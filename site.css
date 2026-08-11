@@ -274,28 +274,16 @@
   position:relative;
   overflow:hidden;
   padding:72px 0 84px;
-  background:
-    radial-gradient(circle at 82% 12%,rgba(216,232,248,.92) 0%,rgba(234,243,252,.75) 34%,rgba(242,248,253,.92) 67%,rgba(236,245,252,1) 100%);
+  background-image:url('why-bis-bridge-bg.png');
+  background-size:cover;
+  background-position:center top;
+  background-repeat:no-repeat;
   color:var(--bis3-navy);
   font-family:var(--B,'Inter',Arial,sans-serif);
 }
-.bis3-section::before{
-  content:"";
-  position:absolute;
-  inset:0 0 0 auto;
-  width:58%;
-  background:
-    linear-gradient(90deg,rgba(238,246,252,1) 0%,rgba(238,246,252,.80) 14%,rgba(238,246,252,.25) 42%,rgba(238,246,252,0) 70%),
-    url("architecture-background.png") right top/cover no-repeat;
-  opacity:.74;
-  pointer-events:none;
-}
+.bis3-section::before,
 .bis3-section::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(238,246,252,.18) 58%,rgba(238,246,252,.72));
-  pointer-events:none;
+  display:none;
 }
 .bis3-wrap{
   position:relative;
