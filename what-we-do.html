@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Полный комплекс услуг по регистрации Sp. z o.o., открытию счетов в банках ЕС, юридическому и бухгалтерскому сопровождению вашей компании.">
+  <title>What We Do | BIS Bridge Europe</title>
+  <meta property="og:title" content="BIS BRIDGE EUROPE | Интеграция и сопровождение бизнеса в ЕС">
+  <meta property="og:description" content="Полный комплекс услуг по регистрации Sp. z o.o., открытию счетов в банках ЕС, юридическому и бухгалтерскому сопровождению вашей компании.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="site.css">
+</head>
+<body data-page="what">
+<bis-bridge-nav></bis-bridge-nav>
+<script>
+(() => {
+  const host = document.querySelector('bis-bridge-nav');
+  if (!host) return;
+  const active = document.body.dataset.page || '';
+  const root = host.attachShadow({mode:'open'});
+  const links = [
+    ['home','index.html','BIS Bridge Europe'],
+    ['what','what-we-do.html','What We Do'],
+    ['why','why-bis-bridge.html','Why BIS Bridge'],
+    ['accounting','accounting.html','Accounting'],
+    ['insights','#','Insights'],
+    ['contacts','contacts.html','Contacts']
+  ];
+  root.innerHTML = `
+    <style>
+      :host{display:block;width:100%;height:76px;position:relative;z-index:500;}
+      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+      a{color:inherit;text-decoration:none}
+      .header{position:relative;width:100%;height:76px;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(11,43,99,.08);font-family:'Inter',sans-serif;color:#0b2b63;}
+      .header-inner{width:min(1320px,100%);height:100%;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;gap:30px;}
+      .logo img{width:104px;height:48px;object-fit:contain;display:block;}
+      nav{flex:1;}
+      .main-menu{display:flex;align-items:center;justify-content:center;gap:28px;list-style:none;}
+      .main-menu a{position:relative;font-size:14px;font-weight:500;color:#0b2b63;opacity:.72;white-space:nowrap;}
+      .main-menu a.active{opacity:1;}
+      .main-menu a.active::after{content:'';position:absolute;left:0;right:0;bottom:-7px;height:2px;border-radius:10px;background:#ff7900;}
+      .header-button{min-height:42px;padding:0 20px;display:inline-flex;align-items:center;justify-content:center;border-radius:7px;background:#ff7900;color:#fff;font-size:13.5px;font-weight:600;white-space:nowrap;}
+      @media(max-width:1100px){.header-inner{padding-left:28px;padding-right:28px}.main-menu{gap:18px}.main-menu a{font-size:13px}}
+      @media(max-width:940px){.main-menu{display:none}}
+      @media(max-width:680px){:host{height:70px}.header{height:70px}.header-inner{padding-left:20px;padding-right:20px}.header-button{display:none}}
+    </style>
+    <header class="header">
+      <div class="header-inner">
+        <a href="index.html" class="logo" aria-label="BIS Bridge Europe"><img src="bis-bridge-logo.png" alt="BIS Bridge Europe"></a>
+        <nav aria-label="Основная навигация"><ul class="main-menu">
+          ${links.map(([key,href,label]) => `<li><a href="${href}" class="${active===key?'active':''}">${label}</a></li>`).join('')}
+        </ul></nav>
+        <a href="contacts.html#contact-form" class="header-button">Записаться на встречу</a>
+      </div>
+    </header>`;
+})();
+</script>
+<!-- ══ SCREEN 2 — WHAT WE DO ══ -->
+<section class="s2" id="services">
+  <div class="s2-container">
+    <div class="s2-intro">
+      <h2 class="s2-title">МАСШТАБИРУЙТЕ БИЗНЕС В ЕВРОПЕ</h2>
+      <p class="s2-sub">Обеспечиваем комплексное операционное сопровождение на всех этапах развития вашего бизнеса.</p>
+    </div>
+    <div class="s2-services">
+      <article class="s2-card">
+        <div class="s2-card-icon" aria-hidden="true">
+      <img src="what-registration.png" alt="" aria-hidden="true">
+    </div>
+        <h3 class="s2-card-title">Регистрация бизнеса</h3>
+        <p class="s2-card-text">Открываем бизнес под ключ — от анализа структуры до подачи первых деклараций.</p>
+        <a class="s2-more" href="why-bis-bridge.html">Узнать больше <span>→</span></a>
+      </article>
+      <article class="s2-card">
+        <div class="s2-card-icon" aria-hidden="true">
+      <img src="what-banking.png" alt="" aria-hidden="true">
+    </div>
+        <h3 class="s2-card-title">Сопровождение при открытии банковских счетов в ЕС</h3>
+        <p class="s2-card-text">Собираем комплект документов для банка, сопровождаем при верификации в банке.</p>
+        <a class="s2-more" href="why-bis-bridge.html">Узнать больше <span>→</span></a>
+      </article>
+      <article class="s2-card">
+        <div class="s2-card-icon" aria-hidden="true">
+      <img src="what-legal.png" alt="" aria-hidden="true">
+    </div>
+        <h3 class="s2-card-title">Юридическая и налоговая экспертиза под ваш этап развития</h3>
+        <p class="s2-card-text">Обеспечиваем юридическую и налоговую экспертизу для задач, выходящих за рамки стандартного бухгалтерского сопровождения.</p>
+        <a class="s2-more" href="why-bis-bridge.html">Узнать больше <span>→</span></a>
+      </article>
+      <article class="s2-card s2-card--offset">
+        <div class="s2-card-icon" aria-hidden="true">
+      <img src="what-operations.png" alt="" aria-hidden="true">
+    </div>
+        <h3 class="s2-card-title">Решение административных задач по мере необходимости</h3>
+        <p class="s2-card-text">Сопровождаем административные процессы бизнеса: госреестры, разрешения, документы и другие операционные вопросы.</p>
+        <a class="s2-more" href="why-bis-bridge.html">Узнать больше <span>→</span></a>
+      </article>
+      <article class="s2-card">
+        <div class="s2-card-icon" aria-hidden="true">
+      <img src="what-support.png" alt="" aria-hidden="true">
+    </div>
+        <h3 class="s2-card-title">Единая точка входа для внешних задач бизнеса</h3>
+        <p class="s2-card-text">Вы обращаетесь с задачей — мы помогаем найти подходящее решение, специалиста или сервис под ваш запрос и этап развития бизнеса.</p>
+        <a class="s2-more" href="why-bis-bridge.html">Узнать больше <span>→</span></a>
+      </article>
+    </div>
+    <div class="s2-system">
+      <div class="s2-sys-head">МЫ СТРОИМ СИСТЕМУ ДЛЯ ВАС</div>
+      <div class="s2-sys-grid">
+        <div class="s2-sys-item s2-sys-item--1">
+          <div class="s2-sys-icon" aria-hidden="true">
+            <img src="system-direction.png" alt="" aria-hidden="true">
+          </div>
+          <h3 class="s2-sys-title">ВЫХОДИТЕ НА НОВЫЙ РЫНОК</h3>
+          <p class="s2-sys-text">Хотите открыть компанию легально, быстро, оптимально</p>
+        </div>
+        <div class="s2-sys-item s2-sys-item--2">
+          <div class="s2-sys-icon s2-sys-icon--blue" aria-hidden="true">
+            <img src="system-network.png" alt="" aria-hidden="true">
+          </div>
+          <h3 class="s2-sys-title">ИЩЕТЕ СИСТЕМНОСТЬ</h3>
+          <p class="s2-sys-text">Вам необходим один партнёр вместо десятка консультантов</p>
+        </div>
+        <div class="s2-sys-item s2-sys-item--3">
+          <div class="s2-sys-icon" aria-hidden="true">
+            <img src="system-growth.png" alt="" aria-hidden="true">
+          </div>
+          <h3 class="s2-sys-title">МАСШТАБИРУЕТЕСЬ</h3>
+          <p class="s2-sys-text">Управление процессами в ЕС занимает всё больше времени</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- COOKIE -->
+<div class="cookie hidden" id="cookie">
+  <p>Мы используем файлы cookie для анализа трафика и улучшения работы сайта. Данные обрабатываются Cloudflare в соответствии с EU-US Data Privacy Framework. <a onclick="openPrivacy()">Политика конфиденциальности</a></p>
+  <div class="cookie-btns">
+    <button class="c-acc" onclick="acceptCookie()">Akceptuję</button>
+    <button class="c-set" onclick="declineCookie()">Ustawienia</button>
+  </div>
+</div>
+
+<!-- PRIVACY MODAL -->
+<div class="modal-overlay" id="privacy-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closePrivacy()">✕</button>
+    <h2>Polityka Prywatności</h2>
+    <div class="modal-sub">RODO / GDPR · Ostatnia aktualizacja: 2025</div>
+    <h3>1. Administrator danych</h3>
+    <p><strong>INTEGRIA GROUP Sp. z o.o.</strong><br>NIP: 6793358307<br>ul. Zamknięta 10 lok. 1.5, 30-554 Kraków, Polska<br>E-mail: <a href="mailto:info@bisbridge.eu" style="color:#005ea6">info@bisbridge.eu</a></p>
+    <h3>2. Cel przetwarzania danych</h3>
+    <ul><li>Obsługa zapytań przesłanych przez formularz kontaktowy</li><li>Przygotowanie ofert i zawarcie umów</li><li>Analiza ruchu na stronie (Cloudflare Analytics)</li></ul>
+    <h3>3. Prawa użytkownika</h3>
+    <ul><li>Prawo dostępu do danych</li><li>Prawo do sprostowania danych</li><li>Prawo do usunięcia danych (prawo do bycia zapomnianym)</li><li>Prawo do cofnięcia zgody w dowolnym momencie</li></ul>
+    <h3>4. Przekazywanie danych</h3>
+    <p>Dane mogą być przetwarzane przez Cloudflare Inc. w ramach EU-US Data Privacy Framework.</p>
+    <h3>5. Kontakt</h3>
+    <p><a href="mailto:info@bisbridge.eu" style="color:#005ea6">info@bisbridge.eu</a></p>
+    <div style="margin-top:28px;text-align:right">
+      <button onclick="closePrivacy()" style="background:#0b2b63;color:#fff;border:none;padding:10px 24px;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer">Zamknij</button>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(() => {
+  const cookie = document.getElementById('cookie');
+  const modal = document.getElementById('privacy-modal');
+  if (cookie && !localStorage.getItem('cookie-ok')) {
+    setTimeout(() => cookie.classList.remove('hidden'), 1500);
+  }
+  window.acceptCookie = function(){ localStorage.setItem('cookie-ok','1'); if(cookie) cookie.classList.add('hidden'); };
+  window.declineCookie = function(){ localStorage.setItem('cookie-ok','0'); if(cookie) cookie.classList.add('hidden'); };
+  window.openPrivacy = function(){ if(modal) modal.classList.add('open'); };
+  window.closePrivacy = function(){ if(modal) modal.classList.remove('open'); };
+  if (modal) modal.addEventListener('click', e => { if(e.target===modal) window.closePrivacy(); });
+})();
+</script>
+</body>
+</html>

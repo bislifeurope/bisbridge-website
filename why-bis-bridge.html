@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Полный комплекс услуг по регистрации Sp. z o.o., открытию счетов в банках ЕС, юридическому и бухгалтерскому сопровождению вашей компании.">
+  <title>Why BIS Bridge | BIS Bridge Europe</title>
+  <meta property="og:title" content="BIS BRIDGE EUROPE | Интеграция и сопровождение бизнеса в ЕС">
+  <meta property="og:description" content="Полный комплекс услуг по регистрации Sp. z o.o., открытию счетов в банках ЕС, юридическому и бухгалтерскому сопровождению вашей компании.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="site.css">
+</head>
+<body data-page="why">
+<bis-bridge-nav></bis-bridge-nav>
+<script>
+(() => {
+  const host = document.querySelector('bis-bridge-nav');
+  if (!host) return;
+  const active = document.body.dataset.page || '';
+  const root = host.attachShadow({mode:'open'});
+  const links = [
+    ['home','index.html','BIS Bridge Europe'],
+    ['what','what-we-do.html','What We Do'],
+    ['why','why-bis-bridge.html','Why BIS Bridge'],
+    ['accounting','accounting.html','Accounting'],
+    ['insights','#','Insights'],
+    ['contacts','contacts.html','Contacts']
+  ];
+  root.innerHTML = `
+    <style>
+      :host{display:block;width:100%;height:76px;position:relative;z-index:500;}
+      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+      a{color:inherit;text-decoration:none}
+      .header{position:relative;width:100%;height:76px;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(11,43,99,.08);font-family:'Inter',sans-serif;color:#0b2b63;}
+      .header-inner{width:min(1320px,100%);height:100%;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;gap:30px;}
+      .logo img{width:104px;height:48px;object-fit:contain;display:block;}
+      nav{flex:1;}
+      .main-menu{display:flex;align-items:center;justify-content:center;gap:28px;list-style:none;}
+      .main-menu a{position:relative;font-size:14px;font-weight:500;color:#0b2b63;opacity:.72;white-space:nowrap;}
+      .main-menu a.active{opacity:1;}
+      .main-menu a.active::after{content:'';position:absolute;left:0;right:0;bottom:-7px;height:2px;border-radius:10px;background:#ff7900;}
+      .header-button{min-height:42px;padding:0 20px;display:inline-flex;align-items:center;justify-content:center;border-radius:7px;background:#ff7900;color:#fff;font-size:13.5px;font-weight:600;white-space:nowrap;}
+      @media(max-width:1100px){.header-inner{padding-left:28px;padding-right:28px}.main-menu{gap:18px}.main-menu a{font-size:13px}}
+      @media(max-width:940px){.main-menu{display:none}}
+      @media(max-width:680px){:host{height:70px}.header{height:70px}.header-inner{padding-left:20px;padding-right:20px}.header-button{display:none}}
+    </style>
+    <header class="header">
+      <div class="header-inner">
+        <a href="index.html" class="logo" aria-label="BIS Bridge Europe"><img src="bis-bridge-logo.png" alt="BIS Bridge Europe"></a>
+        <nav aria-label="Основная навигация"><ul class="main-menu">
+          ${links.map(([key,href,label]) => `<li><a href="${href}" class="${active===key?'active':''}">${label}</a></li>`).join('')}
+        </ul></nav>
+        <a href="contacts.html#contact-form" class="header-button">Записаться на встречу</a>
+      </div>
+    </header>`;
+})();
+</script>
+<!-- ══ SCREEN 3 — BIS BRIDGE MODEL ══ -->
+<section class="bis3-section" id="model">
+  <div class="bis3-wrap">
+
+    <header class="bis3-head">
+      <span class="bis3-topline"></span>
+      <h2 class="bis3-title">BIS BRIDGE MODEL</h2>
+      <p class="bis3-subtitle">Мы сопровождаем компанию с первого дня<br>и на каждом этапе её развития.</p>
+    </header>
+
+    <h3 class="bis3-kicker">АНАЛИЗИРУЕМ ВАШ БИЗНЕС-ПРОЕКТ C РАЗНЫХ СТОРОН:</h3>
+
+    <div class="bis3-stack">
+
+      <article class="bis3-card">
+        <div class="bis3-icon" aria-hidden="true">
+          <img src="why-model-1.png" alt="" aria-hidden="true">
+        </div>
+        <div>
+          <h3>Юридические вопросы</h3>
+          <p class="bis3-lead">учредители, роли и функции, управление компанией согласно уставному договору</p>
+          <ul class="bis3-list">
+            <li><strong>Состав учредителей/членов правления,</strong> их гражданство и местонахождение — это не анкетные данные, это параметры, которые напрямую влияют на скорость и эффективность запуска, последующую работу компании.</li>
+            <li><strong>Структура уставного капитала.</strong> Распределение долей и принятие решений участниками общества.</li>
+            <li><strong>Состав Правления</strong> - полномочия, ответственность, право подписи. Необходимость прокурента.</li>
+            <li><strong>Виды деятельности компании (коды PKD)</strong> — подбираем коды деятельности согласно текущей ситуации и перспективам развития. Главный код и первые десять позиций анализируют банк, налоговая и регуляторы при выдаче лицензий. Подбор требует осознанного подхода — внесение изменений после регистрации это отдельная процедура.</li>
+            <li><strong>Продажа, залог и иные действия с долями</strong> — любые действия с долями требуют согласия компании. Это защищает интересы всех учредителей.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="bis3-card">
+        <div class="bis3-icon" aria-hidden="true">
+          <img src="why-model-2.png" alt="" aria-hidden="true">
+        </div>
+        <div>
+          <h3>Финансовая и операционная модель бизнеса</h3>
+          <p class="bis3-lead">CIT, VAT, международные операции, дивиденды</p>
+          <ul class="bis3-list">
+            <li><strong>Форма деятельности и модель налогообложения</strong> — определяем возможные формы ведения бизнеса с учётом специфики деятельности, структуры доходов/расходов, статуса учредителей/юридических оснований для регистрации компании в Польше.</li>
+            <li><strong>VAT, CIT и базовые правила отчётности</strong> — рассматриваем основные ставки налогов, сроки подачи отчётности, уплаты обязательств и принципы работы польской налоговой системы на практических примерах.</li>
+            <li><strong>VAT UE, экспорт и импорт</strong> — обсуждаем базовые требования при работе с европейскими контрагентами, международными поставками и операциями внутри ЕС.</li>
+            <li><strong>Дивиденды, прибыль и финансовые процессы компании</strong> — рассматриваем базовые правила распределения прибыли, выплаты дивидендов и подготовки годовой отчётности.</li>
+            <li><strong>Индивидуальная налоговая экспертиза</strong> — для вопросов требующих углублённого консультирования подключаем сертифицированного налогового консультанта.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="bis3-card">
+        <div class="bis3-icon" aria-hidden="true">
+          <img src="why-model-3.png" alt="" aria-hidden="true">
+        </div>
+        <div>
+          <h3>Административные и бизнес вопросы</h3>
+          <p class="bis3-lead">Банк, лицензии, разрешения</p>
+          <ul class="bis3-list">
+            <li><strong>Банк и требования к учредителям</strong> — гражданство и статус пребывания членов Правления определяют в каком банке компания сможет открыть счёт. Анализируем до регистрации.</li>
+            <li><strong>Лицензии и разрешения</strong> — грузо- и пассажироперевозки, экспедиторская деятельность, розничная/оптовая торговля алкоголем и продуктами питания, агентства трудоустройства, финансовые услуги и ряд других направлений. Лицензируемые виды деятельности предъявляют свои требования к учредителям, юридическому адресу и операционной структуре компании. Оцениваем на старте — до регистрации.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="bis3-card">
+        <div class="bis3-icon" aria-hidden="true">
+          <img src="why-model-4.png" alt="" aria-hidden="true">
+        </div>
+        <div>
+          <h3>Ваш бизнес-опыт — отправная точка</h3>
+          <p class="bis3-lead">Анализируем что работает в польских реалиях, что требует адаптации.</p>
+          <p class="bis3-body">Изучаем структуру вашего бизнеса, модель работы с контрагентами, операционные процессы. Определяем что переносится напрямую, что требует адаптации под польское законодательство и деловую практику.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="bis3-transition">
+      <div class="bis3-transition-icon" aria-hidden="true">
+        <img src="why-model-transition.png" alt="" aria-hidden="true">
+      </div>
+      <p class="bis3-result">На основе проведенного анализа мы формируем <strong>персональную модель запуска бизнеса.</strong></p>
+      <div class="bis3-next">
+        <small>Следующий этап:</small>
+        <h4>Персональная архитектура запуска проекта.</h4>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== ЭКРАН 4: ПЕРСОНАЛЬНАЯ АРХИТЕКТУРА ЗАПУСКА ПРОЕКТА ========== -->
+
+
+<section id="screen4">
+  <div class="s4-bridge-bg"></div>
+  <div class="s4-inner">
+    <div class="s4-left">
+      <p class="s4-eyebrow">BIS Bridge Model</p>
+      <h2>Персональная архитектура запуска проекта</h2>
+      <div class="s4-divider"></div>
+      <p>После анализа проекта мы формируем персональную модель запуска компании. Определяем необходимые этапы, последовательность действий и подключаем профильных специалистов именно там, где это требуется. В результате Вы получаете единую систему запуска бизнеса вместо набора отдельных услуг.</p>
+    </div>
+    <div class="s4-right">
+      <div class="s4-grid">
+        <div class="s4-card" onclick="openPanel(0)">
+          <img class="s4-card-icon" src="why-service-registration.png" alt="" aria-hidden="true">
+          <p class="s4-card-title">Регистрация компании</p>
+          <p class="s4-card-text">Создаём юридическую основу бизнеса. Полностью сопровождаем процесс регистрации с учётом выбранной модели и планов развития.</p>
+          <span class="s4-card-link">Узнать больше <img class="s4-link-arrow" src="arrow-orange.png" alt="" aria-hidden="true"></span>
+        </div>
+        <div class="s4-card" onclick="openPanel(1)">
+          <img class="s4-card-icon" src="why-service-accounting.png" alt="" aria-hidden="true">
+          <p class="s4-card-title">Финансовое и налоговое сопровождение</p>
+          <p class="s4-card-text">Создаём систему финансового сопровождения, которая позволяет собственнику сосредоточиться на развитии бизнеса.</p>
+          <span class="s4-card-link">Узнать больше <img class="s4-link-arrow" src="arrow-orange.png" alt="" aria-hidden="true"></span>
+        </div>
+        <div class="s4-card" onclick="openPanel(2)">
+          <img class="s4-card-icon" src="why-service-legal.png" alt="" aria-hidden="true">
+          <p class="s4-card-title">Юридическое сопровождение</p>
+          <p class="s4-card-text">Подключаем профильную юридическую экспертизу только по тем вопросам, которые действительно требуют участия специалистов.</p>
+          <span class="s4-card-link">Узнать больше <img class="s4-link-arrow" src="arrow-orange.png" alt="" aria-hidden="true"></span>
+        </div>
+        <div class="s4-card" onclick="openPanel(3)">
+          <img class="s4-card-icon" src="why-service-banking.png" alt="" aria-hidden="true">
+          <p class="s4-card-title">Банковские решения и финансирование</p>
+          <p class="s4-card-text">Формируем финансовую инфраструктуру компании. Сопровождаем взаимодействие с банками и подбираем инструменты финансирования.</p>
+          <span class="s4-card-link">Узнать больше <img class="s4-link-arrow" src="arrow-orange.png" alt="" aria-hidden="true"></span>
+        </div>
+        <div class="s4-card" onclick="openPanel(4)">
+          <img class="s4-card-icon" src="why-service-real-estate.png" alt="" aria-hidden="true">
+          <p class="s4-card-title">Недвижимость для бизнеса</p>
+          <p class="s4-card-text">Подбираем решения под задачи компании. Сопровождаем поиск объектов коммерческой недвижимости через проверенных партнёров.</p>
+          <span class="s4-card-link">Узнать больше <img class="s4-link-arrow" src="arrow-orange.png" alt="" aria-hidden="true"></span>
+        </div>
+        <div class="s4-card" onclick="openPanel(5)">
+          <img class="s4-card-icon" src="why-service-admin.png" alt="" aria-hidden="true">
+          <p class="s4-card-title">Административное сопровождение</p>
+          <p class="s4-card-text">Организуем выполнение обязательных административных процедур, государственных регистраций и разрешительных документов.</p>
+          <span class="s4-card-link">Узнать больше <img class="s4-link-arrow" src="arrow-orange.png" alt="" aria-hidden="true"></span>
+        </div>
+        <div class="s4-card" onclick="openPanel(6)">
+          <img class="s4-card-icon" src="why-service-legalization.png" alt="" aria-hidden="true">
+          <p class="s4-card-title">Легализация</p>
+          <p class="s4-card-text">Сопровождаем вопросы легального пребывания и работы в Польше для собственников, их семей и сотрудников компании.</p>
+          <span class="s4-card-link">Узнать больше <img class="s4-link-arrow" src="arrow-orange.png" alt="" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="s4-footer-strip">
+    <p><strong>Мы проектируем модели под ваш бизнес.</strong></p>
+    <a href="contacts.html#contact-form" class="s4-footer-cta">
+      Обсудить ваш проект
+      <img class="s4-footer-arrow" src="arrow-white.png" alt="" aria-hidden="true" width="18" height="18">
+    </a>
+  </div>
+</section>
+
+
+<div class="s4-panel-overlay" id="s4Overlay" onclick="closePanel()"></div>
+<div class="s4-panel" id="s4Panel">
+  <div class="s4-panel-head">
+    <button class="s4-panel-close" onclick="closePanel()"><img class="s4-close-icon" src="close-navy.png" alt="" aria-hidden="true" width="24" height="24"></button>
+    <div id="s4PanelIcon" class="s4-panel-icon"></div>
+    <p id="s4PanelTitle" class="s4-panel-title"></p>
+    <p id="s4PanelDesc" class="s4-panel-desc"></p>
+  </div>
+  <div class="s4-panel-body">
+    <h4>В рамках этапа</h4>
+    <ul class="s4-panel-list" id="s4PanelList"></ul>
+  </div>
+  <div class="s4-panel-footer">
+    <button class="s4-panel-btn" onclick="closePanel()">Закрыть</button>
+  </div>
+</div>
+
+<script>
+const s4Data = [
+  { title: "Регистрация компании", icon: `<img class="s4-panel-icon-img" src="why-service-registration.png" alt="" aria-hidden="true">`, desc: "Полностью сопровождаем процесс регистрации компании с учётом выбранной модели бизнеса и дальнейших планов развития.", items: ["Оптимальная организационно-правовая форма.","Учредительные документы и корпоративная структура.","Распределение ролей участников и членов правления.","Коды деятельности (PKD).","PESEL, Profil Zaufany и электронная подпись (при необходимости).","Регистрация компании.","Получение NIP, REGON и регистрация в CRBR.","Регистрационные заявления (NIP-8, PCC-3, VAT, VAT-UE).","Банковское сопровождение."] },
+  { title: "Финансовое и налоговое сопровождение", icon: `<img class="s4-panel-icon-img" src="why-service-accounting.png" alt="" aria-hidden="true">`, desc: "Создаём систему финансового сопровождения, которая позволяет собственнику сосредоточиться на развитии бизнеса. Обеспечиваем бухгалтерский и налоговый учёт в соответствии с требованиями законодательства. Для проектов с повышенной сложностью подключаем профильных налоговых консультантов.", items: ["Постановка бухгалтерского сопровождения.","Ведение бухгалтерского и налогового учёта.","Подготовка обязательной отчётности.","Налоговое сопровождение текущей деятельности.","Международные налоговые вопросы (при необходимости).","Подготовка компании к взаимодействию с государственными органами.","Консультации по вопросам налогообложения.","Подключение лицензированных налоговых консультантов для сложных проектов."] },
+  { title: "Юридическое сопровождение", icon: `<img class="s4-panel-icon-img" src="why-service-legal.png" alt="" aria-hidden="true">`, desc: "Подключаем профильную юридическую экспертизу. Организуем сопровождение только по тем вопросам, которые действительно требуют участия профильных специалистов.", items: ["Корпоративное право.","Коммерческие договоры.","Трудовое право.","Лицензируемые виды деятельности.","Сделки с коммерческой недвижимостью.","Индивидуальные юридические проекты."] },
+  { title: "Банковские решения и финансирование", icon: `<img class="s4-panel-icon-img" src="why-service-banking.png" alt="" aria-hidden="true">`, desc: "Формируем финансовую инфраструктуру компании. Сопровождаем взаимодействие с банками и помогаем подобрать инструменты финансирования для развития бизнеса.", items: ["Банковские счета для бизнеса.","Подготовка банковского пакета документов.","Сопровождение банковской проверки.","Лизинговые решения.","Бизнес-кредитование.","Факторинг.","Банковские гарантии и другие финансовые инструменты (при необходимости)."] },
+  { title: "Недвижимость для бизнеса", icon: `<img class="s4-panel-icon-img" src="why-service-real-estate.png" alt="" aria-hidden="true">`, desc: "Подбираем решения под задачи компании. Через проверенных партнёров сопровождаем поиск объектов коммерческой недвижимости для запуска и развития бизнеса.", items: ["Юридические адреса.","Виртуальные офисы.","Офисные помещения.","Склады.","Производственные помещения.","Земельные участки.","Сопровождение аренды и покупки."] },
+  { title: "Административное сопровождение", icon: `<img class="s4-panel-icon-img" src="why-service-admin.png" alt="" aria-hidden="true">`, desc: "Организуем выполнение обязательных административных процедур. Помогаем пройти необходимые государственные регистрации и получить разрешительные документы.", items: ["Регистрация на PUESC.","Получение номера EORI.","Сертификаты налогового резидентства.","Регистрация в Sanepid.","Лицензии и разрешения.","Взаимодействие с государственными учреждениями."] },
+  { title: "Легализация", icon: `<img class="s4-panel-icon-img" src="why-service-legalization.png" alt="" aria-hidden="true">`, desc: "Сопровождаем вопросы легального пребывания и работы в Польше. Организуем процесс легализации собственников бизнеса, членов их семей и сотрудников компании.", items: ["ВНЖ для собственников бизнеса.","Легализация членов семьи.","Разрешения на работу.","Легализация сотрудников.","Сопровождение взаимодействия с государственными органами."] }
+];
+function openPanel(index) {
+  const data = s4Data[index];
+  document.getElementById('s4PanelIcon').innerHTML = data.icon;
+  document.getElementById('s4PanelTitle').textContent = data.title;
+  document.getElementById('s4PanelDesc').textContent = data.desc;
+  document.getElementById('s4PanelList').innerHTML = data.items.map(item => `<li>${item}</li>`).join('');
+  document.getElementById('s4Panel').classList.add('open');
+}
+function closePanel() {
+  document.getElementById('s4Panel').classList.remove('open');
+  document.querySelectorAll('.s4-card').forEach(c => c.classList.remove('s4-card--active'));
+}
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closePanel(); });
+</script>
+
+
+<!-- COOKIE -->
+<div class="cookie hidden" id="cookie">
+  <p>Мы используем файлы cookie для анализа трафика и улучшения работы сайта. Данные обрабатываются Cloudflare в соответствии с EU-US Data Privacy Framework. <a onclick="openPrivacy()">Политика конфиденциальности</a></p>
+  <div class="cookie-btns">
+    <button class="c-acc" onclick="acceptCookie()">Akceptuję</button>
+    <button class="c-set" onclick="declineCookie()">Ustawienia</button>
+  </div>
+</div>
+
+<!-- PRIVACY MODAL -->
+<div class="modal-overlay" id="privacy-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closePrivacy()">✕</button>
+    <h2>Polityka Prywatności</h2>
+    <div class="modal-sub">RODO / GDPR · Ostatnia aktualizacja: 2025</div>
+    <h3>1. Administrator danych</h3>
+    <p><strong>INTEGRIA GROUP Sp. z o.o.</strong><br>NIP: 6793358307<br>ul. Zamknięta 10 lok. 1.5, 30-554 Kraków, Polska<br>E-mail: <a href="mailto:info@bisbridge.eu" style="color:#005ea6">info@bisbridge.eu</a></p>
+    <h3>2. Cel przetwarzania danych</h3>
+    <ul><li>Obsługa zapytań przesłanych przez formularz kontaktowy</li><li>Przygotowanie ofert i zawarcie umów</li><li>Analiza ruchu na stronie (Cloudflare Analytics)</li></ul>
+    <h3>3. Prawa użytkownika</h3>
+    <ul><li>Prawo dostępu do danych</li><li>Prawo do sprostowania danych</li><li>Prawo do usunięcia danych (prawo do bycia zapomnianym)</li><li>Prawo do cofnięcia zgody w dowolnym momencie</li></ul>
+    <h3>4. Przekazywanie danych</h3>
+    <p>Dane mogą być przetwarzane przez Cloudflare Inc. w ramach EU-US Data Privacy Framework.</p>
+    <h3>5. Kontakt</h3>
+    <p><a href="mailto:info@bisbridge.eu" style="color:#005ea6">info@bisbridge.eu</a></p>
+    <div style="margin-top:28px;text-align:right">
+      <button onclick="closePrivacy()" style="background:#0b2b63;color:#fff;border:none;padding:10px 24px;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer">Zamknij</button>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(() => {
+  const cookie = document.getElementById('cookie');
+  const modal = document.getElementById('privacy-modal');
+  if (cookie && !localStorage.getItem('cookie-ok')) {
+    setTimeout(() => cookie.classList.remove('hidden'), 1500);
+  }
+  window.acceptCookie = function(){ localStorage.setItem('cookie-ok','1'); if(cookie) cookie.classList.add('hidden'); };
+  window.declineCookie = function(){ localStorage.setItem('cookie-ok','0'); if(cookie) cookie.classList.add('hidden'); };
+  window.openPrivacy = function(){ if(modal) modal.classList.add('open'); };
+  window.closePrivacy = function(){ if(modal) modal.classList.remove('open'); };
+  if (modal) modal.addEventListener('click', e => { if(e.target===modal) window.closePrivacy(); });
+})();
+</script>
+</body>
+</html>
