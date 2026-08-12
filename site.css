@@ -3710,24 +3710,17 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
 
 .s4-panel-icon img{width:100%;height:100%;object-fit:contain;display:block}.s4-close-icon,.s4-footer-arrow,.s4-link-arrow{display:block;object-fit:contain}
 
-/* =========================================================
-   WHY BIS BRIDGE — FINAL BACKGROUND OVERRIDE
-   Только фон секции .bis3-section.
-   Текст, карточки и остальная верстка не изменяются.
-   ========================================================= */
-
+/* ===== WHY BIS BRIDGE — FINAL BACKGROUND OVERRIDE ===== */
+/* Полностью убираем старый мост и оставляем только новый PNG-фон */
 .bis3-section{
-  background-image:url('why-bis-bridge-bg.png') !important;
-  background-size:cover !important;
-  background-position:center top !important;
-  background-repeat:no-repeat !important;
-  background-color:#eef5fc !important;
+  background: #eef5fc url('why-bis-bridge-bg.png') center top / cover no-repeat !important;
 }
 
 .bis3-section::before,
 .bis3-section::after{
-  content:none !important;
-  display:none !important;
-  background:none !important;
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+  opacity: 0 !important;
 }
-
