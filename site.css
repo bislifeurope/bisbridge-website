@@ -272,13 +272,13 @@
 *{box-sizing:border-box}
 .bis3-section{
   position:relative;
-  overflow:visible;
+  overflow:hidden;
   padding:72px 0 84px;
   background-color:#eef5fc;
   background-image:url('why-bis-bridge-bg.png');
   background-repeat:no-repeat;
   background-size:780px auto;
-  background-position:right 0px top -30px;
+  background-position:right 0px top 10px;
   color:var(--bis3-navy);
   font-family:var(--B,'Inter',Arial,sans-serif);
 }
@@ -3690,3 +3690,41 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
 }
 
 .s4-panel-icon img{width:100%;height:100%;object-fit:contain;display:block}.s4-close-icon,.s4-footer-arrow,.s4-link-arrow{display:block;object-fit:contain}
+
+
+/* ══ УНИФИКАЦИЯ ЦВЕТА ТЕКСТА — bis3-list li приводим к серому как весь сайт ══ */
+.bis3-list li,
+.bis3-body{
+  color:#6d7f9f !important;
+}
+
+
+/* ══ ЕДИНЫЙ СТАНДАРТ ТЕКСТА ВНУТРИ КАРТОЧЕК — все страницы ══ */
+
+/* Заголовки карточек: 17px / Manrope 700 / navy */
+.s2-card-title,
+.bis3-card h3,
+.s4-card-title,
+.acc-culture-card-title {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 17px !important;
+  line-height: 1.34 !important;
+  font-weight: 700 !important;
+  color: #0b2b63 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Текст карточек: 14px / Inter 400 / серый */
+.s2-card-text,
+.bis3-list li,
+.bis3-lead,
+.bis3-body,
+.s4-card-text,
+.acc-culture-card-text {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.58 !important;
+  font-weight: 400 !important;
+  color: #6d7f9f !important;
+  letter-spacing: 0 !important;
+}
