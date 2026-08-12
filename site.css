@@ -272,7 +272,7 @@
 *{box-sizing:border-box}
 .bis3-section{
   position:relative;
-  overflow:hidden;
+  overflow:visible;
   padding:72px 0 84px;
   background-color:#eef5fc;
   background-image:url('why-bis-bridge-bg.png');
