@@ -278,7 +278,7 @@
   background-image:url('why-bis-bridge-bg.png');
   background-repeat:no-repeat;
   background-size:780px auto;
-  background-position:right 0px top 10px;
+  background-position:right 0px top -30px;
   color:var(--bis3-navy);
   font-family:var(--B,'Inter',Arial,sans-serif);
 }
