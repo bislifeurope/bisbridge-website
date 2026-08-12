@@ -1439,7 +1439,7 @@ section:not(.hero):not(.s2){
     var(--s4-bridge-image, none);
 }
 
-/* Возвращаем исходный рисунок моста отдельным слоем */
+/* Мост отключён */
 #screen4 .s4-bridge-bg{
   background-image:
     linear-gradient(
@@ -1448,8 +1448,7 @@ section:not(.hero):not(.s2){
       rgba(238,246,252,.84) 35%,
       rgba(238,246,252,.52) 66%,
       rgba(238,246,252,.22) 100%
-    ),
-    url("bridge-blueprint.png") !important;
+    ) !important;
 }
 
 /* Общая типографика всех экранов после главного */
@@ -2090,16 +2089,15 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
   padding: 80px 0 0;
 }
 
-/* Фоновый мост */
+/* Фоновый мост — отключён */
 #screen4 .s4-bridge-bg {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(90deg, rgba(232,238,246,0.97) 0%, rgba(232,238,246,0.84) 35%, rgba(232,238,246,0.52) 66%, rgba(232,238,246,0.22) 100%),
-    url("bridge-blueprint.png");
+    linear-gradient(90deg, rgba(232,238,246,0.97) 0%, rgba(232,238,246,0.84) 35%, rgba(232,238,246,0.52) 66%, rgba(232,238,246,0.22) 100%);
   background-repeat: no-repeat;
-  background-size: 100% 100%, min(960px, 64vw) auto;
-  background-position: center, right -60px top -90px;
+  background-size: 100% 100%;
+  background-position: center;
   opacity: 1;
   pointer-events: none;
 }
