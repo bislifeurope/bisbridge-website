@@ -274,28 +274,13 @@
   position:relative;
   overflow:hidden;
   padding:72px 0 84px;
-  background:
-    radial-gradient(circle at 82% 12%,rgba(216,232,248,.92) 0%,rgba(234,243,252,.75) 34%,rgba(242,248,253,.92) 67%,rgba(236,245,252,1) 100%);
+  background-color:#eef5fc;
+  background-image:url('why-bis-bridge-bg.png');
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center top;
   color:var(--bis3-navy);
   font-family:var(--B,'Inter',Arial,sans-serif);
-}
-.bis3-section::before{
-  content:"";
-  position:absolute;
-  inset:0 0 0 auto;
-  width:58%;
-  background:
-    linear-gradient(90deg,rgba(238,246,252,1) 0%,rgba(238,246,252,.80) 14%,rgba(238,246,252,.25) 42%,rgba(238,246,252,0) 70%),
-    url("architecture-background.png") right top/cover no-repeat;
-  opacity:.74;
-  pointer-events:none;
-}
-.bis3-section::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(238,246,252,.18) 58%,rgba(238,246,252,.72));
-  pointer-events:none;
 }
 .bis3-wrap{
   position:relative;
@@ -400,7 +385,6 @@
 .bis3-next h4{font-family:var(--F,'Manrope',Arial,sans-serif);margin:0;font-size:26px;line-height:1.18;font-weight:800;color:var(--bis3-navy)}
 @media(max-width:1100px){
   .bis3-stack,.bis3-transition{width:88%}
-  .bis3-section::before{width:65%;opacity:.55}
 }
 @media(max-width:820px){
   .bis3-section{padding:56px 0 66px}
@@ -413,7 +397,6 @@
   .bis3-list li,.bis3-body{font-size:14px}
   .bis3-transition{grid-template-columns:62px 1fr}
   .bis3-next{grid-column:2}
-  .bis3-section::before{width:100%;opacity:.24}
 }
 @media(max-width:560px){
   .bis3-title{font-family:var(--F,'Manrope',Arial,sans-serif);font-size:34px}
@@ -3709,18 +3692,3 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
 }
 
 .s4-panel-icon img{width:100%;height:100%;object-fit:contain;display:block}.s4-close-icon,.s4-footer-arrow,.s4-link-arrow{display:block;object-fit:contain}
-
-/* ===== WHY BIS BRIDGE — FINAL BACKGROUND OVERRIDE ===== */
-/* Полностью убираем старый мост и оставляем только новый PNG-фон */
-.bis3-section{
-  background: #eef5fc url('why-bis-bridge-bg.png') center top / cover no-repeat !important;
-}
-
-.bis3-section::before,
-.bis3-section::after{
-  content: none !important;
-  display: none !important;
-  background: none !important;
-  background-image: none !important;
-  opacity: 0 !important;
-}
