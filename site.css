@@ -277,8 +277,8 @@
   background-color:#eef5fc;
   background-image:url('why-bis-bridge-bg.png');
   background-repeat:no-repeat;
-  background-size:480px auto;
-  background-position:right -20px top 40px;
+  background-size:580px auto;
+  background-position:right 20px top 10px;
   color:var(--bis3-navy);
   font-family:var(--B,'Inter',Arial,sans-serif);
 }
@@ -387,7 +387,7 @@
   .bis3-stack,.bis3-transition{width:88%}
 }
 @media(max-width:820px){
-  .bis3-section{padding:56px 0 66px}
+  .bis3-section{padding:56px 0 66px;background-image:none}
   .bis3-wrap{width:min(100% - 32px,1320px)}
   .bis3-stack,.bis3-transition{width:100%}
   .bis3-card{grid-template-columns:62px minmax(0,1fr);gap:17px;padding:25px 21px}
