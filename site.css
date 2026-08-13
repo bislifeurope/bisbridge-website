@@ -3891,9 +3891,7 @@ bis-bridge-nav {
   isolation:isolate;
   overflow:hidden;
   padding:58px 0 78px;
-  background:
-    radial-gradient(circle at 82% 14%, rgba(208,226,246,.32) 0%, rgba(232,242,251,.16) 36%, rgba(242,248,253,0) 62%),
-    linear-gradient(180deg,#eef5fc 0%,#edf5fc 52%,#f3f8fd 100%);
+  background:linear-gradient(180deg,#eef5fc 0%,#edf5fc 54%,#f2f8fd 100%);
   color:#0b2b63;
   font-family:'Inter',sans-serif;
 }
@@ -3902,9 +3900,9 @@ bis-bridge-nav {
 #model .bbm-visual{
   position:absolute;
   z-index:1;
-  top:6px;
-  right:max(-120px, calc((100vw - 1480px)/2 - 120px));
-  width:clamp(820px,58vw,980px);
+  top:8px;
+  right:max(-235px, calc((100vw - 1440px)/2 - 235px));
+  width:clamp(940px,64vw,1120px);
   pointer-events:none;
   user-select:none;
 }
@@ -3912,8 +3910,8 @@ bis-bridge-nav {
   display:block;
   width:100%;
   height:auto;
-  opacity:.88;
-  filter:brightness(1.04) contrast(1.05);
+  opacity:.98;
+  filter:contrast(1.10) brightness(1.02);
 }
 
 /* Main content */
@@ -3924,19 +3922,22 @@ bis-bridge-nav {
   margin:0 auto;
 }
 
-/* Return content width closer to the previous narrower layout */
+/* Narrow centered content column so the model is more visible */
 #model .bbm-head,
 #model .bbm-kicker,
 #model .bbm-stack,
 #model .bbm-transition{
-  width:min(836px, calc(100% - 48px));
-  max-width:836px;
+  width:min(780px, calc(100% - 24px));
+  max-width:780px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 #model .bbm-head{
   position:relative;
   z-index:3;
-  margin:0 0 34px;
+  margin-top:0;
+  margin-bottom:34px;
   text-align:left;
 }
 #model .bbm-topline{
@@ -3955,6 +3956,7 @@ bis-bridge-nav {
   font-weight:800;
   letter-spacing:-.035em;
   color:#0b2b63 !important;
+  opacity:1 !important;
 }
 #model .bbm-subtitle{
   max-width:510px;
@@ -3962,16 +3964,19 @@ bis-bridge-nav {
   font-size:17px;
   line-height:1.65;
   color:#6d7f9f !important;
+  opacity:1 !important;
 }
 #model .bbm-kicker{
   position:relative;
   z-index:3;
-  margin:0 0 26px;
+  margin-top:0;
+  margin-bottom:26px;
   font-family:'Manrope',sans-serif;
   font-size:18px;
   line-height:1.35;
   font-weight:800;
   color:#0b2b63 !important;
+  opacity:1 !important;
   text-align:left;
 }
 
@@ -3989,10 +3994,11 @@ bis-bridge-nav {
   grid-template-columns:72px minmax(0,1fr);
   gap:26px;
   padding:28px 32px 28px 30px;
-  background:#ffffff;
+  background:#ffffff !important;
   border:1px solid rgba(11,43,99,.08);
   border-radius:16px;
-  box-shadow:0 14px 34px rgba(16,47,112,.065);
+  box-shadow:0 14px 34px rgba(16,47,112,.055);
+  opacity:1 !important;
 }
 #model .bbm-card::before{
   content:"";
@@ -4030,6 +4036,7 @@ bis-bridge-nav {
   font-weight:800;
   letter-spacing:-.01em;
   color:#0b2b63 !important;
+  opacity:1 !important;
 }
 #model .bbm-card-copy h3::after{
   content:"";
@@ -4046,6 +4053,7 @@ bis-bridge-nav {
   font-size:14px;
   line-height:1.55;
   color:#6d7f9f !important;
+  opacity:1 !important;
 }
 #model .bbm-list{
   margin:0;
@@ -4060,25 +4068,28 @@ bis-bridge-nav {
   line-height:1.58;
   font-weight:400;
   color:#6d7f9f !important;
+  opacity:1 !important;
 }
 #model .bbm-list li:last-child{margin-bottom:0}
-#model .bbm-list strong{font-weight:700;color:#0b2b63 !important}
+#model .bbm-list strong{font-weight:700;color:#0b2b63 !important; opacity:1 !important}
 #model .bbm-body{margin-bottom:0}
 
 /* Transition block */
 #model .bbm-transition{
   position:relative;
   z-index:4;
-  margin:20px 0 0;
+  margin-top:20px;
+  margin-bottom:0;
   padding:22px 26px;
   display:grid;
   grid-template-columns:64px minmax(220px,1fr) minmax(300px,1.05fr);
   gap:22px;
   align-items:center;
-  background:#ffffff;
+  background:#ffffff !important;
   border:1px solid rgba(11,43,99,.08);
   border-radius:14px;
-  box-shadow:0 10px 28px rgba(16,47,112,.045);
+  box-shadow:0 10px 28px rgba(16,47,112,.04);
+  opacity:1 !important;
 }
 #model .bbm-transition-icon{
   width:58px;
@@ -4099,6 +4110,7 @@ bis-bridge-nav {
   font-size:14px;
   line-height:1.58;
   color:#0b2b63 !important;
+  opacity:1 !important;
 }
 #model .bbm-result strong{color:#ff7900 !important}
 #model .bbm-next small{
@@ -4106,6 +4118,7 @@ bis-bridge-nav {
   margin:0 0 6px;
   font-size:12px;
   color:#6d7f9f !important;
+  opacity:1 !important;
 }
 #model .bbm-next h4{
   margin:0;
@@ -4114,11 +4127,16 @@ bis-bridge-nav {
   line-height:1.25;
   font-weight:800;
   color:#0b2b63 !important;
+  opacity:1 !important;
 }
 
 @media(max-width:1200px){
   #model .bbm-wrap{width:min(1040px,calc(100% - 56px))}
-  #model .bbm-visual{right:-145px;width:860px}
+  #model .bbm-head,
+  #model .bbm-kicker,
+  #model .bbm-stack,
+  #model .bbm-transition{width:min(760px, 100%);max-width:760px}
+  #model .bbm-visual{right:-255px;width:990px}
 }
 @media(max-width:980px){
   #model.bbm-section{padding:46px 0 64px}
@@ -4126,8 +4144,8 @@ bis-bridge-nav {
   #model .bbm-head,
   #model .bbm-kicker,
   #model .bbm-stack,
-  #model .bbm-transition{width:min(836px, 100%);max-width:none}
-  #model .bbm-visual{top:8px;right:-215px;width:760px}
+  #model .bbm-transition{width:min(720px, 100%);max-width:720px}
+  #model .bbm-visual{top:18px;right:-285px;width:860px;opacity:.92}
   #model .bbm-card{grid-template-columns:62px minmax(0,1fr);gap:20px;padding:26px 26px 26px 24px}
   #model .bbm-icon{width:56px;height:56px}
   #model .bbm-icon img{width:32px;height:32px}
@@ -4141,7 +4159,7 @@ bis-bridge-nav {
   #model .bbm-head,
   #model .bbm-kicker,
   #model .bbm-stack,
-  #model .bbm-transition{width:100%}
+  #model .bbm-transition{width:100%;max-width:none}
   #model .bbm-head{margin-bottom:28px}
   #model .bbm-title{font-size:34px}
   #model .bbm-subtitle{font-size:15px}
@@ -4151,102 +4169,5 @@ bis-bridge-nav {
   #model .bbm-transition{display:block;padding:22px}
   #model .bbm-transition-icon{margin-bottom:14px}
   #model .bbm-result{margin-bottom:16px}
-}
-
-/* =========================================================
-   BIS BRIDGE MODEL — POSITION / CLARITY CORRECTION
-   13 Aug 2026
-   - restore centered narrow content position
-   - remove washed-out look
-   - enlarge and sharpen architectural model
-   ========================================================= */
-#model.bbm-section{
-  background:#eef5fc !important;
-  opacity:1 !important;
-}
-
-#model .bbm-wrap{
-  opacity:1 !important;
-}
-
-/* Restore previous centered placement of the whole 836px content column */
-#model .bbm-head,
-#model .bbm-kicker,
-#model .bbm-stack,
-#model .bbm-transition{
-  width:min(836px, calc(100% - 48px)) !important;
-  max-width:836px !important;
-  margin-left:auto !important;
-  margin-right:auto !important;
-}
-#model .bbm-head{margin-bottom:34px !important;}
-#model .bbm-kicker{margin-bottom:26px !important;}
-#model .bbm-transition{margin-top:20px !important;}
-
-/* Full-contrast copy — no haze */
-#model .bbm-title,
-#model .bbm-kicker,
-#model .bbm-card-copy h3,
-#model .bbm-list strong,
-#model .bbm-result,
-#model .bbm-next h4{
-  color:#0b2b63 !important;
-  opacity:1 !important;
-}
-#model .bbm-subtitle,
-#model .bbm-lead,
-#model .bbm-list li,
-#model .bbm-body,
-#model .bbm-next small{
-  color:#6d7f9f !important;
-  opacity:1 !important;
-}
-#model .bbm-card,
-#model .bbm-transition{
-  background:#fff !important;
-  opacity:1 !important;
-}
-
-/* Larger, clearer model */
-#model .bbm-visual{
-  top:-52px !important;
-  right:-78px !important;
-  width:1120px !important;
-  opacity:1 !important;
-}
-#model .bbm-visual img{
-  opacity:.96 !important;
-  filter:contrast(1.14) saturate(1.06) brightness(1.01) !important;
-}
-
-@media(max-width:1200px){
-  #model .bbm-visual{
-    top:-32px !important;
-    right:-150px !important;
-    width:1010px !important;
-  }
-}
-@media(max-width:980px){
-  #model .bbm-head,
-  #model .bbm-kicker,
-  #model .bbm-stack,
-  #model .bbm-transition{
-    width:min(836px, calc(100% - 40px)) !important;
-    max-width:none !important;
-  }
-  #model .bbm-visual{
-    top:-10px !important;
-    right:-245px !important;
-    width:850px !important;
-  }
-}
-@media(max-width:760px){
-  #model .bbm-head,
-  #model .bbm-kicker,
-  #model .bbm-stack,
-  #model .bbm-transition{
-    width:100% !important;
-  }
-  #model .bbm-visual{display:none !important;}
 }
 
