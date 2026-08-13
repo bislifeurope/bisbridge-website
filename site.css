@@ -3878,3 +3878,263 @@ bis-bridge-nav {
   margin-bottom: 16px;
   filter: brightness(0) invert(1);
 }
+
+
+/* =========================================================
+   BIS BRIDGE MODEL — FINAL CLEAN IMPLEMENTATION
+   Separate namespace (.bbm-*) so old .bis3-* experiments
+   cannot affect this section.
+   ========================================================= */
+
+#model.bbm-section{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  padding:58px 0 78px;
+  background:
+    radial-gradient(circle at 82% 12%, rgba(205,225,246,.70) 0%, rgba(230,241,251,.44) 34%, rgba(242,248,253,0) 62%),
+    linear-gradient(180deg,#f4f9fe 0%,#eef6fd 48%,#f6faff 100%);
+  color:#0b2b63;
+  font-family:'Inter',sans-serif;
+}
+
+/* Decorative architectural layer */
+#model .bbm-visual{
+  position:absolute;
+  z-index:1;
+  top:18px;
+  right:max(-105px, calc((100vw - 1500px)/2 - 105px));
+  width:clamp(690px,52vw,825px);
+  pointer-events:none;
+  user-select:none;
+}
+#model .bbm-visual img{
+  display:block;
+  width:100%;
+  height:auto;
+  opacity:.55;
+}
+
+/* Main content */
+#model .bbm-wrap{
+  position:relative;
+  z-index:2;
+  width:min(1120px,calc(100% - 64px));
+  margin:0 auto;
+}
+
+#model .bbm-head{
+  position:relative;
+  z-index:3;
+  width:58%;
+  max-width:600px;
+  margin:0 0 34px;
+  text-align:left;
+}
+#model .bbm-topline{
+  display:block;
+  width:42px;
+  height:3px;
+  margin:0 0 20px;
+  border-radius:99px;
+  background:#ff7900;
+}
+#model .bbm-title{
+  margin:0 0 18px;
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(40px,3.35vw,52px);
+  line-height:1.07;
+  font-weight:800;
+  letter-spacing:-.035em;
+  color:#0b2b63;
+}
+#model .bbm-subtitle{
+  max-width:510px;
+  margin:0;
+  font-size:17px;
+  line-height:1.65;
+  color:#6d7f9f;
+}
+#model .bbm-kicker{
+  position:relative;
+  z-index:3;
+  margin:0 0 26px;
+  font-family:'Manrope',sans-serif;
+  font-size:18px;
+  line-height:1.35;
+  font-weight:800;
+  color:#0b2b63;
+}
+
+/* Cards deliberately sit above the visual */
+#model .bbm-stack{
+  position:relative;
+  z-index:4;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+#model .bbm-card{
+  position:relative;
+  display:grid;
+  grid-template-columns:72px minmax(0,1fr);
+  gap:26px;
+  padding:28px 32px 28px 30px;
+  background:rgba(255,255,255,.965);
+  border:1px solid rgba(11,43,99,.08);
+  border-radius:16px;
+  box-shadow:0 14px 34px rgba(16,47,112,.065);
+}
+#model .bbm-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:18%;
+  width:3px;
+  height:64%;
+  border-radius:0 4px 4px 0;
+  background:#ff7900;
+}
+#model .bbm-icon{
+  width:64px;
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  border:1px solid rgba(11,43,99,.055);
+  background:linear-gradient(145deg,#f1f5fa,#fbfdff);
+}
+#model .bbm-icon img{
+  display:block;
+  width:36px;
+  height:36px;
+  object-fit:contain;
+}
+#model .bbm-card-copy h3{
+  position:relative;
+  margin:0 0 9px;
+  padding-bottom:9px;
+  font-family:'Manrope',sans-serif;
+  font-size:17px;
+  line-height:1.32;
+  font-weight:800;
+  letter-spacing:-.01em;
+  color:#0b2b63;
+}
+#model .bbm-card-copy h3::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:38px;
+  height:2px;
+  border-radius:99px;
+  background:#ff7900;
+}
+#model .bbm-lead{
+  margin:0 0 16px;
+  font-size:14px;
+  line-height:1.55;
+  color:#6d7f9f;
+}
+#model .bbm-list{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+#model .bbm-list li,
+#model .bbm-body{
+  margin:0 0 10px;
+  padding:0;
+  font-size:14px;
+  line-height:1.58;
+  font-weight:400;
+  color:#6d7f9f;
+}
+#model .bbm-list li:last-child{margin-bottom:0}
+#model .bbm-list strong{font-weight:700;color:#0b2b63}
+#model .bbm-body{margin-bottom:0}
+
+/* Transition block */
+#model .bbm-transition{
+  position:relative;
+  z-index:4;
+  margin:20px 0 0;
+  padding:22px 26px;
+  display:grid;
+  grid-template-columns:64px minmax(220px,1fr) minmax(300px,1.05fr);
+  gap:22px;
+  align-items:center;
+  background:rgba(255,255,255,.94);
+  border:1px solid rgba(11,43,99,.08);
+  border-radius:14px;
+  box-shadow:0 10px 28px rgba(16,47,112,.045);
+}
+#model .bbm-transition-icon{
+  width:58px;
+  height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:rgba(255,121,0,.07);
+}
+#model .bbm-transition-icon img{
+  width:36px;
+  height:36px;
+  object-fit:contain;
+}
+#model .bbm-result{
+  margin:0;
+  font-size:14px;
+  line-height:1.58;
+  color:#0b2b63;
+}
+#model .bbm-result strong{color:#ff7900}
+#model .bbm-next small{
+  display:block;
+  margin:0 0 6px;
+  font-size:12px;
+  color:#6d7f9f;
+}
+#model .bbm-next h4{
+  margin:0;
+  font-family:'Manrope',sans-serif;
+  font-size:20px;
+  line-height:1.25;
+  font-weight:800;
+  color:#0b2b63;
+}
+
+@media(max-width:1200px){
+  #model .bbm-wrap{width:min(1040px,calc(100% - 56px))}
+  #model .bbm-visual{right:-135px;width:720px}
+  #model .bbm-head{width:58%;max-width:560px}
+}
+@media(max-width:980px){
+  #model.bbm-section{padding:46px 0 64px}
+  #model .bbm-wrap{width:calc(100% - 44px)}
+  #model .bbm-visual{top:16px;right:-185px;width:650px;opacity:.42}
+  #model .bbm-head{width:64%;max-width:530px}
+  #model .bbm-card{grid-template-columns:62px minmax(0,1fr);gap:20px;padding:26px 26px 26px 24px}
+  #model .bbm-icon{width:56px;height:56px}
+  #model .bbm-icon img{width:32px;height:32px}
+  #model .bbm-transition{grid-template-columns:58px 1fr}
+  #model .bbm-next{grid-column:2}
+}
+@media(max-width:760px){
+  #model.bbm-section{padding:38px 0 54px}
+  #model .bbm-wrap{width:calc(100% - 32px)}
+  #model .bbm-visual{display:none}
+  #model .bbm-head{width:100%;max-width:none;margin-bottom:28px}
+  #model .bbm-title{font-size:34px}
+  #model .bbm-subtitle{font-size:15px}
+  #model .bbm-kicker{font-size:16px;margin-bottom:22px}
+  #model .bbm-card{display:block;padding:24px 22px}
+  #model .bbm-icon{margin:0 0 16px}
+  #model .bbm-transition{display:block;padding:22px}
+  #model .bbm-transition-icon{margin-bottom:14px}
+  #model .bbm-result{margin-bottom:16px}
+}
+
