@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Политика конфиденциальности | BIS Bridge Europe</title>
+  <meta name="description" content="Политика конфиденциальности сайта bisbridge.eu — порядок сбора, обработки и хранения персональных данных.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .legal-hero {
+      background: #f5f9fd;
+      border-bottom: 1px solid rgba(11,43,99,.08);
+      padding: 80px 0 48px;
+    }
+    .legal-hero-inner {
+      width: min(1320px,100%);
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+    .legal-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #F59E0B;
+      margin-bottom: 14px;
+    }
+    .legal-title {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(28px, 3vw, 42px);
+      font-weight: 800;
+      color: #0B1B3D;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .legal-meta {
+      font-size: 13.5px;
+      color: #6B7A99;
+    }
+    /* lang switcher */
+    .lang-switcher {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 24px;
+      background: #fff;
+      border: 1.5px solid rgba(11,43,99,.14);
+      border-radius: 8px;
+      padding: 4px;
+    }
+    .lang-btn {
+      padding: 6px 18px;
+      border-radius: 5px;
+      border: none;
+      background: transparent;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #6B7A99;
+      cursor: pointer;
+      transition: .18s;
+    }
+    .lang-btn.active {
+      background: #0B1B3D;
+      color: #fff;
+    }
+    /* content */
+    .legal-body {
+      width: min(1320px,100%);
+      margin: 0 auto;
+      padding: 56px 48px 80px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    /* TOC */
+    .legal-toc {
+      position: sticky;
+      top: 96px;
+    }
+    .legal-toc-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #6B7A99;
+      margin-bottom: 14px;
+    }
+    .legal-toc a {
+      display: block;
+      font-size: 13px;
+      color: #6B7A99;
+      text-decoration: none;
+      padding: 5px 0;
+      border-left: 2px solid transparent;
+      padding-left: 10px;
+      transition: .15s;
+      line-height: 1.4;
+    }
+    .legal-toc a:hover {
+      color: #0B1B3D;
+      border-color: #F59E0B;
+    }
+    /* doc content */
+    .legal-content {
+      min-width: 0;
+    }
+    .legal-version {
+      display: none;
+    }
+    .legal-section {
+      margin-bottom: 44px;
+    }
+    .legal-section h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #0B1B3D;
+      margin-bottom: 14px;
+      padding-top: 8px;
+      border-top: 2px solid #F59E0B;
+      padding-top: 14px;
+    }
+    .legal-section p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 12px;
+    }
+    .legal-section ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    .legal-section ul li {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 6px;
+    }
+    .legal-section strong {
+      color: #0B1B3D;
+    }
+    .legal-section .addr-block {
+      background: #f5f9fd;
+      border-left: 3px solid #F59E0B;
+      padding: 16px 20px;
+      border-radius: 0 6px 6px 0;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #374151;
+      margin: 14px 0;
+    }
+    .legal-footnote {
+      font-size: 13px;
+      color: #6B7A99;
+      border-top: 1px solid rgba(11,43,99,.08);
+      padding-top: 20px;
+      margin-top: 8px;
+    }
+    /* lang visibility */
+    .ru-text { display: block; }
+    .pl-text { display: none; }
+    body.lang-pl .ru-text { display: none; }
+    body.lang-pl .pl-text { display: block; }
+    @media(max-width: 860px) {
+      .legal-body { grid-template-columns: 1fr; gap: 32px; padding: 40px 28px 60px; }
+      .legal-toc { position: static; }
+      .legal-hero-inner { padding: 0 28px; }
+    }
+    @media(max-width: 600px) {
+      .legal-hero { padding: 76px 0 36px; }
+      .legal-body { padding: 32px 20px 48px; }
+      .legal-hero-inner { padding: 0 20px; }
+    }
+  </style>
+</head>
+<body data-page="legal">
+
+<!-- NAV -->
+<bis-bridge-nav></bis-bridge-nav>
+<script>
+(() => {
+  const host = document.querySelector('bis-bridge-nav');
+  if (!host) return;
+  const active = document.body.dataset.page || '';
+  const root = host.attachShadow({mode:'open'});
+  const links = [
+    ['home','index.html','BIS Bridge Europe'],
+    ['what','what-we-do.html','What We Do'],
+    ['why','why-bis-bridge.html','Why BIS Bridge'],
+    ['accounting','accounting.html','Accounting'],
+    ['insights','#','Insights'],
+    ['contacts','contacts.html','Contacts']
+  ];
+  root.innerHTML = `
+    <style>
+      :host{display:block;width:100%;height:76px;position:relative;z-index:500;}
+      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+      a{color:inherit;text-decoration:none}
+      .header{position:relative;width:100%;height:76px;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(11,43,99,.08);font-family:'Inter',sans-serif;color:#0b2b63;}
+      .header-inner{width:min(1320px,100%);height:100%;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;gap:30px;}
+      .logo img{width:104px;height:48px;object-fit:contain;display:block;}
+      nav{flex:1;}
+      .main-menu{display:flex;align-items:center;justify-content:center;gap:28px;list-style:none;}
+      .main-menu a{position:relative;font-size:14px;font-weight:500;color:#0b2b63;opacity:.72;white-space:nowrap;}
+      .main-menu a.active{opacity:1;}
+      .main-menu a.active::after{content:'';position:absolute;left:0;right:0;bottom:-7px;height:2px;border-radius:10px;background:#ff7900;}
+      .header-button{min-height:42px;padding:0 20px;display:inline-flex;align-items:center;justify-content:center;border-radius:7px;background:#ff7900;color:#fff;font-size:13.5px;font-weight:600;white-space:nowrap;}
+      @media(max-width:1100px){.header-inner{padding-left:28px;padding-right:28px}.main-menu{gap:18px}.main-menu a{font-size:13px}}
+      @media(max-width:940px){.main-menu{display:none}}
+      @media(max-width:680px){:host{height:70px}.header{height:70px}.header-inner{padding-left:20px;padding-right:20px}.header-button{display:none}}
+    </style>
+    <header class="header">
+      <div class="header-inner">
+        <a href="index.html" class="logo" aria-label="BIS Bridge Europe"><img src="bis-bridge-logo.png" alt="BIS Bridge Europe"></a>
+        <nav aria-label="Основная навигация"><ul class="main-menu">
+          ${links.map(([key,href,label]) => `<li${(key==='what'||key==='insights')?' style="display:none"':''}><a href="${href}" class="${active===key?'active':''}">  ${label}</a></li>`).join('')}
+        </ul></nav>
+        <a href="contacts.html#contact-form" class="header-button">Записаться на встречу</a>
+      </div>
+    </header>`;
+})();
+</script>
+
+<!-- HERO -->
+<div class="legal-hero">
+  <div class="legal-hero-inner">
+    <div class="legal-label">Юридические документы</div>
+    <h1 class="legal-title ru-text">Политика конфиденциальности</h1>
+    <h1 class="legal-title pl-text">Polityka Prywatności</h1>
+    <div class="legal-meta ru-text">BIS Bridge Europe · Integria Group Sp. z o.o. · Версия 1.1 · Август 2026</div>
+    <div class="legal-meta pl-text">BIS Bridge Europe · Integria Group Sp. z o.o. · Wersja 1.1 · Sierpień 2026</div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('ru')">RU</button>
+      <button class="lang-btn" onclick="setLang('pl')">PL</button>
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="legal-body">
+
+  <!-- TOC RU -->
+  <nav class="legal-toc ru-text" aria-label="Содержание">
+    <div class="legal-toc-title">Содержание</div>
+    <a href="#s1">1. Общие положения</a>
+    <a href="#s2">2. Администратор данных</a>
+    <a href="#s3">3. Определения</a>
+    <a href="#s4">4. Цели и основания обработки</a>
+    <a href="#s5">5. Категории данных</a>
+    <a href="#s6">6. Сроки хранения</a>
+    <a href="#s7">7. Получатели данных</a>
+    <a href="#s8">8. Файлы cookie</a>
+    <a href="#s9">9. Права пользователя</a>
+    <a href="#s10">10. Надзорный орган</a>
+    <a href="#s11">11. Безопасность</a>
+    <a href="#s12">12. Автоматизированные решения</a>
+    <a href="#s13">13. Лица младше 18 лет</a>
+    <a href="#s14">14. Изменения политики</a>
+  </nav>
+
+  <!-- TOC PL -->
+  <nav class="legal-toc pl-text" aria-label="Spis treści">
+    <div class="legal-toc-title">Spis treści</div>
+    <a href="#s1">1. Postanowienia ogólne</a>
+    <a href="#s2">2. Administrator danych</a>
+    <a href="#s3">3. Definicje</a>
+    <a href="#s4">4. Cele i podstawy przetwarzania</a>
+    <a href="#s5">5. Kategorie danych</a>
+    <a href="#s6">6. Okresy przechowywania</a>
+    <a href="#s7">7. Odbiorcy danych</a>
+    <a href="#s8">8. Pliki cookie</a>
+    <a href="#s9">9. Prawa użytkownika</a>
+    <a href="#s10">10. Organ nadzorczy</a>
+    <a href="#s11">11. Bezpieczeństwo</a>
+    <a href="#s12">12. Zautomatyzowane decyzje</a>
+    <a href="#s13">13. Osoby poniżej 18 lat</a>
+    <a href="#s14">14. Zmiany polityki</a>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="legal-content">
+
+    <!-- SECTION 1 -->
+    <div class="legal-section" id="s1">
+      <h2 class="ru-text">1. Общие положения</h2>
+      <h2 class="pl-text">1. Postanowienia ogólne</h2>
+      <div class="ru-text">
+        <p>Настоящая Политика конфиденциальности определяет порядок сбора, обработки и хранения персональных данных пользователей сайта bisbridge.eu, а также их права в отношении этих данных.</p>
+        <p>Сайт доступен для пользователей из любых стран мира. Обработка персональных данных осуществляется в соответствии с Регламентом (ЕС) 2016/679 (GDPR/RODO) и применимыми нормами польского права. Пользователи из стран вне ЕЭП, пользуясь сайтом и оставляя свои данные, принимают условия обработки в соответствии с GDPR.</p>
+        <p>Правом, применимым к настоящей Политике, является право Республики Польша. Споры подлежат рассмотрению польскими судами.</p>
+      </div>
+      <div class="pl-text">
+        <p>Niniejsza Polityka Prywatności określa zasady gromadzenia, przetwarzania i przechowywania danych osobowych użytkowników serwisu bisbridge.eu, a także ich prawa w odniesieniu do tych danych.</p>
+        <p>Serwis jest dostępny dla użytkowników z całego świata. Przetwarzanie danych osobowych odbywa się zgodnie z Rozporządzeniem (UE) 2016/679 (RODO/GDPR) oraz obowiązującymi przepisami prawa polskiego. Użytkownicy spoza EOG, korzystając z serwisu i pozostawiając swoje dane, akceptują warunki przetwarzania zgodne z RODO.</p>
+        <p>Prawem właściwym dla niniejszej Polityki jest prawo Rzeczypospolitej Polskiej. Spory podlegają rozpoznaniu przez właściwe sądy polskie.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="legal-section" id="s2">
+      <h2 class="ru-text">2. Администратор персональных данных</h2>
+      <h2 class="pl-text">2. Administrator danych osobowych</h2>
+      <div class="ru-text">
+        <p>Администратором персональных данных является:</p>
+        <div class="addr-block">
+          <strong>Integria Group Spółka z ograniczoną odpowiedzialnością</strong><br>
+          ул. Замкнента, 10/1.5, 30-554 Краков, Польша<br>
+          KRS: 0001225530 | NIP: 6793358307 | REGON: 544046015<br>
+          Kapitał zakładowy: 5 000,00 zł<br>
+          Sąd Rejonowy dla Krakowa-Śródmieścia w Krakowie, XI Wydział Gospodarczy KRS<br>
+          E-mail: <a href="mailto:info@bisbridge.eu">info@bisbridge.eu</a><br>
+          Сайт: bisbridge.eu
+        </div>
+        <p>По всем вопросам, связанным с обработкой персональных данных, обращайтесь по адресу <a href="mailto:info@bisbridge.eu">info@bisbridge.eu</a>. В теме письма укажите: «Персональные данные».</p>
+      </div>
+      <div class="pl-text">
+        <p>Administratorem danych osobowych jest:</p>
+        <div class="addr-block">
+          <strong>Integria Group Spółka z ograniczoną odpowiedzialnością</strong><br>
+          ul. Zamknięta 10, lok. 1.5, 30-554 Kraków, Polska<br>
+          KRS: 0001225530 | NIP: 6793358307 | REGON: 544046015<br>
+          Kapitał zakładowy: 5 000,00 zł<br>
+          Sąd Rejonowy dla Krakowa-Śródmieścia w Krakowie, XI Wydział Gospodarczy KRS<br>
+          E-mail: <a href="mailto:info@bisbridge.eu">info@bisbridge.eu</a><br>
+          Strona internetowa: bisbridge.eu
+        </div>
+        <p>W sprawach związanych z przetwarzaniem danych osobowych można skontaktować się z Administratorem pod adresem <a href="mailto:info@bisbridge.eu">info@bisbridge.eu</a>. W tytule wiadomości prosimy wpisać: „Dane osobowe".</p>
+      </div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="legal-section" id="s3">
+      <h2 class="ru-text">3. Определения</h2>
+      <h2 class="pl-text">3. Definicje</h2>
+      <div class="ru-text">
+        <ul>
+          <li><strong>Администратор</strong> — Integria Group Sp. z o.o., определяющая цели и способы обработки персональных данных.</li>
+          <li><strong>Пользователь</strong> — любое лицо, посещающее сайт bisbridge.eu.</li>
+          <li><strong>Персональные данные</strong> — любая информация, позволяющая прямо или косвенно идентифицировать физическое лицо.</li>
+          <li><strong>GDPR/RODO</strong> — Регламент (ЕС) 2016/679 об общей защите персональных данных.</li>
+          <li><strong>Форма</strong> — форма обратной связи на сайте, позволяющая направить запрос Администратору.</li>
+          <li><strong>Cookie</strong> — небольшие текстовые файлы, сохраняемые на устройстве Пользователя при посещении сайта.</li>
+        </ul>
+      </div>
+      <div class="pl-text">
+        <ul>
+          <li><strong>Administrator</strong> — Integria Group Sp. z o.o., określająca cele i sposoby przetwarzania danych osobowych.</li>
+          <li><strong>Użytkownik</strong> — każda osoba odwiedzająca serwis bisbridge.eu.</li>
+          <li><strong>Dane osobowe</strong> — wszelkie informacje umożliwiające bezpośrednią lub pośrednią identyfikację osoby fizycznej.</li>
+          <li><strong>RODO/GDPR</strong> — Rozporządzenie (UE) 2016/679 w sprawie ochrony osób fizycznych.</li>
+          <li><strong>Formularz</strong> — formularz kontaktowy umieszczony w serwisie.</li>
+          <li><strong>Pliki cookie</strong> — niewielkie pliki tekstowe zapisywane na urządzeniu Użytkownika.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="legal-section" id="s4">
+      <h2 class="ru-text">4. Цели и правовые основания обработки данных</h2>
+      <h2 class="pl-text">4. Cele i podstawy prawne przetwarzania danych</h2>
+      <div class="ru-text">
+        <p>Администратор обрабатывает персональные данные в следующих целях:</p>
+        <ul>
+          <li>Обработка запросов через форму, e-mail или иным способом — на основании законного интереса (ст. 6(1)(f) GDPR).</li>
+          <li>Заключение и исполнение договора — на основании необходимости исполнения договора (ст. 6(1)(b) GDPR).</li>
+          <li>Выполнение юридических обязательств, в том числе налоговых — на основании ст. 6(1)(c) GDPR.</li>
+          <li>Установление, осуществление или защита правовых требований — на основании законного интереса (ст. 6(1)(f) GDPR).</li>
+          <li>Ведение статистики и улучшение работы сайта — на основании законного интереса (ст. 6(1)(f) GDPR) либо согласия (ст. 6(1)(a) GDPR) в отношении аналитических cookies.</li>
+          <li>Направление коммерческих предложений — на основании согласия Пользователя (ст. 6(1)(a) GDPR).</li>
+        </ul>
+        <p>Предоставление персональных данных добровольно, однако их непредоставление делает невозможным достижение соответствующей цели.</p>
+      </div>
+      <div class="pl-text">
+        <p>Administrator przetwarza dane osobowe w następujących celach:</p>
+        <ul>
+          <li>Obsługa zapytań przez formularz, e-mail lub w inny sposób — na podstawie prawnie uzasadnionego interesu (art. 6 ust. 1 lit. f RODO).</li>
+          <li>Zawarcie i wykonanie umowy — na podstawie niezbędności do wykonania umowy (art. 6 ust. 1 lit. b RODO).</li>
+          <li>Wypełnienie obowiązków prawnych, w tym podatkowych — na podstawie art. 6 ust. 1 lit. c RODO.</li>
+          <li>Ustalenie, dochodzenie lub obrona roszczeń — na podstawie prawnie uzasadnionego interesu (art. 6 ust. 1 lit. f RODO).</li>
+          <li>Prowadzenie statystyk i doskonalenie serwisu — na podstawie prawnie uzasadnionego interesu lub zgody (art. 6 ust. 1 lit. a RODO) w zakresie analitycznych cookies.</li>
+          <li>Przesyłanie ofert handlowych — na podstawie zgody Użytkownika (art. 6 ust. 1 lit. a RODO).</li>
+        </ul>
+        <p>Podanie danych jest dobrowolne, jednak ich niepodanie uniemożliwia osiągnięcie odpowiedniego celu.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="legal-section" id="s5">
+      <h2 class="ru-text">5. Категории обрабатываемых данных</h2>
+      <h2 class="pl-text">5. Kategorie przetwarzanych danych</h2>
+      <div class="ru-text">
+        <ul>
+          <li><strong>Идентификационные данные:</strong> имя, фамилия, наименование компании.</li>
+          <li><strong>Контактные данные:</strong> адрес электронной почты, номер телефона.</li>
+          <li><strong>Данные из переписки:</strong> содержание сообщений через форму или e-mail.</li>
+          <li><strong>Технические данные:</strong> IP-адрес, тип браузера и устройства, операционная система.</li>
+          <li><strong>Данные cookies:</strong> идентификаторы сессии, пользовательские настройки, аналитические данные (подробнее — в разделе 8).</li>
+        </ul>
+        <p>Администратор не собирает специальные категории данных (здоровье, религиозные или политические убеждения) и просит не направлять такие сведения через форму.</p>
+      </div>
+      <div class="pl-text">
+        <ul>
+          <li><strong>Dane identyfikacyjne:</strong> imię, nazwisko, nazwa firmy.</li>
+          <li><strong>Dane kontaktowe:</strong> adres e-mail, numer telefonu.</li>
+          <li><strong>Dane z korespondencji:</strong> treść wiadomości przesłanych przez formularz lub e-mail.</li>
+          <li><strong>Dane techniczne:</strong> adres IP, typ przeglądarki i urządzenia, system operacyjny.</li>
+          <li><strong>Dane cookies:</strong> identyfikatory sesji, preferencje użytkownika, dane analityczne (szczegóły — w sekcji 8).</li>
+        </ul>
+        <p>Administrator nie gromadzi szczególnych kategorii danych (dotyczących zdrowia, przekonań religijnych lub politycznych) i prosi o nieprzesyłanie takich informacji przez formularz.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 6 -->
+    <div class="legal-section" id="s6">
+      <h2 class="ru-text">6. Сроки хранения данных</h2>
+      <h2 class="pl-text">6. Okresy przechowywania danych</h2>
+      <div class="ru-text">
+        <ul>
+          <li>Данные из запросов через форму — до рассмотрения запроса и в течение 12 месяцев после, либо до подачи возражения.</li>
+          <li>Данные клиентов по договору — в течение срока действия договора и срока исковой давности, а также срока, установленного налоговым законодательством (как правило, 5 лет).</li>
+          <li>Данные для маркетинга — до отзыва согласия.</li>
+          <li>Данные аналитических cookies — до 14 месяцев.</li>
+          <li>Журналы доступа сервера — до 12 месяцев.</li>
+        </ul>
+        <p>По истечении указанных сроков данные удаляются или обезличиваются.</p>
+      </div>
+      <div class="pl-text">
+        <ul>
+          <li>Dane z zapytań przez formularz — do momentu rozpatrzenia i przez 12 miesięcy po, lub do wniesienia sprzeciwu.</li>
+          <li>Dane klientów z umowy — przez czas obowiązywania umowy i okres przedawnienia roszczeń, a także przez okres wynikający z prawa podatkowego (co do zasady 5 lat).</li>
+          <li>Dane marketingowe — do cofnięcia zgody.</li>
+          <li>Analityczne pliki cookie — do 14 miesięcy.</li>
+          <li>Logi dostępu serwera — do 12 miesięcy.</li>
+        </ul>
+        <p>Po upływie wskazanych okresów dane są usuwane lub anonimizowane.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 7 -->
+    <div class="legal-section" id="s7">
+      <h2 class="ru-text">7. Получатели персональных данных</h2>
+      <h2 class="pl-text">7. Odbiorcy danych osobowych</h2>
+      <div class="ru-text">
+        <p>Персональные данные могут передаваться:</p>
+        <ul>
+          <li>Поставщикам IT-услуг и хостинга, обеспечивающим техническое функционирование сайта.</li>
+          <li>Бухгалтерским и юридическим партнёрам, привлекаемым для исполнения договора.</li>
+          <li>Поставщикам сервисов веб-аналитики (например, Google Analytics) — в обезличенном виде.</li>
+          <li>Государственным органам — исключительно на основании требований закона или судебного решения.</li>
+        </ul>
+        <p>Данные не продаются и не передаются третьим лицам в маркетинговых целях без отдельного согласия. В связи с использованием Google Analytics обезличенные данные могут передаваться за пределы ЕЭП на основании EU–US Data Privacy Framework или Стандартных договорных условий (SCC).</p>
+      </div>
+      <div class="pl-text">
+        <p>Dane osobowe mogą być przekazywane:</p>
+        <ul>
+          <li>Dostawcom usług IT i hostingu zapewniającym techniczne funkcjonowanie serwisu.</li>
+          <li>Partnerom księgowym i prawnym zaangażowanym w realizację umowy.</li>
+          <li>Dostawcom usług analitycznych (np. Google Analytics) — w formie zanonimizowanej.</li>
+          <li>Organom publicznym — wyłącznie na podstawie wymogów prawa lub orzeczenia sądu.</li>
+        </ul>
+        <p>Dane nie są sprzedawane ani przekazywane osobom trzecim w celach marketingowych bez odrębnej zgody. W związku z Google Analytics dane mogą być przekazywane poza EOG na podstawie EU–US Data Privacy Framework lub Standardowych Klauzul Umownych (SCC).</p>
+      </div>
+    </div>
+
+    <!-- SECTION 8 -->
+    <div class="legal-section" id="s8">
+      <h2 class="ru-text">8. Файлы cookie</h2>
+      <h2 class="pl-text">8. Pliki cookie</h2>
+      <div class="ru-text">
+        <p>Сайт использует файлы cookie — небольшие текстовые файлы, сохраняемые на устройстве Пользователя:</p>
+        <ul>
+          <li><strong>Необходимые cookie</strong> — обеспечивают базовое функционирование сайта (сессия, безопасность). Не требуют согласия.</li>
+          <li><strong>Аналитические cookie</strong> — сбор обезличенной статистики посещений для улучшения сайта. Устанавливаются с согласия Пользователя.</li>
+          <li><strong>Маркетинговые cookie</strong> — исключительно с отдельного согласия Пользователя.</li>
+        </ul>
+        <p>Пользователь вправе в любое время изменить настройки cookie в браузере или через баннер согласия на сайте. Отказ от необязательных cookie не ограничивает доступ к содержимому сайта.</p>
+      </div>
+      <div class="pl-text">
+        <p>Serwis wykorzystuje pliki cookie — niewielkie pliki tekstowe zapisywane na urządzeniu Użytkownika:</p>
+        <ul>
+          <li><strong>Niezbędne pliki cookie</strong> — zapewniają podstawowe funkcjonowanie serwisu. Nie wymagają zgody.</li>
+          <li><strong>Analityczne pliki cookie</strong> — zbieranie zanonimizowanych statystyk odwiedzin. Instalowane za zgodą Użytkownika.</li>
+          <li><strong>Marketingowe pliki cookie</strong> — wyłącznie za odrębną zgodą Użytkownika.</li>
+        </ul>
+        <p>Użytkownik ma prawo zmienić ustawienia plików cookie w przeglądarce lub przez baner zgody. Odmowa nieobowiązkowych cookies nie ogranicza dostępu do treści serwisu.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 9 -->
+    <div class="legal-section" id="s9">
+      <h2 class="ru-text">9. Права пользователя</h2>
+      <h2 class="pl-text">9. Prawa użytkownika</h2>
+      <div class="ru-text">
+        <p>В соответствии со статьями 15–22 GDPR Пользователь имеет следующие права:</p>
+        <ul>
+          <li><strong>Право на доступ</strong> — получить информацию о том, какие данные обрабатываются и с какой целью.</li>
+          <li><strong>Право на исправление</strong> — потребовать исправления неточных или неполных данных.</li>
+          <li><strong>Право на удаление</strong> — потребовать удаления данных, если они более не нужны или согласие отозвано.</li>
+          <li><strong>Право на ограничение обработки</strong> — в случаях, предусмотренных законом.</li>
+          <li><strong>Право на переносимость данных</strong> — получить данные в машиночитаемом формате.</li>
+          <li><strong>Право на возражение</strong> — возразить против обработки, в том числе в целях прямого маркетинга.</li>
+          <li><strong>Право отозвать согласие</strong> — в любое время, не затрагивая законность обработки до отзыва.</li>
+        </ul>
+        <p>Для реализации прав направьте запрос на <a href="mailto:info@bisbridge.eu">info@bisbridge.eu</a> с темой «Персональные данные». Ответ предоставляется в течение 30 дней.</p>
+      </div>
+      <div class="pl-text">
+        <p>Zgodnie z art. 15–22 RODO Użytkownikowi przysługują następujące prawa:</p>
+        <ul>
+          <li><strong>Prawo dostępu</strong> — uzyskanie informacji o przetwarzanych danych.</li>
+          <li><strong>Prawo do sprostowania</strong> — żądanie poprawienia danych.</li>
+          <li><strong>Prawo do usunięcia</strong> — żądanie usunięcia danych, gdy nie są potrzebne lub zgoda cofnięta.</li>
+          <li><strong>Prawo do ograniczenia przetwarzania</strong> — w przypadkach przewidzianych prawem.</li>
+          <li><strong>Prawo do przenoszenia danych</strong> — uzyskanie danych w formacie nadającym się do odczytu maszynowego.</li>
+          <li><strong>Prawo do sprzeciwu</strong> — wobec przetwarzania, w tym marketingu bezpośredniego.</li>
+          <li><strong>Prawo do cofnięcia zgody</strong> — w dowolnym momencie.</li>
+        </ul>
+        <p>W celu skorzystania z praw prosimy o przesłanie wniosku na <a href="mailto:info@bisbridge.eu">info@bisbridge.eu</a> z tytułem „Dane osobowe". Odpowiedź w ciągu 30 dni.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 10 -->
+    <div class="legal-section" id="s10">
+      <h2 class="ru-text">10. Надзорный орган</h2>
+      <h2 class="pl-text">10. Organ nadzorczy</h2>
+      <div class="ru-text">
+        <p>Если вы считаете, что обработка ваших данных нарушает требования GDPR, вы вправе подать жалобу в надзорный орган Польши:</p>
+        <div class="addr-block">
+          Urząd Ochrony Danych Osobowych (UODO)<br>
+          ул. Stawki 2, 00-193 Варшава, Польша<br>
+          <a href="https://www.uodo.gov.pl" target="_blank" rel="noopener">www.uodo.gov.pl</a>
+        </div>
+        <p>Рекомендуем предварительно обратиться к Администратору для урегулирования в досудебном порядке.</p>
+      </div>
+      <div class="pl-text">
+        <p>Jeżeli uważają Państwo, że przetwarzanie danych narusza RODO, przysługuje prawo do skargi do organu nadzorczego:</p>
+        <div class="addr-block">
+          Urząd Ochrony Danych Osobowych (UODO)<br>
+          ul. Stawki 2, 00-193 Warszawa<br>
+          <a href="https://www.uodo.gov.pl" target="_blank" rel="noopener">www.uodo.gov.pl</a>
+        </div>
+        <p>Zalecamy uprzednie skontaktowanie się z Administratorem w celu polubownego rozwiązania kwestii.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 11 -->
+    <div class="legal-section" id="s11">
+      <h2 class="ru-text">11. Безопасность данных</h2>
+      <h2 class="pl-text">11. Bezpieczeństwo danych</h2>
+      <div class="ru-text">
+        <p>Администратор применяет технические и организационные меры защиты:</p>
+        <ul>
+          <li>шифрование передачи данных (SSL/TLS);</li>
+          <li>ограничение доступа к данным только уполномоченными лицами;</li>
+          <li>регулярное резервное копирование;</li>
+          <li>договоры о конфиденциальности с привлечёнными партнёрами.</li>
+        </ul>
+        <p>Ни одна система передачи данных через интернет не является абсолютно защищённой. Администратор принимает разумные меры безопасности, однако не может гарантировать абсолютную защищённость при любых обстоятельствах.</p>
+      </div>
+      <div class="pl-text">
+        <p>Administrator stosuje techniczne i organizacyjne środki ochrony:</p>
+        <ul>
+          <li>szyfrowanie transmisji danych (SSL/TLS);</li>
+          <li>ograniczenie dostępu do danych wyłącznie do osób upoważnionych;</li>
+          <li>regularne tworzenie kopii zapasowych;</li>
+          <li>umowy o poufności z zaangażowanymi partnerami.</li>
+        </ul>
+        <p>Żaden system przesyłania danych przez Internet nie jest w pełni bezpieczny. Administrator stosuje rozsądne środki bezpieczeństwa, jednak nie może zagwarantować całkowitej ochrony.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 12 -->
+    <div class="legal-section" id="s12">
+      <h2 class="ru-text">12. Автоматизированное принятие решений и профилирование</h2>
+      <h2 class="pl-text">12. Zautomatyzowane podejmowanie decyzji i profilowanie</h2>
+      <div class="ru-text">
+        <p>Персональные данные не подвергаются автоматизированному принятию решений, включая профилирование, которое могло бы повлечь для вас юридические последствия или иным образом существенно повлиять на вас (ст. 22 GDPR).</p>
+      </div>
+      <div class="pl-text">
+        <p>Dane osobowe Użytkowników nie podlegają zautomatyzowanemu podejmowaniu decyzji, w tym profilowaniu, które mogłoby wywołać skutki prawne lub w podobny sposób istotnie wpływać na Użytkownika (art. 22 RODO).</p>
+      </div>
+    </div>
+
+    <!-- SECTION 13 -->
+    <div class="legal-section" id="s13">
+      <h2 class="ru-text">13. Лица младше 18 лет</h2>
+      <h2 class="pl-text">13. Osoby poniżej 18. roku życia</h2>
+      <div class="ru-text">
+        <p>Сайт ориентирован исключительно на деловую аудиторию — совершеннолетних лиц. Администратор сознательно не собирает данные лиц младше 18 лет. При обнаружении таких данных они будут незамедлительно удалены.</p>
+      </div>
+      <div class="pl-text">
+        <p>Serwis jest skierowany wyłącznie do odbiorców biznesowych — osób pełnoletnich. Administrator świadomie nie gromadzi danych osób poniżej 18. roku życia. W przypadku wykrycia takich danych zostaną one niezwłocznie usunięte.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 14 -->
+    <div class="legal-section" id="s14">
+      <h2 class="ru-text">14. Изменения Политики конфиденциальности</h2>
+      <h2 class="pl-text">14. Zmiany Polityki Prywatności</h2>
+      <div class="ru-text">
+        <p>Администратор оставляет за собой право вносить изменения в настоящую Политику в связи с изменениями законодательства или практики обработки данных. Актуальная версия всегда размещается на данной странице с указанием даты обновления.</p>
+      </div>
+      <div class="pl-text">
+        <p>Administrator zastrzega sobie prawo do wprowadzania zmian w niniejszej Polityce w związku ze zmianami przepisów prawa lub praktyki przetwarzania danych. Aktualna wersja jest zawsze dostępna na niniejszej stronie wraz z datą ostatniej aktualizacji.</p>
+      </div>
+      <p class="legal-footnote ru-text">Дата последнего обновления: август 2026 г. | Версия: 1.1</p>
+      <p class="legal-footnote pl-text">Data ostatniej aktualizacji: sierpień 2026 r. | Wersja: 1.1</p>
+    </div>
+
+  </div><!-- /legal-content -->
+</div><!-- /legal-body -->
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="bis-bridge-logo.png" alt="BIS Bridge Europe">
+        <p>© 2026 BIS Bridge Europe.<br>Все права защищены.</p>
+        <p>Сайт управляется компанией<br>Integria Group Sp. z o.o.</p>
+      </div>
+      <div><h4>Компания</h4><div class="footer-company"><strong>INTEGRIA GROUP Sp. z o.o.</strong><p>ul. Zamknięta 10, lok. 1.5<br>30-554 Kraków, Polska</p><p>KRS: 0001225530<br>NIP: 6793358307<br>REGON: 544046015</p></div></div>
+      <div><h4>Навигация</h4><div class="footer-list"><a href="index.html">BIS Bridge Europe</a><a href="why-bis-bridge.html">Почему мы</a><a href="accounting.html">Бухгалтерия</a><a href="contacts.html">Контакты</a></div></div>
+      <div><h4>Услуги</h4><div class="footer-list"><a href="#">Регистрация бизнеса</a><a href="#">Административное сопровождение бизнеса</a><a href="#">Бухгалтерское обслуживание</a></div><h4 style="margin-top:22px">Юридическая информация</h4><div class="footer-list"><a href="privacy-policy.html">Политика конфиденциальности</a><a href="disclaimer.html">Условия использования</a><a href="privacy-policy.html#s8">Политика cookie</a></div></div>
+      <div><h4>Контакты</h4><div class="footer-contact"><img src="email-white.png" alt="" aria-hidden="true"><a href="mailto:info@bisbridge.eu">info@bisbridge.eu</a></div><div class="footer-contact"><img src="phone-white.png" alt="" aria-hidden="true"><a href="tel:+48571805232">+48 571 805 232</a></div><div class="footer-list"><a href="#">WhatsApp / Telegram</a><a href="#">LinkedIn</a><span style="font-size:12.5px;color:rgba(255,255,255,.88)">Kraków, Polska</span></div></div>
+    </div>
+    <div class="footer-bottom"></div>
+  </div>
+</footer>
+
+<!-- COOKIE -->
+<div class="cookie hidden" id="cookie">
+  <p>Мы используем файлы cookie для анализа трафика и улучшения работы сайта. <a href="privacy-policy.html#s8">Политика cookie</a></p>
+  <div class="cookie-btns">
+    <button class="c-acc" onclick="acceptCookie()">Принять</button>
+    <button class="c-set" onclick="declineCookie()">Отклонить</button>
+  </div>
+</div>
+
+<script>
+// Lang switcher
+function setLang(lang) {
+  document.body.classList.toggle('lang-pl', lang === 'pl');
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
+  localStorage.setItem('legal-lang', lang);
+}
+// Restore lang
+(function(){
+  const saved = localStorage.getItem('legal-lang');
+  if (saved === 'pl') setLang('pl');
+})();
+
+// Cookie
+const cookie = document.getElementById('cookie');
+if (cookie && !localStorage.getItem('cookie-ok')) {
+  setTimeout(() => cookie.classList.remove('hidden'), 1500);
+}
+window.acceptCookie = function(){ localStorage.setItem('cookie-ok','1'); if(cookie) cookie.classList.add('hidden'); };
+window.declineCookie = function(){ localStorage.setItem('cookie-ok','0'); if(cookie) cookie.classList.add('hidden'); };
+</script>
+</body>
+</html>

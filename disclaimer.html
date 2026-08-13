@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Условия использования | BIS Bridge Europe</title>
+  <meta name="description" content="Условия использования сайта bisbridge.eu — информация о характере материалов, ограничении ответственности и интеллектуальной собственности.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .legal-hero {
+      background: #f5f9fd;
+      border-bottom: 1px solid rgba(11,43,99,.08);
+      padding: 80px 0 48px;
+    }
+    .legal-hero-inner {
+      width: min(1320px,100%);
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+    .legal-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #F59E0B;
+      margin-bottom: 14px;
+    }
+    .legal-title {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(28px, 3vw, 42px);
+      font-weight: 800;
+      color: #0B1B3D;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .legal-meta {
+      font-size: 13.5px;
+      color: #6B7A99;
+    }
+    .lang-switcher {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 24px;
+      background: #fff;
+      border: 1.5px solid rgba(11,43,99,.14);
+      border-radius: 8px;
+      padding: 4px;
+    }
+    .lang-btn {
+      padding: 6px 18px;
+      border-radius: 5px;
+      border: none;
+      background: transparent;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #6B7A99;
+      cursor: pointer;
+      transition: .18s;
+    }
+    .lang-btn.active {
+      background: #0B1B3D;
+      color: #fff;
+    }
+    .legal-body {
+      width: min(1320px,100%);
+      margin: 0 auto;
+      padding: 56px 48px 80px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .legal-toc {
+      position: sticky;
+      top: 96px;
+    }
+    .legal-toc-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #6B7A99;
+      margin-bottom: 14px;
+    }
+    .legal-toc a {
+      display: block;
+      font-size: 13px;
+      color: #6B7A99;
+      text-decoration: none;
+      padding: 5px 0;
+      border-left: 2px solid transparent;
+      padding-left: 10px;
+      transition: .15s;
+      line-height: 1.4;
+    }
+    .legal-toc a:hover {
+      color: #0B1B3D;
+      border-color: #F59E0B;
+    }
+    .legal-content { min-width: 0; }
+    .legal-section { margin-bottom: 44px; }
+    .legal-section h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #0B1B3D;
+      margin-bottom: 14px;
+      border-top: 2px solid #F59E0B;
+      padding-top: 14px;
+    }
+    .legal-section p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 12px;
+    }
+    .legal-section ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    .legal-section ul li {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #374151;
+      margin-bottom: 6px;
+    }
+    .legal-section strong { color: #0B1B3D; }
+    .legal-footnote {
+      font-size: 13px;
+      color: #6B7A99;
+      border-top: 1px solid rgba(11,43,99,.08);
+      padding-top: 20px;
+      margin-top: 8px;
+    }
+    .ru-text { display: block; }
+    .pl-text { display: none; }
+    body.lang-pl .ru-text { display: none; }
+    body.lang-pl .pl-text { display: block; }
+    @media(max-width: 860px) {
+      .legal-body { grid-template-columns: 1fr; gap: 32px; padding: 40px 28px 60px; }
+      .legal-toc { position: static; }
+      .legal-hero-inner { padding: 0 28px; }
+    }
+    @media(max-width: 600px) {
+      .legal-hero { padding: 76px 0 36px; }
+      .legal-body { padding: 32px 20px 48px; }
+      .legal-hero-inner { padding: 0 20px; }
+    }
+  </style>
+</head>
+<body data-page="legal">
+
+<!-- NAV -->
+<bis-bridge-nav></bis-bridge-nav>
+<script>
+(() => {
+  const host = document.querySelector('bis-bridge-nav');
+  if (!host) return;
+  const active = document.body.dataset.page || '';
+  const root = host.attachShadow({mode:'open'});
+  const links = [
+    ['home','index.html','BIS Bridge Europe'],
+    ['what','what-we-do.html','What We Do'],
+    ['why','why-bis-bridge.html','Why BIS Bridge'],
+    ['accounting','accounting.html','Accounting'],
+    ['insights','#','Insights'],
+    ['contacts','contacts.html','Contacts']
+  ];
+  root.innerHTML = `
+    <style>
+      :host{display:block;width:100%;height:76px;position:relative;z-index:500;}
+      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+      a{color:inherit;text-decoration:none}
+      .header{position:relative;width:100%;height:76px;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(11,43,99,.08);font-family:'Inter',sans-serif;color:#0b2b63;}
+      .header-inner{width:min(1320px,100%);height:100%;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;gap:30px;}
+      .logo img{width:104px;height:48px;object-fit:contain;display:block;}
+      nav{flex:1;}
+      .main-menu{display:flex;align-items:center;justify-content:center;gap:28px;list-style:none;}
+      .main-menu a{position:relative;font-size:14px;font-weight:500;color:#0b2b63;opacity:.72;white-space:nowrap;}
+      .main-menu a.active{opacity:1;}
+      .main-menu a.active::after{content:'';position:absolute;left:0;right:0;bottom:-7px;height:2px;border-radius:10px;background:#ff7900;}
+      .header-button{min-height:42px;padding:0 20px;display:inline-flex;align-items:center;justify-content:center;border-radius:7px;background:#ff7900;color:#fff;font-size:13.5px;font-weight:600;white-space:nowrap;}
+      @media(max-width:1100px){.header-inner{padding-left:28px;padding-right:28px}.main-menu{gap:18px}.main-menu a{font-size:13px}}
+      @media(max-width:940px){.main-menu{display:none}}
+      @media(max-width:680px){:host{height:70px}.header{height:70px}.header-inner{padding-left:20px;padding-right:20px}.header-button{display:none}}
+    </style>
+    <header class="header">
+      <div class="header-inner">
+        <a href="index.html" class="logo" aria-label="BIS Bridge Europe"><img src="bis-bridge-logo.png" alt="BIS Bridge Europe"></a>
+        <nav aria-label="Основная навигация"><ul class="main-menu">
+          ${links.map(([key,href,label]) => `<li${(key==='what'||key==='insights')?' style="display:none"':''}><a href="${href}" class="${active===key?'active':''}">  ${label}</a></li>`).join('')}
+        </ul></nav>
+        <a href="contacts.html#contact-form" class="header-button">Записаться на встречу</a>
+      </div>
+    </header>`;
+})();
+</script>
+
+<!-- HERO -->
+<div class="legal-hero">
+  <div class="legal-hero-inner">
+    <div class="legal-label">Юридические документы</div>
+    <h1 class="legal-title ru-text">Условия использования сайта</h1>
+    <h1 class="legal-title pl-text">Warunki Korzystania z Serwisu</h1>
+    <div class="legal-meta ru-text">BIS Bridge Europe · Integria Group Sp. z o.o. · Версия 1.4 · Август 2026</div>
+    <div class="legal-meta pl-text">BIS Bridge Europe · Integria Group Sp. z o.o. · Wersja 1.3 · Sierpień 2026</div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('ru')">RU</button>
+      <button class="lang-btn" onclick="setLang('pl')">PL</button>
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="legal-body">
+
+  <!-- TOC RU -->
+  <nav class="legal-toc ru-text" aria-label="Содержание">
+    <div class="legal-toc-title">Содержание</div>
+    <a href="#d1">1. Назначение сайта</a>
+    <a href="#d2">2. Ограничение ответственности</a>
+    <a href="#d3">3. Форма обратной связи</a>
+    <a href="#d4">4. Внешние ссылки</a>
+    <a href="#d5">5. Интеллектуальная собственность</a>
+    <a href="#d6">6. Применимое право</a>
+    <a href="#d7">7. Изменения документа</a>
+  </nav>
+
+  <!-- TOC PL -->
+  <nav class="legal-toc pl-text" aria-label="Spis treści">
+    <div class="legal-toc-title">Spis treści</div>
+    <a href="#d1">1. Przeznaczenie serwisu</a>
+    <a href="#d2">2. Ograniczenie odpowiedzialności</a>
+    <a href="#d3">3. Formularz kontaktowy</a>
+    <a href="#d4">4. Linki zewnętrzne</a>
+    <a href="#d5">5. Własność intelektualna</a>
+    <a href="#d6">6. Prawo właściwe</a>
+    <a href="#d7">7. Zmiany dokumentu</a>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="legal-content">
+
+    <!-- SECTION 1 -->
+    <div class="legal-section" id="d1">
+      <h2 class="ru-text">1. Назначение сайта и характер размещённых материалов</h2>
+      <h2 class="pl-text">1. Przeznaczenie serwisu i charakter zamieszczonych materiałów</h2>
+      <div class="ru-text">
+        <p>Сайт bisbridge.eu является информационным ресурсом компании Integria Group Sp. z o.o., действующей под торговым наименованием BIS Bridge Europe. Цель сайта — представление услуг компании и обеспечение возможности первичного контакта с потенциальными клиентами.</p>
+        <p>Все материалы, размещённые на сайте, — тексты, описания услуг, статьи и иные сведения — носят исключительно информационный характер. Они не являются юридической, налоговой, бухгалтерской или иной профессиональной консультацией и не учитывают индивидуальных обстоятельств конкретного лица или компании.</p>
+        <p>Перед принятием любых деловых, юридических или финансовых решений рекомендуется обратиться за персональной консультацией к квалифицированному специалисту.</p>
+        <p>Договорные отношения между Владельцем сайта и клиентом возникают исключительно на основании подписанного договора об оказании услуг. Материалы сайта не создают каких-либо обязательств со стороны Владельца сайта и не являются офертой в смысле ст. 66 Гражданского кодекса Польши, а представляют собой исключительно приглашение к заключению договора в соответствии со ст. 71 KC, если иное прямо не указано.</p>
+      </div>
+      <div class="pl-text">
+        <p>Serwis bisbridge.eu jest zasobem informacyjnym spółki Integria Group Sp. z o.o., działającej pod nazwą handlową BIS Bridge Europe. Celem serwisu jest prezentacja usług spółki oraz umożliwienie pierwszego kontaktu z potencjalnymi klientami.</p>
+        <p>Wszelkie materiały zamieszczone w serwisie — teksty, opisy usług, artykuły i inne treści — mają wyłącznie charakter informacyjny. Nie stanowią one porady prawnej, podatkowej, księgowej ani żadnej innej porady profesjonalnej i nie uwzględniają indywidualnych okoliczności konkretnej osoby lub spółki.</p>
+        <p>Przed podjęciem jakichkolwiek decyzji biznesowych, prawnych lub finansowych zaleca się skonsultowanie się z wykwalifikowanym specjalistą.</p>
+        <p>Stosunki umowne między Właścicielem serwisu a klientem powstają wyłącznie na podstawie podpisanej umowy o świadczenie usług. Materiały serwisu nie tworzą żadnych zobowiązań po stronie Właściciela serwisu i nie stanowią oferty w rozumieniu art. 66 KC, lecz wyłącznie zaproszenie do zawarcia umowy zgodnie z art. 71 KC, chyba że wyraźnie wskazano inaczej.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="legal-section" id="d2">
+      <h2 class="ru-text">2. Ограничение ответственности</h2>
+      <h2 class="pl-text">2. Ograniczenie odpowiedzialności</h2>
+      <div class="ru-text">
+        <p>Владелец сайта прилагает разумные усилия для обеспечения актуальности и достоверности информации, однако не гарантирует её полноту или безошибочность, поскольку законодательство, налоговые нормы и деловая практика могут изменяться.</p>
+        <p>Владелец сайта не несёт ответственности за:</p>
+        <ul>
+          <li>возможные неточности, неполноту или устаревание сведений на сайте;</li>
+          <li>прямые или косвенные убытки, возникшие в результате использования либо невозможности использования сайта;</li>
+          <li>решения, принятые пользователем на основании материалов сайта без получения персональной профессиональной консультации;</li>
+          <li>временную недоступность сайта вследствие технических работ или обстоятельств, не зависящих от Владельца сайта.</li>
+        </ul>
+        <p>Настоящее ограничение применяется в максимально допустимом объёме, за исключением случаев, когда ответственность не может быть ограничена в силу императивных норм права Польши (в том числе ст. 473 § 2 Гражданского кодекса Польши).</p>
+      </div>
+      <div class="pl-text">
+        <p>Właściciel serwisu dokłada rozsądnych starań w celu zapewnienia aktualności i rzetelności informacji, jednak nie gwarantuje ich kompletności ani bezbłędności, ponieważ przepisy prawa, normy podatkowe i praktyka gospodarcza mogą ulegać zmianom.</p>
+        <p>Właściciel serwisu nie ponosi odpowiedzialności za:</p>
+        <ul>
+          <li>ewentualne nieścisłości, niekompletność lub nieaktualność informacji zamieszczonych w serwisie;</li>
+          <li>bezpośrednie lub pośrednie straty powstałe w wyniku korzystania lub niemożności korzystania z serwisu;</li>
+          <li>decyzje podjęte przez użytkownika na podstawie materiałów serwisu bez uzyskania indywidualnej porady profesjonalnej;</li>
+          <li>tymczasową niedostępność serwisu spowodowaną pracami technicznymi lub okolicznościami niezależnymi od Właściciela serwisu.</li>
+        </ul>
+        <p>Niniejsze ograniczenie stosuje się w maksymalnym dopuszczalnym zakresie, z wyjątkiem przypadków, w których odpowiedzialność nie może być ograniczona na podstawie bezwzględnie obowiązujących przepisów prawa polskiego (w tym art. 473 § 2 KC).</p>
+      </div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="legal-section" id="d3">
+      <h2 class="ru-text">3. Форма обратной связи — условия использования</h2>
+      <h2 class="pl-text">3. Formularz kontaktowy — warunki korzystania</h2>
+      <div class="ru-text">
+        <p>Форма обратной связи является бесплатной технической функцией, предназначенной исключительно для направления первичного запроса Владельцу сайта. Её использование не влечёт возникновения каких-либо договорных обязательств.</p>
+        <p>Технические требования: стандартный интернет-браузер с поддержкой JavaScript и активное подключение к сети Интернет.</p>
+        <p>Если форма работает некорректно или сообщение не было доставлено, просьба уведомить нас по адресу <a href="mailto:info@bisbridge.eu">info@bisbridge.eu</a>. Обращение будет рассмотрено в течение 14 дней с момента получения.</p>
+      </div>
+      <div class="pl-text">
+        <p>Formularz kontaktowy jest bezpłatną funkcją techniczną przeznaczoną wyłącznie do przesyłania wstępnych zapytań do Właściciela serwisu. Korzystanie z formularza nie powoduje powstania żadnych zobowiązań umownych.</p>
+        <p>Wymagania techniczne: standardowa przeglądarka internetowa z obsługą JavaScript oraz aktywne połączenie z siecią Internet.</p>
+        <p>Jeżeli formularz działa nieprawidłowo lub wiadomość nie została dostarczona, prosimy o kontakt pod adresem <a href="mailto:info@bisbridge.eu">info@bisbridge.eu</a>. Zgłoszenie zostanie rozpatrzone w terminie 14 dni od jego otrzymania.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="legal-section" id="d4">
+      <h2 class="ru-text">4. Внешние ссылки и упоминание партнёров</h2>
+      <h2 class="pl-text">4. Linki zewnętrzne i partnerzy</h2>
+      <div class="ru-text">
+        <p>Сайт может содержать ссылки на внешние интернет-ресурсы и сайты партнёров. Владелец сайта не контролирует содержимое таких ресурсов и не несёт ответственности за их содержание, политику конфиденциальности или достоверность размещённых на них сведений.</p>
+        <p>Упоминание партнёров, поставщиков или иных третьих лиц носит информационный характер и не является поручительством за качество их услуг. Владелец сайта не несёт юридической ответственности за действия или бездействие упомянутых третьих лиц.</p>
+      </div>
+      <div class="pl-text">
+        <p>Serwis może zawierać odnośniki do zewnętrznych zasobów internetowych oraz stron partnerów. Właściciel serwisu nie kontroluje treści takich zasobów i nie ponosi odpowiedzialności za ich zawartość, politykę prywatności ani rzetelność zamieszczonych tam informacji.</p>
+        <p>Wzmianka o partnerach, dostawcach lub innych podmiotach trzecich ma charakter informacyjny i nie stanowi poręczenia za jakość ich usług. Właściciel serwisu nie ponosi odpowiedzialności prawnej za działania lub zaniechania wymienionych podmiotów trzecich.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="legal-section" id="d5">
+      <h2 class="ru-text">5. Интеллектуальная собственность</h2>
+      <h2 class="pl-text">5. Własność intelektualna</h2>
+      <div class="ru-text">
+        <p>Все элементы сайта bisbridge.eu — тексты, графические материалы, логотипы, фирменный стиль и структура — являются объектами интеллектуальной собственности Integria Group Sp. z o.o. и охраняются в соответствии с Законом об авторском праве и смежных правах Польши.</p>
+        <p>Воспроизведение, копирование, распространение или иное использование материалов сайта без предварительного письменного согласия Владельца сайта запрещено, включая использование контента для автоматизированного сбора данных (data scraping) и обучения моделей искусственного интеллекта (AI/Machine Learning). Гиперссылки на материалы сайта допускаются при условии обязательного указания источника.</p>
+      </div>
+      <div class="pl-text">
+        <p>Wszystkie elementy serwisu bisbridge.eu — teksty, materiały graficzne, logotypy, identyfikacja wizualna i struktura — stanowią własność intelektualną Integria Group Sp. z o.o. i są chronione na podstawie Ustawy o prawie autorskim i prawach pokrewnych z dnia 4 lutego 1994 r.</p>
+        <p>Reprodukcja, kopiowanie, rozpowszechnianie lub inne wykorzystanie materiałów serwisu bez uprzedniej pisemnej zgody Właściciela serwisu jest zabronione, w tym wykorzystanie treści do automatycznego zbierania danych (data scraping) oraz szkolenia modeli sztucznej inteligencji (AI/Machine Learning). Zamieszczanie hiperłączy jest dozwolone pod warunkiem obowiązkowego wskazania źródła.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 6 -->
+    <div class="legal-section" id="d6">
+      <h2 class="ru-text">6. Применимое право</h2>
+      <h2 class="pl-text">6. Prawo właściwe</h2>
+      <div class="ru-text">
+        <p>Настоящие Условия использования регулируются правом Республики Польша. Все споры, возникающие в связи с использованием сайта, подлежат разрешению компетентными польскими судами. Стороны предпринимают разумные усилия для урегулирования разногласий в досудебном порядке.</p>
+      </div>
+      <div class="pl-text">
+        <p>Niniejsze Warunki Korzystania z Serwisu podlegają prawu Rzeczypospolitej Polskiej. Wszelkie spory wynikające z korzystania z serwisu podlegają rozpoznaniu przez właściwe sądy polskie. Strony podejmują rozsądne starania w celu polubownego rozwiązania sporów przed skierowaniem sprawy na drogę sądową.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 7 -->
+    <div class="legal-section" id="d7">
+      <h2 class="ru-text">7. Изменения документа</h2>
+      <h2 class="pl-text">7. Zmiany dokumentu</h2>
+      <div class="ru-text">
+        <p>Владелец сайта вправе вносить изменения в настоящие Условия в любое время. Актуальная редакция публикуется на данной странице с указанием даты обновления. Продолжение использования сайта после внесения изменений означает принятие обновлённых условий.</p>
+      </div>
+      <div class="pl-text">
+        <p>Właściciel serwisu zastrzega sobie prawo do wprowadzania zmian w niniejszych Warunkach w dowolnym czasie. Aktualna wersja jest publikowana na niniejszej stronie wraz z datą ostatniej aktualizacji. Dalsze korzystanie z serwisu po wprowadzeniu zmian oznacza akceptację zaktualizowanych warunków.</p>
+      </div>
+      <p class="legal-footnote ru-text">Дата последнего обновления: август 2026 г. | Версия: 1.4</p>
+      <p class="legal-footnote pl-text">Data ostatniej aktualizacji: sierpień 2026 r. | Wersja: 1.3</p>
+    </div>
+
+  </div><!-- /legal-content -->
+</div><!-- /legal-body -->
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="bis-bridge-logo.png" alt="BIS Bridge Europe">
+        <p>© 2026 BIS Bridge Europe.<br>Все права защищены.</p>
+        <p>Сайт управляется компанией<br>Integria Group Sp. z o.o.</p>
+      </div>
+      <div><h4>Компания</h4><div class="footer-company"><strong>INTEGRIA GROUP Sp. z o.o.</strong><p>ul. Zamknięta 10, lok. 1.5<br>30-554 Kraków, Polska</p><p>KRS: 0001225530<br>NIP: 6793358307<br>REGON: 544046015</p></div></div>
+      <div><h4>Навигация</h4><div class="footer-list"><a href="index.html">BIS Bridge Europe</a><a href="why-bis-bridge.html">Почему мы</a><a href="accounting.html">Бухгалтерия</a><a href="contacts.html">Контакты</a></div></div>
+      <div><h4>Услуги</h4><div class="footer-list"><a href="#">Регистрация бизнеса</a><a href="#">Административное сопровождение бизнеса</a><a href="#">Бухгалтерское обслуживание</a></div><h4 style="margin-top:22px">Юридическая информация</h4><div class="footer-list"><a href="privacy-policy.html">Политика конфиденциальности</a><a href="disclaimer.html">Условия использования</a><a href="privacy-policy.html#s8">Политика cookie</a></div></div>
+      <div><h4>Контакты</h4><div class="footer-contact"><img src="email-white.png" alt="" aria-hidden="true"><a href="mailto:info@bisbridge.eu">info@bisbridge.eu</a></div><div class="footer-contact"><img src="phone-white.png" alt="" aria-hidden="true"><a href="tel:+48571805232">+48 571 805 232</a></div><div class="footer-list"><a href="#">WhatsApp / Telegram</a><a href="#">LinkedIn</a><span style="font-size:12.5px;color:rgba(255,255,255,.88)">Kraków, Polska</span></div></div>
+    </div>
+    <div class="footer-bottom"></div>
+  </div>
+</footer>
+
+<!-- COOKIE -->
+<div class="cookie hidden" id="cookie">
+  <p>Мы используем файлы cookie для анализа трафика и улучшения работы сайта. <a href="privacy-policy.html#s8">Политика cookie</a></p>
+  <div class="cookie-btns">
+    <button class="c-acc" onclick="acceptCookie()">Принять</button>
+    <button class="c-set" onclick="declineCookie()">Отклонить</button>
+  </div>
+</div>
+
+<script>
+function setLang(lang) {
+  document.body.classList.toggle('lang-pl', lang === 'pl');
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
+  localStorage.setItem('legal-lang', lang);
+}
+(function(){
+  const saved = localStorage.getItem('legal-lang');
+  if (saved === 'pl') setLang('pl');
+})();
+
+const cookie = document.getElementById('cookie');
+if (cookie && !localStorage.getItem('cookie-ok')) {
+  setTimeout(() => cookie.classList.remove('hidden'), 1500);
+}
+window.acceptCookie = function(){ localStorage.setItem('cookie-ok','1'); if(cookie) cookie.classList.add('hidden'); };
+window.declineCookie = function(){ localStorage.setItem('cookie-ok','0'); if(cookie) cookie.classList.add('hidden'); };
+</script>
+</body>
+</html>
