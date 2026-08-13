@@ -3861,3 +3861,20 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
   .home-promo-inner,
   .home-cta-inner { width: calc(100% - 40px); }
 }
+
+
+/* ══ STICKY МЕНЮ — все страницы кроме Hero ══ */
+bis-bridge-nav {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+/* ══ ФУТЕР — логотип ══ */
+.footer-logo img {
+  width: 160px;
+  height: auto;
+  display: block;
+  margin-bottom: 16px;
+  filter: brightness(0) invert(1);
+}
