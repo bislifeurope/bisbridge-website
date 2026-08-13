@@ -4153,3 +4153,100 @@ bis-bridge-nav {
   #model .bbm-result{margin-bottom:16px}
 }
 
+/* =========================================================
+   BIS BRIDGE MODEL — POSITION / CLARITY CORRECTION
+   13 Aug 2026
+   - restore centered narrow content position
+   - remove washed-out look
+   - enlarge and sharpen architectural model
+   ========================================================= */
+#model.bbm-section{
+  background:#eef5fc !important;
+  opacity:1 !important;
+}
+
+#model .bbm-wrap{
+  opacity:1 !important;
+}
+
+/* Restore previous centered placement of the whole 836px content column */
+#model .bbm-head,
+#model .bbm-kicker,
+#model .bbm-stack,
+#model .bbm-transition{
+  width:min(836px, calc(100% - 48px)) !important;
+  max-width:836px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+#model .bbm-head{margin-bottom:34px !important;}
+#model .bbm-kicker{margin-bottom:26px !important;}
+#model .bbm-transition{margin-top:20px !important;}
+
+/* Full-contrast copy — no haze */
+#model .bbm-title,
+#model .bbm-kicker,
+#model .bbm-card-copy h3,
+#model .bbm-list strong,
+#model .bbm-result,
+#model .bbm-next h4{
+  color:#0b2b63 !important;
+  opacity:1 !important;
+}
+#model .bbm-subtitle,
+#model .bbm-lead,
+#model .bbm-list li,
+#model .bbm-body,
+#model .bbm-next small{
+  color:#6d7f9f !important;
+  opacity:1 !important;
+}
+#model .bbm-card,
+#model .bbm-transition{
+  background:#fff !important;
+  opacity:1 !important;
+}
+
+/* Larger, clearer model */
+#model .bbm-visual{
+  top:-52px !important;
+  right:-78px !important;
+  width:1120px !important;
+  opacity:1 !important;
+}
+#model .bbm-visual img{
+  opacity:.96 !important;
+  filter:contrast(1.14) saturate(1.06) brightness(1.01) !important;
+}
+
+@media(max-width:1200px){
+  #model .bbm-visual{
+    top:-32px !important;
+    right:-150px !important;
+    width:1010px !important;
+  }
+}
+@media(max-width:980px){
+  #model .bbm-head,
+  #model .bbm-kicker,
+  #model .bbm-stack,
+  #model .bbm-transition{
+    width:min(836px, calc(100% - 40px)) !important;
+    max-width:none !important;
+  }
+  #model .bbm-visual{
+    top:-10px !important;
+    right:-245px !important;
+    width:850px !important;
+  }
+}
+@media(max-width:760px){
+  #model .bbm-head,
+  #model .bbm-kicker,
+  #model .bbm-stack,
+  #model .bbm-transition{
+    width:100% !important;
+  }
+  #model .bbm-visual{display:none !important;}
+}
+
