@@ -97,7 +97,7 @@
       <div class="header-inner">
         <a href="index.html" class="logo" aria-label="BIS Bridge Europe"><img src="bis-bridge-logo.png" alt="BIS Bridge Europe"></a>
         <nav aria-label="Основная навигация"><ul class="main-menu">
-          ${links.map(([key,href,label]) => `<li><a href="${href}" class="${active===key?'active':''}">${label}</a></li>`).join('')}
+          ${links.map(([key,href,label]) => `<li${(key==='what'||key==='insights')?' style="display:none"':''}><a href="${href}" class="${active===key?'active':''}">  ${label}</a></li>`).join('')}
         </ul></nav>
         <a href="contacts.html#contact-form" class="header-button">Записаться на встречу</a>
       </div>
@@ -192,12 +192,12 @@
     <div class="footer-grid">
       <div class="footer-logo">
         <img src="logo-footer.png" alt="BIS Bridge Europe">
-        <p>© 2025 BIS Bridge Europe.<br>Wszelkie prawa zastrzeżone.</p>
-        <p>Serwis prowadzony przez<br>Integria Group Sp. z o.o.</p>
+        <p>© 2026 BIS Bridge Europe.</p>
+        <p>Все права защищены.<br>Сайт управляется компанией<br>Integria Group Sp. z o.o.</p>
       </div>
       <div><h4>Компания</h4><div class="footer-company"><strong>INTEGRIA GROUP Sp. z o.o.</strong><p>ul. Zamknięta 10, lok. 1.5<br>30-554 Kraków, Polska</p><p>KRS: 0001225530<br>NIP: 6793358307<br>REGON: 544046015</p></div></div>
-      <div><h4>Навигация</h4><div class="footer-list"><a href="index.html">BIS Bridge Europe</a><a href="what-we-do.html">What We Do</a><a href="why-bis-bridge.html">Why BIS Bridge</a><a href="accounting.html">Accounting</a><a href="contacts.html">Contacts</a></div></div>
-      <div><h4>Услуги</h4><div class="footer-list"><a href="#">Регистрация бизнеса</a><a href="#">Административное сопровождение бизнеса</a><a href="#">Бухгалтерское обслуживание</a></div><h4 style="margin-top:22px">Юридическая информация</h4><div class="footer-list"><a href="javascript:void(0)" onclick="openPrivacy()">Политика конфиденциальности</a><a href="#">Disclaimer</a><a href="#">Cookie Policy</a></div></div>
+      <div><h4>Навигация</h4><div class="footer-list"><a href="index.html">BIS Bridge Europe</a><a href="why-bis-bridge.html">Why BIS Bridge</a><a href="accounting.html">Accounting</a><a href="contacts.html">Contacts</a></div></div>
+      <div><h4>Услуги</h4><div class="footer-list"><a href="#">Регистрация бизнеса</a><a href="#">Административное сопровождение бизнеса</a><a href="#">Бухгалтерское обслуживание</a></div><h4 style="margin-top:22px">Юридическая информация</h4><div class="footer-list"><a href="privacy-policy.html">Политика конфиденциальности</a><a href="disclaimer.html">Условия использования</a><a href="privacy-policy.html#s8">Политика cookie</a></div></div>
       <div><h4>Контакты</h4><div class="footer-contact"><img src="email-white.png" alt="" aria-hidden="true"><a href="mailto:info@bisbridge.eu">info@bisbridge.eu</a></div><div class="footer-contact"><img src="phone-white.png" alt="" aria-hidden="true"><a href="tel:+48571805232">+48 571 805 232</a></div><div class="footer-list"><a href="#">WhatsApp / Telegram</a><a href="#">LinkedIn</a><span style="font-size:12.5px;color:rgba(255,255,255,.88)">Kraków, Polska</span></div></div>
     </div>
     <div class="footer-bottom"></div>
