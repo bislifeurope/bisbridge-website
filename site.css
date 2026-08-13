@@ -4171,3 +4171,40 @@ bis-bridge-nav {
   #model .bbm-result{margin-bottom:16px}
 }
 
+
+
+/* ===== BIS BRIDGE MODEL — remove top haze / trailing veil ===== */
+#model.bbm-section::before,
+#model.bbm-section::after{
+  content:none !important;
+  display:none !important;
+}
+
+#model.bbm-section{
+  background:#eef5fc !important;
+}
+
+#model .bbm-visual{
+  opacity:1 !important;
+}
+
+#model .bbm-visual img{
+  opacity:1 !important;
+  filter:none !important;
+}
+
+#model .bbm-head,
+#model .bbm-kicker,
+#model .bbm-card,
+#model .bbm-transition,
+#model .bbm-title,
+#model .bbm-subtitle,
+#model .bbm-card-copy h3,
+#model .bbm-lead,
+#model .bbm-list li,
+#model .bbm-body,
+#model .bbm-result,
+#model .bbm-next small,
+#model .bbm-next h4{
+  opacity:1 !important;
+}
