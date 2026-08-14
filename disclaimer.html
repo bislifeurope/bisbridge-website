@@ -143,6 +143,7 @@
     body.lang-pl .ru-text { display: none; }
     body.lang-pl .pl-text { display: block; }
     @media(max-width: 860px) {
+      .legal-toc { display: none; }
       .legal-body { grid-template-columns: 1fr; gap: 32px; padding: 40px 28px 60px; }
       .legal-toc { position: static; }
       .legal-hero-inner { padding: 0 28px; }
@@ -152,6 +153,15 @@
       .legal-body { padding: 32px 20px 48px; }
       .legal-hero-inner { padding: 0 20px; }
     }
+
+    /* Мобильный TOC — скрываем полностью */
+    @media(max-width: 860px) {
+      .legal-toc { display: none !important; }
+      .legal-body { grid-template-columns: 1fr !important; }
+    }
+    /* Убираем серую полосу между секциями из site.css */
+    .legal-content hr, .legal-section + .legal-section::before { display: none !important; }
+    .legal-section h2 { border-top: 2px solid #F59E0B !important; }
   </style>
 </head>
 <body data-page="legal">
@@ -192,7 +202,7 @@
     </style>
     <header class="header">
       <div class="header-inner">
-        <a href="index.html" class="logo" aria-label="BIS Bridge Europe"><img src="bis-bridge-logo.png" alt="BIS Bridge Europe"></a>
+        <a href="index.html" class="logo" aria-label="BIS Bridge Europe"><img src="logo-footer.png" alt="BIS Bridge Europe"></a>
         <nav aria-label="Основная навигация"><ul class="main-menu">
           ${links.map(([key,href,label]) => `<li${(key==='what'||key==='insights')?' style="display:none"':''}><a href="${href}" class="${active===key?'active':''}">  ${label}</a></li>`).join('')}
         </ul></nav>
@@ -371,14 +381,14 @@
   <div class="footer-inner">
     <div class="footer-grid">
       <div class="footer-logo">
-        <img src="bis-bridge-logo.png" alt="BIS Bridge Europe">
+        <img src="logo-footer.png" alt="BIS Bridge Europe">
         <p>© 2026 BIS Bridge Europe.<br>Все права защищены.</p>
         <p>Сайт управляется компанией<br>Integria Group Sp. z o.o.</p>
       </div>
       <div><h4>Компания</h4><div class="footer-company"><strong>INTEGRIA GROUP Sp. z o.o.</strong><p>ul. Zamknięta 10, lok. 1.5<br>30-554 Kraków, Polska</p><p>KRS: 0001225530<br>NIP: 6793358307<br>REGON: 544046015</p></div></div>
-      <div><h4>Навигация</h4><div class="footer-list"><a href="index.html">BIS Bridge Europe</a><a href="why-bis-bridge.html">Почему мы</a><a href="accounting.html">Бухгалтерия</a><a href="contacts.html">Контакты</a></div></div>
+      <div><h4>Навигация</h4><div class="footer-list"><a href="index.html">BIS Bridge Europe</a><a href="why-bis-bridge.html">Why BIS Bridge</a><a href="accounting.html">Accounting</a><a href="contacts.html">Contacts</a></div></div>
       <div><h4>Услуги</h4><div class="footer-list"><a href="#">Регистрация бизнеса</a><a href="#">Административное сопровождение бизнеса</a><a href="#">Бухгалтерское обслуживание</a></div><h4 style="margin-top:22px">Юридическая информация</h4><div class="footer-list"><a href="privacy-policy.html">Политика конфиденциальности</a><a href="disclaimer.html">Условия использования</a><a href="privacy-policy.html#s8">Политика cookie</a></div></div>
-      <div><h4>Контакты</h4><div class="footer-contact"><img src="email-white.png" alt="" aria-hidden="true"><a href="mailto:info@bisbridge.eu">info@bisbridge.eu</a></div><div class="footer-contact"><img src="phone-white.png" alt="" aria-hidden="true"><a href="tel:+48571805232">+48 571 805 232</a></div><div class="footer-list"><a href="#">WhatsApp / Telegram</a><a href="#">LinkedIn</a><span style="font-size:12.5px;color:rgba(255,255,255,.88)">Kraków, Polska</span></div></div>
+      <div><h4>Contacts</h4><div class="footer-contact"><img src="email-white.png" alt="" aria-hidden="true"><a href="mailto:info@bisbridge.eu">info@bisbridge.eu</a></div><div class="footer-contact"><img src="phone-white.png" alt="" aria-hidden="true"><a href="tel:+48571805232">+48 571 805 232</a></div><div class="footer-list"><a href="#">WhatsApp / Telegram</a><a href="#">LinkedIn</a><span style="font-size:12.5px;color:rgba(255,255,255,.88)">Kraków, Polska</span></div></div>
     </div>
     <div class="footer-bottom"></div>
   </div>
