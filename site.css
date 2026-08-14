@@ -4347,3 +4347,35 @@ bis-bridge-nav {
     display:none !important;
   }
 }
+
+
+/* ===== BIS BRIDGE MODEL — CLEAN VERSION, NO ARCHITECTURAL VISUAL ===== */
+
+/* Полностью убираем архитектурную подложку */
+#model .bbm-visual{
+  display:none !important;
+}
+
+/* Убираем любые верхние декоративные/полупрозрачные слои */
+#model.bbm-section::before,
+#model.bbm-section::after{
+  content:none !important;
+  display:none !important;
+}
+
+/* Оставляем ровный чистый фон без градиентной дымки */
+#model.bbm-section{
+  background:#eef5fc !important;
+  background-image:none !important;
+}
+
+/* Никаких полупрозрачных наложений на контент */
+#model .bbm-wrap,
+#model .bbm-head,
+#model .bbm-kicker,
+#model .bbm-stack,
+#model .bbm-card,
+#model .bbm-transition{
+  opacity:1 !important;
+  filter:none !important;
+}
