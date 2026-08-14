@@ -97,7 +97,7 @@
       <div class="header-inner">
         <a href="index.html" class="logo" aria-label="BIS Bridge Europe"><img src="bis-bridge-logo.png" alt="BIS Bridge Europe"></a>
         <nav aria-label="Основная навигация"><ul class="main-menu">
-          ${links.map(([key,href,label]) => `<li><a href="${href}" class="${active===key?'active':''}">${label}</a></li>`).join('')}
+          ${links.map(([key,href,label]) => `<li${(key==='what'||key==='insights')?' style="display:none"':''}><a href="${href}" class="${active===key?'active':''}">${label}</a></li>`).join('')}
         </ul></nav>
         <a href="contacts.html#contact-form" class="header-button">Записаться на встречу</a>
       </div>
@@ -351,5 +351,57 @@ document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close
   if (modal) modal.addEventListener('click', e => { if(e.target===modal) window.closePrivacy(); });
 })();
 </script>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="bis-bridge-logo.png" alt="BIS Bridge Europe"></div>
+        <div class="footer-company">
+          <strong>Integria Group Sp. z o.o.</strong>
+          <p>Business Integration Solutions</p>
+          <p>Kraków, Polska</p>
+        </div>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <div class="footer-list">
+          <a href="index.html">BIS Bridge Europe</a>
+          <a href="why-bis-bridge.html">Why BIS Bridge</a>
+          <a href="accounting.html">Accounting</a>
+          <a href="contacts.html">Contacts</a>
+        </div>
+      </div>
+      <div>
+        <h4>Услуги</h4>
+        <div class="footer-list">
+          <a href="what-we-do.html">Регистрация бизнеса</a>
+          <a href="accounting.html">Бухгалтерское сопровождение</a>
+          <a href="contacts.html">Консультация</a>
+        </div>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <div class="footer-contact"><img src="email-white.png" alt="" aria-hidden="true"><a href="mailto:info@bisbridge.eu">info@bisbridge.eu</a></div>
+        <div class="footer-contact"><img src="phone-white.png" alt="" aria-hidden="true"><a href="tel:+48571805232">+48 571 805 232</a></div>
+        <div class="footer-list">
+          <a href="#">WhatsApp / Telegram</a>
+          <a href="#">LinkedIn</a>
+          <span style="font-size:12.5px;color:rgba(255,255,255,.88)">Kraków, Polska</span>
+        </div>
+      </div>
+      <div>
+        <h4>Правовая информация</h4>
+        <div class="footer-list">
+          <a onclick="openPrivacy()" style="cursor:pointer">Политика конфиденциальности</a>
+          <a href="#">Условия использования</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Integria Group Sp. z o.o. (BIS Bridge Europe). Все права защищены.</span>
+      <span>NIP: 6793358307 · Kraków, Polska</span>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
