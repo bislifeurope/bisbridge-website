@@ -275,10 +275,6 @@
   overflow:hidden;
   padding:72px 0 84px;
   background-color:#eef5fc;
-  background-image:url('why-bis-bridge-bg.png');
-  background-repeat:no-repeat;
-  background-size:780px auto;
-  background-position:right 0px top 10px;
   color:var(--bis3-navy);
   font-family:var(--B,'Inter',Arial,sans-serif);
 }
@@ -4380,109 +4376,5 @@ bis-bridge-nav {
 }
 
 
-/* ===== ACCOUNTING HERO — TEMPLATE BACKGROUND OVERRIDE ===== */
-/*
-   ВАЖНО:
-   Положите PNG-файл в ту же папку, что и accounting.html,
-   под именем: accounting-hero-bg.png
-*/
-.acc-hero{
-  position:relative;
-  overflow:hidden;
-  background-color:#eef4fb !important;
-  background-image:url('accounting-hero-bg.png') !important;
-  background-repeat:no-repeat !important;
-  background-position:center top !important;
-  background-size:100% auto !important;
-  padding:56px 0 48px !important;
-  min-height:520px;
-  border-bottom:1px solid rgba(11,43,99,.08);
-}
-
-.acc-hero::before{
-  content:none !important;
-  display:none !important;
-}
-
-.acc-hero .acc-shell{
-  position:relative;
-  z-index:1;
-  min-height:410px;
-}
-
-.acc-hero-title{
-  max-width:720px;
-  margin:0;
-}
-
-.acc-hero-text{
-  max-width:620px;
-  margin-top:22px;
-  font-size:16px;
-  line-height:1.75;
-  color:#5f77a1;
-}
-
-@media (max-width:1440px){
-  .acc-hero{
-    min-height:500px;
-    background-size:cover !important;
-    background-position:center top !important;
-  }
-}
-
-@media (max-width:1100px){
-  .acc-hero{
-    min-height:470px;
-    padding:48px 0 40px !important;
-    background-position:68% top !important;
-  }
-
-  .acc-hero-title{
-    max-width:640px;
-    font-size:clamp(40px,4.4vw,58px);
-  }
-
-  .acc-hero-text{
-    max-width:560px;
-  }
-}
-
-@media (max-width:900px){
-  .acc-hero{
-    min-height:auto;
-    padding:40px 0 36px !important;
-    background-size:cover !important;
-    background-position:76% top !important;
-  }
-
-  .acc-hero .acc-shell{
-    min-height:auto;
-  }
-
-  .acc-hero-title{
-    max-width:100%;
-  }
-
-  .acc-hero-text{
-    max-width:100%;
-    font-size:15px;
-    line-height:1.7;
-  }
-}
-
-@media (max-width:680px){
-  .acc-hero{
-    padding:34px 0 30px !important;
-    background-size:cover !important;
-    background-position:82% top !important;
-  }
-
-  .acc-kicker{
-    margin-bottom:16px;
-  }
-
-  .acc-hero-title::after{
-    margin-top:18px;
-  }
-}
+/* Убираем фоновую картинку на why-bis-bridge */
+#model .bbm-visual { display:none !important; }
