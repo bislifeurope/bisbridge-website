@@ -3889,9 +3889,9 @@ bis-bridge-nav {
 #model.bbm-section{
   position:relative;
   isolation:isolate;
-  overflow:hidden;
+  overflow:visible;
   padding:58px 0 78px;
-  background:linear-gradient(180deg,#eef5fc 0%,#edf5fc 54%,#f2f8fd 100%);
+  background:#eef5fc;
   color:#0b2b63;
   font-family:'Inter',sans-serif;
 }
@@ -3900,9 +3900,9 @@ bis-bridge-nav {
 #model .bbm-visual{
   position:absolute;
   z-index:1;
-  top:8px;
-  right:max(-235px, calc((100vw - 1440px)/2 - 235px));
-  width:clamp(940px,64vw,1120px);
+  top:0px;
+  right:0;
+  width:clamp(580px,44vw,750px);
   pointer-events:none;
   user-select:none;
 }
@@ -3911,7 +3911,6 @@ bis-bridge-nav {
   width:100%;
   height:auto;
   opacity:.98;
-  filter:contrast(1.10) brightness(1.02);
 }
 
 /* Main content */
