@@ -4303,3 +4303,47 @@ bis-bridge-nav {
     clip-path: inset(64px 0 0 92px) !important;
   }
 }
+
+
+/* ===== BIS BRIDGE MODEL — placement correction =====
+   Restore the right-side architectural model after the previous
+   micro-fix moved it outside the viewport.
+*/
+#model .bbm-visual{
+  top:62px !important;
+  right:56px !important;
+  width:460px !important;
+  overflow:visible !important;
+  clip-path:none !important;
+  opacity:1 !important;
+}
+
+#model .bbm-visual img{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  opacity:1 !important;
+  filter:none !important;
+}
+
+@media (max-width:1200px){
+  #model .bbm-visual{
+    top:70px !important;
+    right:24px !important;
+    width:420px !important;
+  }
+}
+
+@media (max-width:980px){
+  #model .bbm-visual{
+    top:78px !important;
+    right:-20px !important;
+    width:380px !important;
+  }
+}
+
+@media (max-width:760px){
+  #model .bbm-visual{
+    display:none !important;
+  }
+}
