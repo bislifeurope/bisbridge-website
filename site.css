@@ -272,12 +272,12 @@
 *{box-sizing:border-box}
 .bis3-section{
   position:relative;
-  overflow:visible;
+  overflow:hidden;
   padding:72px 0 84px;
   background-color:#eef5fc;
   background-image:url('why-bis-bridge-bg.png');
   background-repeat:no-repeat;
-  background-size:700px auto;
+  background-size:780px auto;
   background-position:right 0px top 10px;
   color:var(--bis3-navy);
   font-family:var(--B,'Inter',Arial,sans-serif);
@@ -4173,7 +4173,11 @@ bis-bridge-nav {
 
 
 
-/* ===== BIS BRIDGE MODEL — remove top haze / trailing veil ===== */
+/* =========================================================
+   BIS BRIDGE MODEL — FINAL RIGHT-SIDE VISUAL OVERRIDE
+   Keeps only the protruding right-side construction visible.
+   Replace site.css with this file together with the new PNG.
+   ========================================================= */
 #model.bbm-section::before,
 #model.bbm-section::after{
   content:none !important;
@@ -4184,7 +4188,20 @@ bis-bridge-nav {
   background:#eef5fc !important;
 }
 
+#model .bbm-head,
+#model .bbm-kicker,
+#model .bbm-stack,
+#model .bbm-transition{
+  width:min(760px, calc(100% - 24px)) !important;
+  max-width:760px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
 #model .bbm-visual{
+  top:42px !important;
+  right:max(-270px, calc((100vw - 1440px)/2 - 270px)) !important;
+  width:clamp(680px, 49vw, 860px) !important;
   opacity:1 !important;
 }
 
@@ -4193,12 +4210,15 @@ bis-bridge-nav {
   filter:none !important;
 }
 
-#model .bbm-head,
-#model .bbm-kicker,
 #model .bbm-card,
-#model .bbm-transition,
+#model .bbm-transition{
+  background:#ffffff !important;
+  opacity:1 !important;
+}
+
 #model .bbm-title,
 #model .bbm-subtitle,
+#model .bbm-kicker,
 #model .bbm-card-copy h3,
 #model .bbm-lead,
 #model .bbm-list li,
@@ -4207,4 +4227,46 @@ bis-bridge-nav {
 #model .bbm-next small,
 #model .bbm-next h4{
   opacity:1 !important;
+}
+
+@media (max-width: 1200px){
+  #model .bbm-head,
+  #model .bbm-kicker,
+  #model .bbm-stack,
+  #model .bbm-transition{
+    width:min(730px, 100%) !important;
+    max-width:730px !important;
+  }
+  #model .bbm-visual{
+    right:-300px !important;
+    width:760px !important;
+  }
+}
+
+@media (max-width: 980px){
+  #model .bbm-head,
+  #model .bbm-kicker,
+  #model .bbm-stack,
+  #model .bbm-transition{
+    width:min(690px, 100%) !important;
+    max-width:690px !important;
+  }
+  #model .bbm-visual{
+    top:54px !important;
+    right:-310px !important;
+    width:680px !important;
+  }
+}
+
+@media (max-width: 760px){
+  #model .bbm-head,
+  #model .bbm-kicker,
+  #model .bbm-stack,
+  #model .bbm-transition{
+    width:100% !important;
+    max-width:none !important;
+  }
+  #model .bbm-visual{
+    display:none !important;
+  }
 }
