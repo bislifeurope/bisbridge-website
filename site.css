@@ -298,7 +298,7 @@
 .bis3-topline{display:block;width:34px;height:3px;border-radius:20px;background:var(--bis3-orange);margin:0 auto 23px}
 .bis3-title{font-family:var(--F,'Manrope',Arial,sans-serif);margin:0 0 18px;font-size:clamp(38px,3.2vw,54px);line-height:1.15;letter-spacing:-0.022em;font-weight:700;color:var(--bis3-navy)}
 .bis3-subtitle{margin:0 auto;color:var(--bis3-muted);font-size:20px;line-height:1.48}
-.bis3-kicker{font-family:var(--B,'Manrope',Arial,sans-serif);margin:0 0 28px;font-size:11.5px;line-height:1.30;font-weight:600;text-transform:uppercase;letter-spacing:0.14em;color:var(--bis3-navy);text-align:center}
+.bis3-kicker{font-family:var(--F,'Manrope',Arial,sans-serif);margin:0 0 28px;font-size:22px;line-height:1.25;font-weight:700;text-transform:uppercase;letter-spacing:0.02em;color:var(--bis3-navy);text-align:center}
 .bis3-stack{width:min(950px,76%);display:flex;flex-direction:column;gap:20px;margin:0 auto}
 .bis3-card{
   position:relative;
@@ -407,7 +407,7 @@
 @media(max-width:560px){
   .bis3-title{font-family:var(--F,'Manrope',Arial,sans-serif);font-size:34px}
   .bis3-subtitle{font-size:17px}
-  .bis3-kicker{font-family:var(--B,'Inter',sans-serif);font-size:11.5px;letter-spacing:0.14em}
+  .bis3-kicker{font-family:var(--F,'Manrope',Arial,sans-serif);font-size:20px;letter-spacing:0.02em}
   .bis3-card{display:block}
   .bis3-icon{margin-bottom:16px}
   .bis3-transition{display:block}
