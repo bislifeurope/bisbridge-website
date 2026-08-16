@@ -4378,3 +4378,221 @@ bis-bridge-nav {
 
 /* Убираем фоновую картинку на why-bis-bridge */
 #model .bbm-visual { display:none !important; }
+
+
+/* ==========================================================================
+   BIS BRIDGE — FINAL BACKGROUND SYSTEM
+   Source prompt is preserved below in this CSS and also in
+   BIS_Bridge_background_prompt.txt
+
+   PALETTE
+   A  = #EEF5FC  main light blue
+   B  = #FFFFFF  white
+   C  = #E4EFF9  stronger light blue
+   Footer = #0B2B63
+   ========================================================================== */
+
+:root{
+  --bb-bg-a:#EEF5FC;
+  --bb-bg-b:#FFFFFF;
+  --bb-bg-c:#E4EFF9;
+  --bb-footer:#0B2B63;
+}
+
+/* --------------------------------------------------------------------------
+   HOME
+   HERO stays image-based.
+   Services = A
+   “Мы строим систему” = B
+   Final CTA = C
+   -------------------------------------------------------------------------- */
+
+body[data-page="home"] #services.s2{
+  background-color:var(--bb-bg-a) !important;
+  background-image:
+    url(services-lines-left.png),
+    url(services-lines-right.png) !important;
+  background-repeat:no-repeat,no-repeat !important;
+  background-position:left 120px,right 60px !important;
+  background-size:190px 800px,272px 870px !important;
+}
+
+/* Full-width white semantic zone inside the existing services section */
+body[data-page="home"] #services .s2-system{
+  position:relative !important;
+  isolation:isolate;
+  padding-top:46px !important;
+  margin-top:8px !important;
+}
+
+body[data-page="home"] #services .s2-system::before{
+  content:"" !important;
+  position:absolute !important;
+  z-index:-1 !important;
+  top:0 !important;
+  bottom:0 !important;
+  left:50% !important;
+  width:100vw !important;
+  transform:translateX(-50%) !important;
+  background:var(--bb-bg-b) !important;
+}
+
+/* Final CTA within s2-system becomes a full-width C band */
+body[data-page="home"] #services .s2-system > div:last-child{
+  position:relative !important;
+  isolation:isolate;
+  padding:34px 0 40px !important;
+  margin-top:44px !important;
+}
+
+body[data-page="home"] #services .s2-system > div:last-child::before{
+  content:"" !important;
+  position:absolute !important;
+  z-index:-1 !important;
+  inset:0 auto 0 50% !important;
+  width:100vw !important;
+  transform:translateX(-50%) !important;
+  background:var(--bb-bg-c) !important;
+}
+
+/* --------------------------------------------------------------------------
+   WHY BIS BRIDGE
+   Analysis = A
+   Personal architecture = B
+   Accounting transition = C
+   -------------------------------------------------------------------------- */
+
+body[data-page="why"] .bis3-section{
+  background:var(--bb-bg-a) !important;
+  background-image:none !important;
+}
+
+body[data-page="why"] #screen4{
+  background:var(--bb-bg-b) !important;
+}
+
+body[data-page="why"] #screen4 .s4-bridge-bg{
+  display:none !important;
+  background:none !important;
+  opacity:0 !important;
+}
+
+/* the “Следующий этап — Бухгалтерское сопровождение” section */
+body[data-page="why"] #screen4 + section{
+  background:var(--bb-bg-c) !important;
+}
+
+/* Keep cards clean white */
+body[data-page="why"] .bis3-card,
+body[data-page="why"] #screen4 .s4-card,
+body[data-page="why"] #screen4 + section > div > div{
+  background:var(--bb-bg-b) !important;
+}
+
+/* --------------------------------------------------------------------------
+   ACCOUNTING
+   Hero = B
+   Approach + Process + Analysis = A
+   Culture = B
+   Pricing = C
+   -------------------------------------------------------------------------- */
+
+body[data-page="accounting"] .acc-hero{
+  background:var(--bb-bg-b) !important;
+  background-image:none !important;
+}
+
+body[data-page="accounting"] .acc-approach,
+body[data-page="accounting"] .acc-process,
+body[data-page="accounting"] .acc-analysis{
+  background:var(--bb-bg-a) !important;
+  background-image:none !important;
+}
+
+body[data-page="accounting"] .acc-culture{
+  background:var(--bb-bg-b) !important;
+  background-image:none !important;
+}
+
+body[data-page="accounting"] .accounting-pricing{
+  background:var(--bb-bg-c) !important;
+  background-image:none !important;
+}
+
+body[data-page="accounting"] .accounting-pricing .ap-service,
+body[data-page="accounting"] .accounting-pricing .ap-panel{
+  background:var(--bb-bg-b) !important;
+}
+
+/* --------------------------------------------------------------------------
+   CONTACTS
+   One calm A-zone + footer.
+   -------------------------------------------------------------------------- */
+
+body[data-page="contacts"] .contact-page{
+  background:var(--bb-bg-a) !important;
+  background-image:none !important;
+}
+
+body[data-page="contacts"] .contact-page::after{
+  content:none !important;
+  display:none !important;
+}
+
+body[data-page="contacts"] .person-card,
+body[data-page="contacts"] .contact-direct,
+body[data-page="contacts"] .form-block input,
+body[data-page="contacts"] .form-block textarea{
+  background:var(--bb-bg-b) !important;
+}
+
+/* --------------------------------------------------------------------------
+   GLOBAL FOOTER
+   -------------------------------------------------------------------------- */
+
+body .footer{
+  background:var(--bb-footer) !important;
+  background-image:none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive: preserve the same background logic on tablet/mobile.
+   -------------------------------------------------------------------------- */
+@media(max-width:980px){
+  body[data-page="home"] #services.s2{
+    background-position:left 220px,right 170px !important;
+    background-size:130px auto,180px auto !important;
+  }
+}
+@media(max-width:680px){
+  body[data-page="home"] #services.s2{
+    background-image:none !important;
+  }
+}
+
+/* ==========================================================================
+   PRESERVED DESIGN PROMPT
+
+   A = #EEF5FC
+   B = #FFFFFF
+   C = #E4EFF9
+   Footer = #0B2B63
+
+   HOME:
+   HERO VISUAL → A services → B system → C final CTA → FOOTER
+
+   WHY BIS BRIDGE:
+   A BIS BRIDGE MODEL → B Personal architecture → C Accounting transition
+   → FOOTER
+
+   ACCOUNTING:
+   B hero → A approach → A process → A analysis → B culture → C pricing
+   → FOOTER
+
+   CONTACTS:
+   A contacts → FOOTER
+
+   Rule: background changes only when the semantic stage changes.
+   Do not introduce page-specific shades or extra gradients.
+   ========================================================================== */
+
