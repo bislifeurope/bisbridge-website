@@ -4700,3 +4700,50 @@ body .footer{
   color: #ff7900 !important;
   line-height: 1.30 !important;
 }
+
+/* ══ bis3-card h3 — привести к H4 стандарту карточек ══ */
+.bis3-card h3 {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.32 !important;
+  font-weight: 700 !important;
+  color: #0b2b63 !important;
+  letter-spacing: -0.012em !important;
+  margin: 0 0 10px !important;
+  padding-bottom: 0 !important;
+}
+
+.bis3-card h3::after {
+  display: none !important;
+}
+
+.bis3-lead {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.62 !important;
+  font-weight: 400 !important;
+  color: #6d7f9f !important;
+  margin: 0 0 8px !important;
+}
+
+.bis3-body {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.62 !important;
+  font-weight: 400 !important;
+  color: #6d7f9f !important;
+  margin: 0 !important;
+}
+
+.bis3-list li {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.62 !important;
+  font-weight: 400 !important;
+  color: #6d7f9f !important;
+}
+
+.bis3-list li strong {
+  font-weight: 600 !important;
+  color: #0b2b63 !important;
+}
