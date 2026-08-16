@@ -1,6 +1,7 @@
 
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
+      /* ── Бренд-цвета ── */
       --navy:#0b2b63;
       --navy2:#005ea6;
       --orange:#ff7900;
@@ -9,6 +10,17 @@
       --gray:#6d7f9f;
       --F:'Manrope',sans-serif;
       --B:'Inter',sans-serif;
+
+      /* ── BIS Bridge Design System v1.0 ── */
+      --bis-navy:   #0B2B63;
+      --bis-blue:   #005EA6;
+      --bis-orange: #FF7900;
+      --bis-text:   #6D7F9F;
+      --bis-white:  #FFFFFF;
+      --bg-a: #EEF5FC;
+      --bg-b: #FFFFFF;
+      --bg-c: #E4EFF9;
+      --line: rgba(11,43,99,.10);
     }
     html{scroll-behavior:smooth}
     body{font-family:var(--B);color:var(--navy);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -57,7 +69,7 @@
       min-height:100vh;
       padding-top:72px;
       overflow:hidden;
-      background:#C8DDF0;
+      background:#EEF5FC;
     }
 
     /* Фото — абсолютный фон */
@@ -226,14 +238,14 @@
 .s2-sys-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .s2-sys-item{position:relative;min-height:220px;padding:32px 28px 28px;border:1px solid rgba(255,255,255,.9);border-radius:20px;overflow:hidden;box-shadow:0 16px 40px rgba(25,56,104,.07);transition:transform .25s ease,box-shadow .25s ease}
 .s2-sys-item--1{background:rgba(255,255,255,.92)}
-.s2-sys-item--2{background:#EAF3FB}
+.s2-sys-item--2{background:#EEF5FC}
 .s2-sys-item--3{background:linear-gradient(180deg,#F9FCFF 0%,#EEF5FC 100%)}
 .s2-sys-item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--orange);opacity:.9}
-.s2-sys-item--2::before{left:0;right:0;top:0;bottom:auto;width:auto;height:3px;background:#2B5D94}
+.s2-sys-item--2::before{left:0;right:0;top:0;bottom:auto;width:auto;height:3px;background:#005EA6}
 .s2-sys-item--3::before{left:0;right:0;top:0;bottom:auto;width:auto;height:3px;background:var(--orange)}
 .s2-sys-item:hover{transform:translateY(-3px);box-shadow:0 22px 50px rgba(25,56,104,.11)}
 .s2-sys-icon{width:42px;height:42px;display:flex;align-items:center;justify-content:center;margin-bottom:22px;border-radius:12px;background:rgba(249,115,22,.09);color:var(--orange2)}
-.s2-sys-icon--blue{background:rgba(43,93,148,.09);color:#2B5D94}
+.s2-sys-icon--blue{background:rgba(0,94,166,.09);color:#005EA6}
 .s2-sys-icon img{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .s2-sys-title{font-family:var(--F);font-size:17px;line-height:1.35;font-weight:800;text-transform:uppercase;color:var(--navy);margin-bottom:10px}
 .s2-sys-text{font-size:15px;line-height:1.65;color:var(--gray)}
@@ -602,7 +614,7 @@ p{line-height:1.7}
   line-height:1.12;
   margin-bottom:18px;
 }
-.s2-sub{font-size:18px;line-height:1.65;color:#71809d}
+.s2-sub{font-size:18px;line-height:1.65;color:#6d7f9f}
 .s2-services{gap:26px;margin-bottom:88px}
 .s2-card{
   min-height:310px;
@@ -620,9 +632,9 @@ p{line-height:1.7}
   box-shadow:var(--bb-shadow);
   background:#fff;
 }
-.s2-num{font-size:12px;letter-spacing:.16em;color:#6d7b95;margin-bottom:24px}
+.s2-num{font-size:12px;letter-spacing:.16em;color:#6d7f9f;margin-bottom:24px}
 .s2-card-title{font-size:21px;line-height:1.34;margin-bottom:16px}
-.s2-card-text{font-size:16px;line-height:1.7;color:#71809d}
+.s2-card-text{font-size:16px;line-height:1.7;color:#6d7f9f}
 .s2-more{
   color:var(--bb-link);
   font-size:13px;
@@ -658,7 +670,7 @@ p{line-height:1.7}
 #screen4{padding:var(--bb-section-y) 0 0}
 #screen4 .s4-inner{gap:58px}
 .s4-left h2{font-size:clamp(38px,3.6vw,50px);line-height:1.14}
-.s4-left>p:last-child{font-size:16px;line-height:1.75;color:#71809d}
+.s4-left>p:last-child{font-size:16px;line-height:1.75;color:#6d7f9f}
 .s4-grid{gap:20px}
 .s4-card{
   border-radius:var(--bb-soft-radius);
@@ -818,7 +830,7 @@ li{
 }
 .s2-num{
   margin-bottom:18px !important;
-  color:#7A89A6 !important;
+  color:#6d7f9f !important;
 }
 .s2-card-title{
   font-size:18px !important;
@@ -834,7 +846,7 @@ li{
 .s2-more{
   font-size:12.5px !important;
   font-weight:500 !important;
-  color:#7A89A6 !important;
+  color:#6d7f9f !important;
   gap:7px !important;
 }
 
@@ -1632,7 +1644,11 @@ body footer :where(p,li){
 
 
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Inter',sans-serif;color:#0b2b63;background:#fff;-webkit-font-smoothing:antialiased}
-:root{--navy:#0b2b63;--blue:#005ea6;--orange:#ff7900;--gray:#6d7f9f;--line:#d9e3ef;--bg:#eef5fc;--F:'Manrope',sans-serif;--B:'Inter',sans-serif}
+:root{--navy:#0b2b63;--blue:#005ea6;--orange:#ff7900;--gray:#6d7f9f;
+      --F:'Manrope',sans-serif;
+    }
+
+    /* already replaced below */--line:#d9e3ef;--bg:#eef5fc;--F:'Manrope',sans-serif;--B:'Inter',sans-serif}
 a{color:inherit}
 .header{height:72px;background:rgba(255,255,255,.98);border-bottom:1px solid rgba(11,43,99,.08);display:flex;align-items:center;position:sticky;top:0;z-index:20}
 .header-inner{width:min(1320px,100%);margin:auto;padding:0 48px;display:flex;align-items:center;gap:34px}
@@ -1737,7 +1753,7 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
   margin:0 auto !important;
   font-size:15.5px !important;
   line-height:1.5 !important;
-  color:#71809d !important;
+  color:#6d7f9f !important;
 }
 .s2-services{
   display:grid !important;
@@ -1769,7 +1785,7 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
   justify-content:center !important;
   margin-bottom:12px !important;
   background:rgba(11,43,99,.045) !important;
-  color:#244f89 !important;
+  color:#005EA6 !important;
 }
 .s2-card-icon img{
   width:21px !important;height:21px !important;
@@ -1791,7 +1807,7 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
   font-family:var(--B) !important;
   font-size:12.5px !important;
   line-height:1.48 !important;
-  color:#71809d !important;
+  color:#6d7f9f !important;
   margin-bottom:14px !important;
 }
 .s2-more{
@@ -1863,7 +1879,7 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
 }
 .s2-intro{margin-bottom:38px !important;}
 .s2-title{font-size:clamp(34px,3.4vw,52px) !important; letter-spacing:-.04em !important;}
-.s2-sub{max-width:625px !important; font-size:15px !important; line-height:1.55 !important; color:#7887a3 !important;}
+.s2-sub{max-width:625px !important; font-size:15px !important; line-height:1.55 !important; color:#6d7f9f !important;}
 .s2-services{
   width:min(1220px,100%) !important;
   margin:0 auto 60px !important;
@@ -1884,7 +1900,7 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
 .s2-card:last-child{grid-column:4 / span 2 !important;}
 .s2-card-icon{width:40px !important;height:40px !important; margin-bottom:14px !important; background:rgba(246,249,253,.95) !important;}
 .s2-card-title{font-size:15px !important; line-height:1.27 !important; margin-bottom:10px !important;}
-.s2-card-text{font-size:12px !important; line-height:1.48 !important; color:#7b89a3 !important;}
+.s2-card-text{font-size:12px !important; line-height:1.48 !important; color:#6d7f9f !important;}
 .s2-more{font-size:12px !important; gap:8px !important;}
 .s2-more,.s2-more:visited,.s2-more:hover,.s2-more span{color:#ff7900 !important;}
 .s2-system{position:relative !important; z-index:2 !important;}
@@ -1958,14 +1974,14 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
   height: 4px !important;
   margin: 16px auto 14px !important;
   border-radius: 99px !important;
-  background: #ff8b0a !important;
+  background: #ff7900 !important;
 }
 #services .s2-sub {
   max-width: 620px !important;
   margin: 0 auto !important;
   font-size: 15px !important;
   line-height: 1.5 !important;
-  color: #7686a2 !important;
+  color: #6d7f9f !important;
 }
 #services .s2-services {
   width: min(1060px, 100%) !important;
@@ -2009,19 +2025,19 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
   font-size: 17px !important;
   line-height: 1.32 !important;
   margin-bottom: 14px !important;
-  color: #163a76 !important;
+  color: #005EA6 !important;
 }
 #services .s2-card-text {
   font-size: 12px !important;
   line-height: 1.58 !important;
-  color: #7a88a2 !important;
+  color: #6d7f9f !important;
   margin-bottom: 16px !important;
 }
 #services .s2-more,
 #services .s2-more:visited,
 #services .s2-more:hover,
 #services .s2-more span {
-  color: #ff7f0f !important;
+  color: #ff7900 !important;
 }
 #services .s2-more {
   font-size: 12px !important;
@@ -2080,7 +2096,7 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
 /* ===== ЭКРАН 4 ===== */
 #screen4 {
   position: relative;
-  background: #e8eef6;
+  background: #EEF5FC;
   overflow: hidden;
   padding: 80px 0 0;
 }
@@ -2552,7 +2568,7 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
 
 /* ===== PROCESS (5 шагов) ===== */
 .acc-process {
-  background: #F8FAFD;
+  background: #EEF5FC;
   padding: 56px 0 64px;
   border-top: 1px solid rgba(11,27,61,0.07);
 }
@@ -2813,7 +2829,7 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
   font-family: 'Inter', sans-serif;
   font-size: 15.5px;
   line-height: 1.75;
-  color: #3D4F6E;
+  color: #6d7f9f;
   margin: 0;
 }
 .acc-culture-card-text + .acc-culture-card-text {
@@ -3064,7 +3080,7 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
     .ap-more {
       margin-top: auto;
       padding-top: 24px;
-      color: #7789a6;
+      color: #6d7f9f;
       font-size: 12px;
       line-height: 1.2;
       font-weight: 500;
@@ -3194,7 +3210,7 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
 
     .ap-note {
       margin: 14px 0 0;
-      color: #7a8ba7;
+      color: #6d7f9f;
       font-size: 11px;
       line-height: 1.5;
     }
@@ -3753,7 +3769,7 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
   border-top: 1px solid rgba(11,27,61,.08);
 }
 .home-promo--alt {
-  background: #f3f8fd;
+  background: #EEF5FC;
 }
 .home-promo-inner {
   width: min(1120px, calc(100% - 64px));
@@ -3847,7 +3863,7 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
   transition: background .2s ease, transform .2s ease;
 }
 .home-cta-btn:hover {
-  background: #e06d00;
+  background: #ff7900;
   transform: translateY(-2px);
 }
 
