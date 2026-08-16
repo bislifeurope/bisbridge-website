@@ -4388,14 +4388,14 @@ bis-bridge-nav {
    PALETTE
    A  = #EEF5FC  main light blue
    B  = #FFFFFF  white
-   C  = #E4EFF9  stronger light blue
+   C  = #E5EFF9  stronger light blue
    Footer = #0B2B63
    ========================================================================== */
 
 :root{
   --bb-bg-a:#EEF5FC;
   --bb-bg-b:#FFFFFF;
-  --bb-bg-c:#E4EFF9;
+  --bb-bg-c:#E5EFF9;
   --bb-footer:#0B2B63;
 }
 
@@ -4575,7 +4575,7 @@ body .footer{
 
    A = #EEF5FC
    B = #FFFFFF
-   C = #E4EFF9
+   C = #E5EFF9
    Footer = #0B2B63
 
    HOME:
@@ -4595,37 +4595,4 @@ body .footer{
    Rule: background changes only when the semantic stage changes.
    Do not introduce page-specific shades or extra gradients.
    ========================================================================== */
-
-
-
-/* ==========================================================================
-   CONTACTS — RESTORE BRIDGE VISUAL
-   The contacts page keeps A as the base background, but brings back
-   the subtle bridge visual on the right side.
-   ========================================================================== */
-
-body[data-page="contacts"] .contact-page{
-  position:relative !important;
-  overflow:hidden !important;
-  background:var(--bb-bg-a) !important;
-}
-
-body[data-page="contacts"] .contact-page::after{
-  content:'' !important;
-  display:block !important;
-  position:absolute !important;
-  right:-4% !important;
-  top:0 !important;
-  width:56% !important;
-  height:100% !important;
-  background:
-    linear-gradient(90deg,
-      rgba(238,245,252,.97),
-      rgba(238,245,252,.45) 35%,
-      rgba(238,245,252,.08)
-    ),
-    url('hero-background.png') center right / cover no-repeat !important;
-  opacity:.26 !important;
-  pointer-events:none !important;
-}
 
