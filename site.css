@@ -4671,3 +4671,32 @@ body .footer{
   color: #ff7900 !important;
   line-height: 1.30 !important;
 }
+
+/* ══ #screen4 ФИНАЛЬНЫЙ OVERRIDE — карточки идентичны bis3 ══ */
+#screen4 .s4-card-title {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.32 !important;
+  font-weight: 700 !important;
+  color: #0b2b63 !important;
+  letter-spacing: -0.012em !important;
+  margin: 0 0 10px !important;
+}
+
+#screen4 .s4-card-text {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.62 !important;
+  font-weight: 400 !important;
+  color: #6d7f9f !important;
+  letter-spacing: 0 !important;
+  margin: 0 0 16px !important;
+}
+
+#screen4 .s4-card-link {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #ff7900 !important;
+  line-height: 1.30 !important;
+}
