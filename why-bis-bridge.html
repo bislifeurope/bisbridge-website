@@ -58,6 +58,258 @@
 
 
   <link rel="stylesheet" href="site.css">
+
+<style id="wb-analysis-layout-fix">
+/* WHY BIS BRIDGE — analysis block refinement requested 2026-08-16 */
+body[data-page="why"] .wb-analysis-row{
+  display:grid !important;
+  grid-template-columns:minmax(290px,32%) minmax(0,1fr) !important;
+  background:#fff !important;
+  border:1px solid rgba(11,43,99,.09) !important;
+  border-left:0 !important;
+  border-radius:8px !important;
+  overflow:hidden !important;
+}
+
+body[data-page="why"] .wb-analysis-row-title{
+  padding:26px 28px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+  justify-content:flex-start !important;
+  gap:10px !important;
+  background:#EEF5FC !important;
+  border-right:1px solid rgba(11,43,99,.08) !important;
+  font-family:'Manrope',sans-serif !important;
+  font-size:18px !important;
+  line-height:1.32 !important;
+  font-weight:700 !important;
+  letter-spacing:-.012em !important;
+  color:#0B2B63 !important;
+}
+
+body[data-page="why"] .wb-analysis-row--alt .wb-analysis-row-title{
+  background:#E4EFF9 !important;
+}
+
+body[data-page="why"] .wb-analysis-row-title .wb-analysis-sidelead{
+  margin:0 !important;
+  font-family:'Inter',sans-serif !important;
+  font-size:14px !important;
+  line-height:1.52 !important;
+  font-weight:400 !important;
+  letter-spacing:0 !important;
+  color:#6D7F9F !important;
+}
+
+body[data-page="why"] .wb-analysis-row-copy{
+  padding:24px 30px 24px !important;
+  background:#fff !important;
+}
+
+body[data-page="why"] .wb-analysis-row-copy p{
+  margin:0 0 10px !important;
+}
+
+body[data-page="why"] .wb-analysis-row-copy p:last-child{
+  margin-bottom:0 !important;
+}
+
+@media(max-width:820px){
+  body[data-page="why"] .wb-analysis-row{
+    grid-template-columns:1fr !important;
+  }
+  body[data-page="why"] .wb-analysis-row-title{
+    border-right:0 !important;
+    border-bottom:1px solid rgba(11,43,99,.08) !important;
+    padding:22px 22px 18px !important;
+  }
+  body[data-page="why"] .wb-analysis-row-copy{
+    padding:20px 22px 22px !important;
+  }
+}
+</style>
+
+
+<style id="wb-transition-separation-fix">
+body[data-page="why"] .wb-analysis .wb-stage-transition{
+  margin-top:34px !important;
+  background:#FFFFFF !important;
+  border:1px solid rgba(11,43,99,.10) !important;
+  border-left:3px solid #FF7900 !important;
+  box-shadow:0 8px 24px rgba(11,43,99,.035) !important;
+}
+</style>
+
+
+<style id="wb-architecture-grid-fix">
+/* WHY BIS BRIDGE — architecture/cards refinement */
+@media (min-width: 1180px){
+  body[data-page="why"] .wb-architecture-grid{
+    display:grid !important;
+    grid-template-columns:repeat(12,minmax(0,1fr)) !important;
+    gap:16px !important;
+  }
+  body[data-page="why"] .wb-architecture-grid > .wb-service-card{
+    grid-column:span 3 !important;
+    min-height:236px !important;
+  }
+  body[data-page="why"] .wb-architecture-grid > .wb-service-card:nth-child(5){
+    grid-column:2 / span 3 !important;
+  }
+  body[data-page="why"] .wb-architecture-grid > .wb-service-card:nth-child(6){
+    grid-column:5 / span 3 !important;
+  }
+  body[data-page="why"] .wb-architecture-grid > .wb-service-card:nth-child(7){
+    grid-column:8 / span 3 !important;
+  }
+}
+
+body[data-page="why"] .wb-stage-arrow{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:42px !important;
+  height:42px !important;
+  border-radius:50% !important;
+  color:#FF7900 !important;
+  text-decoration:none !important;
+  transition:background .2s ease, transform .2s ease;
+}
+body[data-page="why"] .wb-stage-arrow:hover{
+  background:rgba(255,121,0,.08) !important;
+  transform:translateX(2px);
+}
+
+body[data-page="why"] .wb-stage-actions{
+  display:flex !important;
+  gap:14px !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  flex-wrap:wrap !important;
+}
+body[data-page="why"] .wb-stage-actions .wb-btn-primary,
+body[data-page="why"] .wb-stage-actions .wb-btn-secondary{
+  flex:0 0 300px !important;
+  width:300px !important;
+  max-width:300px !important;
+  min-width:300px !important;
+  text-align:center !important;
+}
+
+@media (max-width: 1179px){
+  body[data-page="why"] .wb-stage-actions .wb-btn-primary,
+  body[data-page="why"] .wb-stage-actions .wb-btn-secondary{
+    flex:1 1 260px !important;
+    width:auto !important;
+    max-width:none !important;
+    min-width:260px !important;
+  }
+}
+@media (max-width: 767px){
+  body[data-page="why"] .wb-stage-actions .wb-btn-primary,
+  body[data-page="why"] .wb-stage-actions .wb-btn-secondary{
+    flex:1 1 100% !important;
+    min-width:100% !important;
+  }
+}
+</style>
+
+
+<style id="wb-stage-blocks-final-fix">
+/* Equalize the two "Следующий этап" blocks */
+body[data-page="why"] .wb-stage-transition{
+  min-height:176px !important;
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) auto !important;
+  align-items:center !important;
+  gap:24px !important;
+}
+
+body[data-page="why"] .wb-stage-transition > div:first-child{
+  align-self:center !important;
+}
+
+body[data-page="why"] .wb-stage-text{
+  max-width:760px !important;
+}
+
+/* Same-size action buttons, without text overflow */
+body[data-page="why"] .wb-stage-actions{
+  display:flex !important;
+  gap:16px !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  flex-wrap:nowrap !important;
+}
+
+body[data-page="why"] .wb-stage-actions .wb-btn-primary,
+body[data-page="why"] .wb-stage-actions .wb-btn-secondary{
+  width:280px !important;
+  min-width:280px !important;
+  max-width:280px !important;
+  min-height:56px !important;
+  padding:12px 18px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  white-space:normal !important;
+  line-height:1.25 !important;
+  font-size:15px !important;
+}
+
+@media (max-width: 1099px){
+  body[data-page="why"] .wb-stage-transition{
+    grid-template-columns:1fr !important;
+  }
+  body[data-page="why"] .wb-stage-actions{
+    justify-content:flex-start !important;
+    flex-wrap:wrap !important;
+  }
+  body[data-page="why"] .wb-stage-actions .wb-btn-primary,
+  body[data-page="why"] .wb-stage-actions .wb-btn-secondary{
+    flex:1 1 280px !important;
+  }
+}
+
+@media (max-width: 767px){
+  body[data-page="why"] .wb-stage-transition{
+    min-height:auto !important;
+  }
+  body[data-page="why"] .wb-stage-actions .wb-btn-primary,
+  body[data-page="why"] .wb-stage-actions .wb-btn-secondary{
+    width:100% !important;
+    min-width:100% !important;
+    max-width:100% !important;
+  }
+}
+</style>
+
+
+<style id="wb-cards-symmetry-fix">
+/* Symmetric 4 + 3 layout for the 7 architecture cards */
+@media (min-width: 1180px){
+  body[data-page="why"] .wb-architecture-grid{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    gap:16px !important;
+  }
+
+  body[data-page="why"] .wb-architecture-grid > .wb-service-card{
+    flex:0 0 calc((100% - 48px) / 4) !important;
+    max-width:calc((100% - 48px) / 4) !important;
+    min-height:236px !important;
+  }
+
+  body[data-page="why"] .wb-architecture-grid > .wb-service-card.wb-service-card--last{
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+}
+</style>
+
 </head>
 <body data-page="why">
 <bis-bridge-nav></bis-bridge-nav>
@@ -114,19 +366,18 @@
       <h1 class="wb-analysis-title">АНАЛИЗИРУЕМ ВАШ БИЗНЕС-ПРОЕКТ С РАЗНЫХ СТОРОН</h1>
       <div class="wb-rule"></div>
       <p class="wb-analysis-intro">
-        Мы сопровождаем компанию с первого дня и на каждом этапе её развития.
-        До запуска проекта анализируем его ключевые параметры, чтобы определить,
-        что переносится напрямую, что требует адаптации и какие решения необходимо
-        заложить в архитектуру бизнеса.
+        До запуска проекта мы анализируем исходные данные, цели собственников и ключевые параметры бизнеса, чтобы сформировать оптимальную архитектуру запуска компании.
       </p>
     </header>
 
     <div class="wb-analysis-list">
 
       <article class="wb-analysis-row">
-        <div class="wb-analysis-row-title">Юридические вопросы</div>
+        <div class="wb-analysis-row-title">
+          <span>Юридические вопросы</span>
+          <p class="wb-analysis-sidelead">учредители, роли и функции, управление компанией согласно уставному договору</p>
+        </div>
         <div class="wb-analysis-row-copy">
-          <p class="wb-analysis-lead">учредители, роли и функции, управление компанией согласно уставному договору</p>
           <p><strong>Состав учредителей/членов правления,</strong> их гражданство и местонахождение — это не анкетные данные, это параметры, которые напрямую влияют на скорость и эффективность запуска, последующую работу компании.</p>
           <p><strong>Структура уставного капитала.</strong> Распределение долей и принятие решений участниками общества.</p>
           <p><strong>Состав Правления</strong> — полномочия, ответственность, право подписи. Необходимость прокурента.</p>
@@ -135,10 +386,12 @@
         </div>
       </article>
 
-      <article class="wb-analysis-row wb-analysis-row--soft">
-        <div class="wb-analysis-row-title">Финансовая и операционная модель бизнеса</div>
+      <article class="wb-analysis-row wb-analysis-row--alt">
+        <div class="wb-analysis-row-title">
+          <span>Финансовая и операционная модель бизнеса</span>
+          <p class="wb-analysis-sidelead">CIT, VAT, международные операции, дивиденды</p>
+        </div>
         <div class="wb-analysis-row-copy">
-          <p class="wb-analysis-lead">CIT, VAT, международные операции, дивиденды</p>
           <p><strong>Форма деятельности и модель налогообложения</strong> — определяем возможные формы ведения бизнеса с учётом специфики деятельности, структуры доходов/расходов, статуса учредителей/юридических оснований для регистрации компании в Польше.</p>
           <p><strong>VAT, CIT и базовые правила отчётности</strong> — рассматриваем основные ставки налогов, сроки подачи отчётности, уплаты обязательств и принципы работы польской налоговой системы на практических примерах.</p>
           <p><strong>VAT UE, экспорт и импорт</strong> — обсуждаем базовые требования при работе с европейскими контрагентами, международными поставками и операциями внутри ЕС.</p>
@@ -148,19 +401,23 @@
       </article>
 
       <article class="wb-analysis-row">
-        <div class="wb-analysis-row-title">Административные и бизнес-вопросы</div>
+        <div class="wb-analysis-row-title">
+          <span>Административные и бизнес-вопросы</span>
+          <p class="wb-analysis-sidelead">Банк, лицензии, разрешения</p>
+        </div>
         <div class="wb-analysis-row-copy">
-          <p class="wb-analysis-lead">Банк, лицензии, разрешения</p>
           <p><strong>Банк и требования к учредителям</strong> — гражданство и статус пребывания членов Правления определяют, в каком банке компания сможет открыть счёт. Анализируем до регистрации.</p>
           <p><strong>Лицензии и разрешения</strong> — грузо- и пассажироперевозки, экспедиторская деятельность, розничная/оптовая торговля алкоголем и продуктами питания, агентства трудоустройства, финансовые услуги и ряд других направлений. Лицензируемые виды деятельности предъявляют свои требования к учредителям, юридическому адресу и операционной структуре компании. Оцениваем на старте — до регистрации.</p>
         </div>
       </article>
 
-      <article class="wb-analysis-row wb-analysis-row--accent">
-        <div class="wb-analysis-row-title">Ваш бизнес-опыт — отправная точка</div>
+      <article class="wb-analysis-row wb-analysis-row--alt">
+        <div class="wb-analysis-row-title">
+          <span>Ваш бизнес-опыт — отправная точка</span>
+          <p class="wb-analysis-sidelead">Анализируем, что работает в польских реалиях, что требует адаптации.</p>
+        </div>
         <div class="wb-analysis-row-copy">
-          <p class="wb-analysis-lead">Анализируем, что работает в польских реалиях, что требует адаптации.</p>
-          <p>Изучаем структуру Вашего бизнеса, модель работы с контрагентами, операционные процессы. Определяем, что переносится напрямую, что требует адаптации под польское законодательство и деловую практику.</p>
+          <p>Изучаем структуру Вашего бизнеса, модель работы с контрагентами, операционные процессы. Определяем, какие элементы существующей бизнес-модели можно сохранить, а что требует адаптации под польское законодательство и деловую практику.</p>
         </div>
       </article>
 
@@ -172,7 +429,7 @@
         <h2 class="wb-stage-title">Персональная архитектура запуска проекта</h2>
         <p class="wb-stage-text">На основе проведённого анализа мы формируем персональную модель запуска бизнеса и последовательность необходимых действий.</p>
       </div>
-      <div class="wb-stage-arrow">→</div>
+      <a href="#screen4" class="wb-stage-arrow" aria-label="Перейти к разделу Персональная архитектура запуска проекта">→</a>
     </div>
 
   </div>
@@ -241,7 +498,7 @@
       <div>
         <div class="wb-stage-label">Следующий этап</div>
         <h2 class="wb-stage-title">Бухгалтерское сопровождение бизнеса</h2>
-        <p class="wb-stage-text">После запуска компании мы выстраиваем системное бухгалтерское и финансовое сопровождение, которое обеспечивает прозрачность процессов, управляемость и устойчивую работу бизнеса.</p>
+        <p class="wb-stage-text">После запуска компании мы выстраиваем системное бухгалтерское и финансовое сопровождение.</p>
       </div>
       <div class="wb-stage-actions">
         <a href="accounting.html" class="wb-btn-primary">Подробнее о бухгалтерском сопровождении</a>
