@@ -4621,3 +4621,53 @@ body .footer{
 .next-step-btn-primary:hover{background:#e06a00}
 .next-step-btn-text{display:flex;align-items:center;justify-content:center;gap:6px;color:#0b2b63;font-family:var(--B);font-size:14px;font-weight:500;text-decoration:none;padding:0 24px;min-height:46px}
 .next-step-btn-text .arr-orange{color:#ff7900}
+
+/* ══ ФИНАЛЬНАЯ УНИФИКАЦИЯ ТИПОГРАФИКИ КАРТОЧЕК — перебивает все предыдущие блоки ══ */
+/* H4 заголовки карточек — все одинаковые: Manrope 700 / 18px */
+.s2-card-title,
+.s2-sys-title,
+.s4-card-title,
+.bis3-card h3,
+.accounting-card h3,
+.analysis-card h3,
+.culture-card h3,
+.acc-culture-card-title {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.32 !important;
+  font-weight: 700 !important;
+  color: #0b2b63 !important;
+  letter-spacing: -0.012em !important;
+}
+
+/* Body текст карточек — все одинаковые: Inter 400 / 14px */
+.s2-card-text,
+.s2-sys-text,
+.s4-card-text,
+.s4-card p,
+.bis3-card p,
+.bis3-card li,
+.bis3-lead,
+.bis3-body,
+.accounting-card p,
+.analysis-card p,
+.culture-card p,
+.acc-culture-card-text {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.62 !important;
+  font-weight: 400 !important;
+  color: #6d7f9f !important;
+  letter-spacing: 0 !important;
+}
+
+/* Ссылки «Узнать больше» / «Открыть этап» */
+.s2-more,
+.s4-card-link,
+.bis3-card a {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #ff7900 !important;
+  line-height: 1.30 !important;
+}
