@@ -1599,44 +1599,6 @@ body footer :where(p,li){
 
 
 
-/* ══ ПЕРСОНАЛЬНАЯ АРХИТЕКТУРА — типографика карточек ══ */
-#screen4 .s4-card-title{
-  font-family:'Manrope',sans-serif !important;
-  font-size:17px !important;
-  line-height:1.32 !important;
-  font-weight:700 !important;
-  color:#0b2b63 !important;
-  letter-spacing:-.02em !important;
-}
-
-#screen4 .s4-card-text{
-  font-family:'Inter',sans-serif !important;
-  font-size:15px !important;
-  line-height:1.68 !important;
-  font-weight:400 !important;
-  color:#6d7f9f !important;
-  letter-spacing:0 !important;
-}
-
-#screen4 .s4-card-link{
-  font-family:'Inter',sans-serif !important;
-  font-size:13px !important;
-  line-height:1.35 !important;
-  font-weight:600 !important;
-}
-
-@media(max-width:640px){
-  #screen4 .s4-card-title{
-    font-size:16px !important;
-  }
-
-  #screen4 .s4-card-text{
-    font-size:14px !important;
-  }
-}
-
-
-
 /* ===== ORIGINAL STYLE BLOCK SEPARATOR ===== */
 
 
@@ -3589,1161 +3551,178 @@ input{height:46px} textarea{min-height:104px;max-height:220px;padding-top:13px;r
 /* ===== ORIGINAL STYLE BLOCK SEPARATOR ===== */
 
 
-/* =========================================================
-   ЕДИНЫЙ ВНУТРЕННИЙ ШРИФТ ПО ЭКРАНУ "КАК СТРОИТСЯ РАБОТА"
-   Крупные H1/H2 не затрагиваются.
-   ========================================================= */
+
+/* ==========================================================================
+   BIS BRIDGE — CANONICAL TYPOGRAPHY SYSTEM v1.1
+   FINAL SOURCE OF TRUTH
+   One semantic role = one typography style everywhere.
+   ========================================================================== */
 
 :root{
-  --bis-body-size: 14px;
-  --bis-body-line: 1.58;
-  --bis-small-size: 12px;
-  --bis-card-title-size: 17px;
-  --bis-section-subtitle-size: 18px;
+  --bb-type-heading:'Manrope',sans-serif;
+  --bb-type-body:'Inter',sans-serif;
+  --bb-type-navy:#0B2B63;
+  --bb-type-muted:#6D7F9F;
+  --bb-type-orange:#FF7900;
 }
 
-/* Весь основной наборный текст */
-.s2-card-text,
-.s2-sys-text,
-.bis3-card p,
-.bis3-lead,
-.bis3-list li,
-.accounting-page p,
-.accounting-page li,
-.accounting-copy,
-.accounting-list li,
-.accounting-analysis__intro,
-.accounting-analysis__list li,
-.accounting-analysis__subtitle,
-.acc-hero-text,
-.acc-col-text,
-.acc-list li,
-.acc-step p,
-.acc-analysis-intro,
-.acc-analysis-list li,
-.acc-analysis-subtitle,
-.acc-culture-intro,
-.acc-culture-card-text,
-.acc-culture-footer-text,
-.info-card p,
-.principle-card p,
-.analysis-card p,
-.culture-card p{
-  font-size:var(--bis-body-size) !important;
-  line-height:var(--bis-body-line) !important;
+/* CARD TITLES — identical across all pages */
+body[data-page="home"] #services .s2-card-title,
+body[data-page="home"] #services .s2-sys-title,
+body[data-page="why"] #model .bis3-card h3,
+body[data-page="why"] #screen4 .s4-card-title,
+body[data-page="accounting"] .acc-culture-card-title,
+body[data-page="accounting"] .ap-service h3{
+  font-family:var(--bb-type-heading) !important;
+  font-size:18px !important;
+  line-height:1.32 !important;
+  font-weight:700 !important;
+  letter-spacing:-0.012em !important;
+  color:var(--bb-type-navy) !important;
 }
 
-/* Мелкие подписи, номера и ссылки */
-.s2-num,
-.s2-more,
-.accounting-kicker,
-.accounting-label,
-.accounting-process__start,
-.acc-process-start,
-.acc-culture-label,
-.acc-culture-num,
-.eyebrow,
-.kicker,
-.section-label{
-  font-size:var(--bis-small-size) !important;
-  line-height:1.35 !important;
+/* CARD BODY — identical across all pages */
+body[data-page="home"] #services .s2-card-text,
+body[data-page="home"] #services .s2-sys-text,
+body[data-page="why"] #model .bis3-lead,
+body[data-page="why"] #model .bis3-list li,
+body[data-page="why"] #model .bis3-body,
+body[data-page="why"] #screen4 .s4-card-text,
+body[data-page="accounting"] .acc-culture-card-text,
+body[data-page="accounting"] .ap-service__summary,
+body[data-page="accounting"] .ap-service__details p{
+  font-family:var(--bb-type-body) !important;
+  font-size:14px !important;
+  line-height:1.62 !important;
+  font-weight:400 !important;
+  letter-spacing:0 !important;
+  color:var(--bb-type-muted) !important;
 }
 
-/* Заголовки карточек */
-.s2-card-title,
-.s2-sys-title,
-.bis3-card h3,
-.accounting-subtitle,
-.accounting-section-title,
-.acc-col-title,
-.acc-col-subtitle,
-.acc-analysis-subtitle,
-.acc-culture-card-title,
-.info-card h3,
-.principle-card h3,
-.analysis-card h3,
-.culture-card h3{
-  font-size:var(--bis-card-title-size) !important;
-  line-height:1.34 !important;
+/* Strong fragments in body remain Inter */
+body[data-page="why"] #model .bis3-list strong,
+body[data-page="why"] #model .bis3-body strong,
+body[data-page="why"] #model .bis3-result strong{
+  font-family:var(--bb-type-body) !important;
+  font-size:inherit !important;
+  line-height:inherit !important;
+  font-weight:600 !important;
+  color:var(--bb-type-navy) !important;
 }
 
-/* Подзаголовки секций */
-.accounting-process__title,
-.acc-process-title,
-.s2-sys-head{
-  font-size:var(--bis-section-subtitle-size) !important;
+/* H2 / major section titles */
+body[data-page="home"] #services .s2-title,
+body[data-page="why"] #model .bis3-title,
+body[data-page="why"] #screen4 .s4-left h2,
+body[data-page="accounting"] .acc-analysis-title,
+body[data-page="accounting"] .acc-culture-title,
+body[data-page="accounting"] .ap-title{
+  font-family:var(--bb-type-heading) !important;
+  font-size:38px !important;
+  line-height:1.15 !important;
+  font-weight:700 !important;
+  letter-spacing:-0.022em !important;
+  color:var(--bb-type-navy) !important;
+}
+
+/* H3 / block titles */
+body[data-page="why"] #model .bis3-kicker,
+body[data-page="why"] #model .bis3-next h4,
+body[data-page="why"] .next-step-title,
+body[data-page="accounting"] .acc-process-title,
+body[data-page="accounting"] .ap-panel h3,
+body[data-page="contacts"] .form-block h2{
+  font-family:var(--bb-type-heading) !important;
+  font-size:24px !important;
   line-height:1.25 !important;
+  font-weight:700 !important;
+  letter-spacing:-0.018em !important;
+  color:var(--bb-type-navy) !important;
 }
 
-/* Общий ритм абзацев */
-.accounting-page p,
-.acc-col-text,
-.acc-analysis-intro,
-.acc-culture-card-text,
-.s2-card-text,
-.s2-sys-text{
-  margin-top:0;
+/* Leads */
+body[data-page="home"] #services .s2-sub,
+body[data-page="why"] #model .bis3-subtitle,
+body[data-page="accounting"] .acc-hero-text,
+body[data-page="accounting"] .ap-lead{
+  font-family:var(--bb-type-body) !important;
+  font-size:17px !important;
+  line-height:1.62 !important;
+  font-weight:400 !important;
+  color:var(--bb-type-muted) !important;
 }
 
-/* На мобильных не уменьшаем ниже читаемого размера */
+/* Main body */
+body[data-page="why"] #model .bis3-result,
+body[data-page="why"] #screen4 .s4-left > p:last-child,
+body[data-page="accounting"] .acc-col-text,
+body[data-page="accounting"] .acc-list li,
+body[data-page="accounting"] .acc-analysis-intro,
+body[data-page="accounting"] .acc-analysis-list li{
+  font-family:var(--bb-type-body) !important;
+  font-size:15px !important;
+  line-height:1.68 !important;
+  font-weight:400 !important;
+  color:var(--bb-type-muted) !important;
+}
+
+/* Eyebrows / labels */
+body[data-page="home"] #services .s2-sys-head,
+body[data-page="why"] #model .bis3-next small,
+body[data-page="why"] #screen4 .s4-eyebrow,
+body[data-page="why"] .next-step-label,
+body[data-page="accounting"] .acc-kicker,
+body[data-page="accounting"] .acc-culture-label,
+body[data-page="accounting"] .ap-kicker,
+body[data-page="accounting"] .acc-process-start{
+  font-family:var(--bb-type-body) !important;
+  font-size:11.5px !important;
+  line-height:1.30 !important;
+  font-weight:600 !important;
+  letter-spacing:.14em !important;
+  text-transform:uppercase !important;
+  color:var(--bb-type-muted) !important;
+}
+
+/* Links */
+body[data-page="home"] #services .s2-more,
+body[data-page="why"] #screen4 .s4-card-link,
+body[data-page="accounting"] .ap-more{
+  font-family:var(--bb-type-body) !important;
+  font-size:13px !important;
+  line-height:1.30 !important;
+  font-weight:600 !important;
+  color:var(--bb-type-orange) !important;
+}
+
+/* Mobile */
 @media(max-width:640px){
-  :root{
-    --bis-body-size: 14px;
-    --bis-small-size: 11px;
-    --bis-card-title-size: 16px;
-    --bis-section-subtitle-size: 18px;
+  body[data-page="home"] #services .s2-title,
+  body[data-page="why"] #model .bis3-title,
+  body[data-page="why"] #screen4 .s4-left h2,
+  body[data-page="accounting"] .acc-analysis-title,
+  body[data-page="accounting"] .acc-culture-title,
+  body[data-page="accounting"] .ap-title{
+    font-size:32px !important;
+  }
+
+  body[data-page="home"] #services .s2-card-title,
+  body[data-page="home"] #services .s2-sys-title,
+  body[data-page="why"] #model .bis3-card h3,
+  body[data-page="why"] #screen4 .s4-card-title,
+  body[data-page="accounting"] .acc-culture-card-title,
+  body[data-page="accounting"] .ap-service h3{
+    font-size:17px !important;
+  }
+
+  body[data-page="home"] #services .s2-card-text,
+  body[data-page="home"] #services .s2-sys-text,
+  body[data-page="why"] #model .bis3-lead,
+  body[data-page="why"] #model .bis3-list li,
+  body[data-page="why"] #model .bis3-body,
+  body[data-page="why"] #screen4 .s4-card-text,
+  body[data-page="accounting"] .acc-culture-card-text{
+    font-size:14px !important;
   }
 }
 
-.s4-panel-icon img{width:100%;height:100%;object-fit:contain;display:block}.s4-close-icon,.s4-footer-arrow,.s4-link-arrow{display:block;object-fit:contain}
-
-
-/* ══ УНИФИКАЦИЯ ЦВЕТА ТЕКСТА — bis3-list li приводим к серому как весь сайт ══ */
-.bis3-list li,
-.bis3-body{
-  color:#6d7f9f !important;
-}
-
-
-/* ══ ЕДИНЫЙ СТАНДАРТ ТЕКСТА ВНУТРИ КАРТОЧЕК — все страницы ══ */
-
-/* Заголовки карточек: 17px / Manrope 700 / navy */
-.s2-card-title,
-.bis3-card h3,
-.s4-card-title,
-.acc-culture-card-title {
-  font-family: 'Manrope', sans-serif !important;
-  font-size: 17px !important;
-  line-height: 1.34 !important;
-  font-weight: 700 !important;
-  color: #0b2b63 !important;
-  letter-spacing: -0.01em !important;
-}
-
-/* Текст карточек: 14px / Inter 400 / серый */
-.s2-card-text,
-.bis3-list li,
-.bis3-lead,
-.bis3-body,
-.s4-card-text,
-.acc-culture-card-text {
-  font-family: 'Inter', sans-serif !important;
-  font-size: 14px !important;
-  line-height: 1.58 !important;
-  font-weight: 400 !important;
-  color: #6d7f9f !important;
-  letter-spacing: 0 !important;
-}
-
-
-/* ══ ДОПОЛНЕНИЕ — карточки "МЫ СТРОИМ СИСТЕМУ ДЛЯ ВАС" ══ */
-.s2-sys-title {
-  font-family: 'Manrope', sans-serif !important;
-  font-size: 17px !important;
-  line-height: 1.34 !important;
-  font-weight: 700 !important;
-  color: #0b2b63 !important;
-  letter-spacing: -0.01em !important;
-}
-
-.s2-sys-text {
-  font-family: 'Inter', sans-serif !important;
-  font-size: 14px !important;
-  line-height: 1.58 !important;
-  font-weight: 400 !important;
-  color: #6d7f9f !important;
-  letter-spacing: 0 !important;
-}
-
-
-/* ══ ГЛАВНАЯ — анонс-секции ══ */
-.home-promo {
-  padding: 80px 0;
-  background: #fff;
-  border-top: 1px solid rgba(11,27,61,.08);
-}
-.home-promo--alt {
-  background: #f3f8fd;
-}
-.home-promo-inner {
-  width: min(1120px, calc(100% - 64px));
-  margin: 0 auto;
-}
-.home-promo-text {
-  max-width: 680px;
-}
-.home-promo-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: #ff7900;
-  margin: 0 0 18px;
-}
-.home-promo-title {
-  font-family: 'Manrope', sans-serif;
-  font-size: clamp(28px, 2.8vw, 38px);
-  line-height: 1.15;
-  font-weight: 700;
-  color: #0b2b63;
-  letter-spacing: -.025em;
-  margin: 0 0 18px;
-}
-.home-promo-desc {
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  line-height: 1.7;
-  color: #6d7f9f;
-  margin: 0 0 28px;
-}
-.home-promo-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: #ff7900;
-  text-decoration: none;
-}
-.home-promo-btn span {
-  display: inline-block;
-  transition: transform .2s ease;
-}
-.home-promo-btn:hover span {
-  transform: translateX(4px);
-}
-
-/* ══ ГЛАВНАЯ — CTA секция ══ */
-.home-cta {
-  padding: 80px 0;
-  background: #0b2b63;
-  border-top: none;
-}
-.home-cta-inner {
-  width: min(1120px, calc(100% - 64px));
-  margin: 0 auto;
-  text-align: center;
-}
-.home-cta-title {
-  font-family: 'Manrope', sans-serif;
-  font-size: clamp(28px, 2.8vw, 38px);
-  line-height: 1.15;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: -.025em;
-  margin: 0 0 16px;
-}
-.home-cta-desc {
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  line-height: 1.7;
-  color: rgba(255,255,255,.72);
-  margin: 0 0 32px;
-}
-.home-cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 15px 32px;
-  background: #ff7900;
-  color: #fff;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 7px;
-  text-decoration: none;
-  transition: background .2s ease, transform .2s ease;
-}
-.home-cta-btn:hover {
-  background: #e06d00;
-  transform: translateY(-2px);
-}
-
-@media(max-width:680px) {
-  .home-promo { padding: 56px 0; }
-  .home-cta { padding: 56px 0; }
-  .home-promo-inner,
-  .home-cta-inner { width: calc(100% - 40px); }
-}
-
-
-/* ══ STICKY МЕНЮ — все страницы кроме Hero ══ */
-bis-bridge-nav {
-  position: sticky;
-  top: 0;
-  z-index: 500;
-}
-
-/* ══ ФУТЕР — логотип ══ */
-.footer-logo img {
-  width: 160px;
-  height: auto;
-  display: block;
-  margin-bottom: 16px;
-  filter: brightness(0) invert(1);
-}
-
-
-/* =========================================================
-   BIS BRIDGE MODEL — FINAL CLEAN IMPLEMENTATION
-   Separate namespace (.bbm-*) so old .bis3-* experiments
-   cannot affect this section.
-   ========================================================= */
-
-#model.bbm-section{
-  position:relative;
-  isolation:isolate;
-  overflow:visible;
-  padding:58px 0 78px;
-  background:#eef5fc;
-  color:#0b2b63;
-  font-family:'Inter',sans-serif;
-}
-
-/* Decorative architectural layer */
-#model .bbm-visual{
-  position:absolute;
-  z-index:1;
-  top:0px;
-  right:0;
-  width:clamp(580px,44vw,750px);
-  pointer-events:none;
-  user-select:none;
-}
-#model .bbm-visual img{
-  display:block;
-  width:100%;
-  height:auto;
-  opacity:.98;
-}
-
-/* Main content */
-#model .bbm-wrap{
-  position:relative;
-  z-index:2;
-  width:min(1120px,calc(100% - 64px));
-  margin:0 auto;
-}
-
-/* Narrow centered content column so the model is more visible */
-#model .bbm-head,
-#model .bbm-kicker,
-#model .bbm-stack,
-#model .bbm-transition{
-  width:min(780px, calc(100% - 24px));
-  max-width:780px;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-#model .bbm-head{
-  position:relative;
-  z-index:3;
-  margin-top:0;
-  margin-bottom:34px;
-  text-align:left;
-}
-#model .bbm-topline{
-  display:block;
-  width:42px;
-  height:3px;
-  margin:0 0 20px;
-  border-radius:99px;
-  background:#ff7900;
-}
-#model .bbm-title{
-  margin:0 0 18px;
-  font-family:'Manrope',sans-serif;
-  font-size:clamp(40px,3.35vw,52px);
-  line-height:1.07;
-  font-weight:700;
-  letter-spacing:-.035em;
-  color:#0b2b63 !important;
-  opacity:1 !important;
-}
-#model .bbm-subtitle{
-  max-width:510px;
-  margin:0;
-  font-size:17px;
-  line-height:1.65;
-  color:#6d7f9f !important;
-  opacity:1 !important;
-}
-#model .bbm-kicker{
-  position:relative;
-  z-index:3;
-  margin-top:0;
-  margin-bottom:26px;
-  font-family:'Manrope',sans-serif;
-  font-size:18px;
-  line-height:1.35;
-  font-weight:700;
-  color:#0b2b63 !important;
-  opacity:1 !important;
-  text-align:left;
-}
-
-/* Cards deliberately sit above the visual */
-#model .bbm-stack{
-  position:relative;
-  z-index:4;
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-}
-#model .bbm-card{
-  position:relative;
-  display:grid;
-  grid-template-columns:72px minmax(0,1fr);
-  gap:26px;
-  padding:28px 32px 28px 30px;
-  background:#ffffff !important;
-  border:1px solid rgba(11,43,99,.08);
-  border-radius:16px;
-  box-shadow:0 14px 34px rgba(16,47,112,.055);
-  opacity:1 !important;
-}
-#model .bbm-card::before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:18%;
-  width:3px;
-  height:64%;
-  border-radius:0 4px 4px 0;
-  background:#ff7900;
-}
-#model .bbm-icon{
-  width:64px;
-  height:64px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  border:1px solid rgba(11,43,99,.055);
-  background:linear-gradient(145deg,#f1f5fa,#fbfdff);
-}
-#model .bbm-icon img{
-  display:block;
-  width:36px;
-  height:36px;
-  object-fit:contain;
-}
-#model .bbm-card-copy h3{
-  position:relative;
-  margin:0 0 9px;
-  padding-bottom:9px;
-  font-family:'Manrope',sans-serif;
-  font-size:17px;
-  line-height:1.32;
-  font-weight:700;
-  letter-spacing:-.01em;
-  color:#0b2b63 !important;
-  opacity:1 !important;
-}
-#model .bbm-card-copy h3::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:0;
-  width:38px;
-  height:2px;
-  border-radius:99px;
-  background:#ff7900;
-}
-#model .bbm-lead{
-  margin:0 0 16px;
-  font-size:14px;
-  line-height:1.55;
-  color:#6d7f9f !important;
-  opacity:1 !important;
-}
-#model .bbm-list{
-  margin:0;
-  padding:0;
-  list-style:none;
-}
-#model .bbm-list li,
-#model .bbm-body{
-  margin:0 0 10px;
-  padding:0;
-  font-size:14px;
-  line-height:1.58;
-  font-weight:400;
-  color:#6d7f9f !important;
-  opacity:1 !important;
-}
-#model .bbm-list li:last-child{margin-bottom:0}
-#model .bbm-list strong{font-weight:700;color:#0b2b63 !important; opacity:1 !important}
-#model .bbm-body{margin-bottom:0}
-
-/* Transition block */
-#model .bbm-transition{
-  position:relative;
-  z-index:4;
-  margin-top:20px;
-  margin-bottom:0;
-  padding:22px 26px;
-  display:grid;
-  grid-template-columns:64px minmax(220px,1fr) minmax(300px,1.05fr);
-  gap:22px;
-  align-items:center;
-  background:#ffffff !important;
-  border:1px solid rgba(11,43,99,.08);
-  border-radius:14px;
-  box-shadow:0 10px 28px rgba(16,47,112,.04);
-  opacity:1 !important;
-}
-#model .bbm-transition-icon{
-  width:58px;
-  height:58px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  background:rgba(255,121,0,.07);
-}
-#model .bbm-transition-icon img{
-  width:36px;
-  height:36px;
-  object-fit:contain;
-}
-#model .bbm-result{
-  margin:0;
-  font-size:14px;
-  line-height:1.58;
-  color:#0b2b63 !important;
-  opacity:1 !important;
-}
-#model .bbm-result strong{color:#ff7900 !important}
-#model .bbm-next small{
-  display:block;
-  margin:0 0 6px;
-  font-size:12px;
-  color:#6d7f9f !important;
-  opacity:1 !important;
-}
-#model .bbm-next h4{
-  margin:0;
-  font-family:'Manrope',sans-serif;
-  font-size:20px;
-  line-height:1.25;
-  font-weight:700;
-  color:#0b2b63 !important;
-  opacity:1 !important;
-}
-
-@media(max-width:1200px){
-  #model .bbm-wrap{width:min(1040px,calc(100% - 56px))}
-  #model .bbm-head,
-  #model .bbm-kicker,
-  #model .bbm-stack,
-  #model .bbm-transition{width:min(760px, 100%);max-width:760px}
-  #model .bbm-visual{right:-255px;width:990px}
-}
-@media(max-width:980px){
-  #model.bbm-section{padding:46px 0 64px}
-  #model .bbm-wrap{width:calc(100% - 44px)}
-  #model .bbm-head,
-  #model .bbm-kicker,
-  #model .bbm-stack,
-  #model .bbm-transition{width:min(720px, 100%);max-width:720px}
-  #model .bbm-visual{top:18px;right:-285px;width:860px;opacity:.92}
-  #model .bbm-card{grid-template-columns:62px minmax(0,1fr);gap:20px;padding:26px 26px 26px 24px}
-  #model .bbm-icon{width:56px;height:56px}
-  #model .bbm-icon img{width:32px;height:32px}
-  #model .bbm-transition{grid-template-columns:58px 1fr}
-  #model .bbm-next{grid-column:2}
-}
-@media(max-width:760px){
-  #model.bbm-section{padding:38px 0 54px}
-  #model .bbm-wrap{width:calc(100% - 32px)}
-  #model .bbm-visual{display:none}
-  #model .bbm-head,
-  #model .bbm-kicker,
-  #model .bbm-stack,
-  #model .bbm-transition{width:100%;max-width:none}
-  #model .bbm-head{margin-bottom:28px}
-  #model .bbm-title{font-size:34px}
-  #model .bbm-subtitle{font-size:15px}
-  #model .bbm-kicker{font-size:16px;margin-bottom:22px}
-  #model .bbm-card{display:block;padding:24px 22px}
-  #model .bbm-icon{margin:0 0 16px}
-  #model .bbm-transition{display:block;padding:22px}
-  #model .bbm-transition-icon{margin-bottom:14px}
-  #model .bbm-result{margin-bottom:16px}
-}
-
-
-
-/* =========================================================
-   BIS BRIDGE MODEL — FINAL RIGHT-SIDE VISUAL OVERRIDE
-   Keeps only the protruding right-side construction visible.
-   Replace site.css with this file together with the new PNG.
-   ========================================================= */
-#model.bbm-section::before,
-#model.bbm-section::after{
-  content:none !important;
-  display:none !important;
-}
-
-#model.bbm-section{
-  background:#eef5fc !important;
-}
-
-#model .bbm-head,
-#model .bbm-kicker,
-#model .bbm-stack,
-#model .bbm-transition{
-  width:min(760px, calc(100% - 24px)) !important;
-  max-width:760px !important;
-  margin-left:auto !important;
-  margin-right:auto !important;
-}
-
-#model .bbm-visual{
-  top:42px !important;
-  right:max(-270px, calc((100vw - 1440px)/2 - 270px)) !important;
-  width:clamp(680px, 49vw, 860px) !important;
-  opacity:1 !important;
-}
-
-#model .bbm-visual img{
-  opacity:1 !important;
-  filter:none !important;
-}
-
-#model .bbm-card,
-#model .bbm-transition{
-  background:#ffffff !important;
-  opacity:1 !important;
-}
-
-#model .bbm-title,
-#model .bbm-subtitle,
-#model .bbm-kicker,
-#model .bbm-card-copy h3,
-#model .bbm-lead,
-#model .bbm-list li,
-#model .bbm-body,
-#model .bbm-result,
-#model .bbm-next small,
-#model .bbm-next h4{
-  opacity:1 !important;
-}
-
-@media (max-width: 1200px){
-  #model .bbm-head,
-  #model .bbm-kicker,
-  #model .bbm-stack,
-  #model .bbm-transition{
-    width:min(730px, 100%) !important;
-    max-width:730px !important;
-  }
-  #model .bbm-visual{
-    right:-300px !important;
-    width:760px !important;
-  }
-}
-
-@media (max-width: 980px){
-  #model .bbm-head,
-  #model .bbm-kicker,
-  #model .bbm-stack,
-  #model .bbm-transition{
-    width:min(690px, 100%) !important;
-    max-width:690px !important;
-  }
-  #model .bbm-visual{
-    top:54px !important;
-    right:-310px !important;
-    width:680px !important;
-  }
-}
-
-@media (max-width: 760px){
-  #model .bbm-head,
-  #model .bbm-kicker,
-  #model .bbm-stack,
-  #model .bbm-transition{
-    width:100% !important;
-    max-width:none !important;
-  }
-  #model .bbm-visual{
-    display:none !important;
-  }
-}
-
-
-/* ===== BIS BRIDGE MODEL — micro fix: smaller, more right, no faded upper trail ===== */
-#model .bbm-visual{
-  top:88px !important;
-  right:max(-395px, calc((100vw - 1440px)/2 - 395px)) !important;
-  width:clamp(360px, 25vw, 430px) !important;
-  overflow:hidden !important;
-  clip-path: inset(58px 0 0 88px) !important;
-}
-
-#model .bbm-visual img{
-  opacity:1 !important;
-  filter:none !important;
-}
-
-@media (max-width: 1200px){
-  #model .bbm-visual{
-    top:96px !important;
-    right:-410px !important;
-    width:390px !important;
-    clip-path: inset(58px 0 0 88px) !important;
-  }
-}
-
-@media (max-width: 980px){
-  #model .bbm-visual{
-    top:108px !important;
-    right:-430px !important;
-    width:350px !important;
-    clip-path: inset(64px 0 0 92px) !important;
-  }
-}
-
-
-/* ===== BIS BRIDGE MODEL — placement correction =====
-   Restore the right-side architectural model after the previous
-   micro-fix moved it outside the viewport.
-*/
-#model .bbm-visual{
-  top:62px !important;
-  right:56px !important;
-  width:460px !important;
-  overflow:visible !important;
-  clip-path:none !important;
-  opacity:1 !important;
-}
-
-#model .bbm-visual img{
-  display:block !important;
-  width:100% !important;
-  height:auto !important;
-  opacity:1 !important;
-  filter:none !important;
-}
-
-@media (max-width:1200px){
-  #model .bbm-visual{
-    top:70px !important;
-    right:24px !important;
-    width:420px !important;
-  }
-}
-
-@media (max-width:980px){
-  #model .bbm-visual{
-    top:78px !important;
-    right:-20px !important;
-    width:380px !important;
-  }
-}
-
-@media (max-width:760px){
-  #model .bbm-visual{
-    display:none !important;
-  }
-}
-
-
-/* ===== BIS BRIDGE MODEL — CLEAN VERSION, NO ARCHITECTURAL VISUAL ===== */
-
-/* Полностью убираем архитектурную подложку */
-#model .bbm-visual{
-  display:none !important;
-}
-
-/* Убираем любые верхние декоративные/полупрозрачные слои */
-#model.bbm-section::before,
-#model.bbm-section::after{
-  content:none !important;
-  display:none !important;
-}
-
-/* Оставляем ровный чистый фон без градиентной дымки */
-#model.bbm-section{
-  background:#eef5fc !important;
-  background-image:none !important;
-}
-
-/* Никаких полупрозрачных наложений на контент */
-#model .bbm-wrap,
-#model .bbm-head,
-#model .bbm-kicker,
-#model .bbm-stack,
-#model .bbm-card,
-#model .bbm-transition{
-  opacity:1 !important;
-  filter:none !important;
-}
-
-
-/* Убираем фоновую картинку на why-bis-bridge */
-#model .bbm-visual { display:none !important; }
-
-
-/* ==========================================================================
-   BIS BRIDGE — FINAL BACKGROUND SYSTEM
-   Source prompt is preserved below in this CSS and also in
-   BIS_Bridge_background_prompt.txt
-
-   PALETTE
-   A  = #EEF5FC  main light blue
-   B  = #FFFFFF  white
-   C  = #E5EFF9  stronger light blue
-   Footer = #0B2B63
-   ========================================================================== */
-
-:root{
-  --bb-bg-a:#EEF5FC;
-  --bb-bg-b:#FFFFFF;
-  --bb-bg-c:#E5EFF9;
-  --bb-footer:#0B2B63;
-}
-
-/* --------------------------------------------------------------------------
-   HOME
-   HERO stays image-based.
-   Services = A
-   “Мы строим систему” = B
-   Final CTA = C
-   -------------------------------------------------------------------------- */
-
-body[data-page="home"] #services.s2{
-  background-color:var(--bb-bg-a) !important;
-  background-image:
-    url(services-lines-left.png),
-    url(services-lines-right.png) !important;
-  background-repeat:no-repeat,no-repeat !important;
-  background-position:left 120px,right 60px !important;
-  background-size:190px 800px,272px 870px !important;
-}
-
-/* Full-width white semantic zone inside the existing services section */
-body[data-page="home"] #services .s2-system{
-  position:relative !important;
-  isolation:isolate;
-  padding-top:46px !important;
-  margin-top:8px !important;
-}
-
-body[data-page="home"] #services .s2-system::before{
-  content:"" !important;
-  position:absolute !important;
-  z-index:-1 !important;
-  top:0 !important;
-  bottom:0 !important;
-  left:50% !important;
-  width:100vw !important;
-  transform:translateX(-50%) !important;
-  background:var(--bb-bg-b) !important;
-}
-
-/* Final CTA within s2-system becomes a full-width C band */
-body[data-page="home"] #services .s2-system > div:last-child{
-  position:relative !important;
-  isolation:isolate;
-  padding:34px 0 40px !important;
-  margin-top:44px !important;
-}
-
-body[data-page="home"] #services .s2-system > div:last-child::before{
-  content:"" !important;
-  position:absolute !important;
-  z-index:-1 !important;
-  inset:0 auto 0 50% !important;
-  width:100vw !important;
-  transform:translateX(-50%) !important;
-  background:var(--bb-bg-c) !important;
-}
-
-/* --------------------------------------------------------------------------
-   WHY BIS BRIDGE
-   Analysis = A
-   Personal architecture = B
-   Accounting transition = C
-   -------------------------------------------------------------------------- */
-
-body[data-page="why"] .bis3-section{
-  background:var(--bb-bg-a) !important;
-  background-image:none !important;
-}
-
-body[data-page="why"] #screen4{
-  background:var(--bb-bg-b) !important;
-}
-
-body[data-page="why"] #screen4 .s4-bridge-bg{
-  display:none !important;
-  background:none !important;
-  opacity:0 !important;
-}
-
-/* the “Следующий этап — Бухгалтерское сопровождение” section */
-body[data-page="why"] #screen4 + section{
-  background:var(--bb-bg-c) !important;
-}
-
-/* Keep cards clean white */
-body[data-page="why"] .bis3-card,
-body[data-page="why"] #screen4 .s4-card,
-body[data-page="why"] #screen4 + section > div > div{
-  background:var(--bb-bg-b) !important;
-}
-
-/* --------------------------------------------------------------------------
-   ACCOUNTING
-   Hero = B
-   Approach + Process + Analysis = A
-   Culture = B
-   Pricing = C
-   -------------------------------------------------------------------------- */
-
-body[data-page="accounting"] .acc-hero{
-  background:var(--bb-bg-b) !important;
-  background-image:none !important;
-}
-
-body[data-page="accounting"] .acc-approach,
-body[data-page="accounting"] .acc-process,
-body[data-page="accounting"] .acc-analysis{
-  background:var(--bb-bg-a) !important;
-  background-image:none !important;
-}
-
-body[data-page="accounting"] .acc-culture{
-  background:var(--bb-bg-b) !important;
-  background-image:none !important;
-}
-
-body[data-page="accounting"] .accounting-pricing{
-  background:var(--bb-bg-c) !important;
-  background-image:none !important;
-}
-
-body[data-page="accounting"] .accounting-pricing .ap-service,
-body[data-page="accounting"] .accounting-pricing .ap-panel{
-  background:var(--bb-bg-b) !important;
-}
-
-/* --------------------------------------------------------------------------
-   CONTACTS
-   One calm A-zone + footer.
-   -------------------------------------------------------------------------- */
-
-body[data-page="contacts"] .contact-page{
-  background:var(--bb-bg-a) !important;
-  background-image:none !important;
-}
-
-body[data-page="contacts"] .contact-page::after{
-  content:none !important;
-  display:none !important;
-}
-
-body[data-page="contacts"] .person-card,
-body[data-page="contacts"] .contact-direct,
-body[data-page="contacts"] .form-block input,
-body[data-page="contacts"] .form-block textarea{
-  background:var(--bb-bg-b) !important;
-}
-
-/* --------------------------------------------------------------------------
-   GLOBAL FOOTER
-   -------------------------------------------------------------------------- */
-
-body .footer{
-  background:var(--bb-footer) !important;
-  background-image:none !important;
-}
-
-/* --------------------------------------------------------------------------
-   Responsive: preserve the same background logic on tablet/mobile.
-   -------------------------------------------------------------------------- */
-@media(max-width:980px){
-  body[data-page="home"] #services.s2{
-    background-position:left 220px,right 170px !important;
-    background-size:130px auto,180px auto !important;
-  }
-}
-@media(max-width:680px){
-  body[data-page="home"] #services.s2{
-    background-image:none !important;
-  }
-}
-
-/* ==========================================================================
-   PRESERVED DESIGN PROMPT
-
-   A = #EEF5FC
-   B = #FFFFFF
-   C = #E5EFF9
-   Footer = #0B2B63
-
-   HOME:
-   HERO VISUAL → A services → B system → C final CTA → FOOTER
-
-   WHY BIS BRIDGE:
-   A BIS BRIDGE MODEL → B Personal architecture → C Accounting transition
-   → FOOTER
-
-   ACCOUNTING:
-   B hero → A approach → A process → A analysis → B culture → C pricing
-   → FOOTER
-
-   CONTACTS:
-   A contacts → FOOTER
-
-   Rule: background changes only when the semantic stage changes.
-   Do not introduce page-specific shades or extra gradients.
-   ========================================================================== */
-
-
-/* ══ NEXT STEP BLOCK — единый стиль для всех страниц ══ */
-.next-step-section{background:var(--bg-c,#E4EFF9);padding:32px 0 48px}
-.next-step-wrap{max-width:1320px;margin:0 auto;padding:0 48px}
-.next-step-card{background:#fff;border:1px solid rgba(11,43,99,.10);border-radius:12px;padding:28px 40px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
-.next-step-icon{flex-shrink:0}
-.next-step-body{flex:1;min-width:200px}
-.next-step-label{font-family:var(--B);font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6d7f9f;margin-bottom:6px}
-.next-step-title{font-family:var(--F);font-size:20px;font-weight:700;color:#0b2b63;line-height:1.25;margin:0 0 8px;letter-spacing:-0.012em}
-.next-step-text{font-family:var(--B);font-size:14px;line-height:1.62;color:#6d7f9f;margin:0}
-.next-step-actions{flex-shrink:0;display:flex;flex-direction:column;align-items:stretch;gap:10px;min-width:300px}
-.next-step-btn-primary{display:flex;align-items:center;justify-content:center;background:#ff7900;color:#fff;font-family:var(--B);font-size:14px;font-weight:600;padding:0 24px;min-height:46px;border-radius:7px;text-decoration:none;transition:background .2s}
-.next-step-btn-primary:hover{background:#e06a00}
-.next-step-btn-text{display:flex;align-items:center;justify-content:center;gap:6px;color:#0b2b63;font-family:var(--B);font-size:14px;font-weight:500;text-decoration:none;padding:0 24px;min-height:46px}
-.next-step-btn-text .arr-orange{color:#ff7900}
-
-/* ══ ФИНАЛЬНАЯ УНИФИКАЦИЯ ТИПОГРАФИКИ КАРТОЧЕК — перебивает все предыдущие блоки ══ */
-/* H4 заголовки карточек — все одинаковые: Manrope 700 / 18px */
-.s2-card-title,
-.s2-sys-title,
-.s4-card-title,
-.bis3-card h3,
-.accounting-card h3,
-.analysis-card h3,
-.culture-card h3,
-.acc-culture-card-title {
-  font-family: 'Manrope', sans-serif !important;
-  font-size: 18px !important;
-  line-height: 1.32 !important;
-  font-weight: 700 !important;
-  color: #0b2b63 !important;
-  letter-spacing: -0.012em !important;
-}
-
-/* Body текст карточек — все одинаковые: Inter 400 / 14px */
-.s2-card-text,
-.s2-sys-text,
-.s4-card-text,
-.s4-card p,
-.bis3-card p,
-.bis3-card li,
-.bis3-lead,
-.bis3-body,
-.accounting-card p,
-.analysis-card p,
-.culture-card p,
-.acc-culture-card-text {
-  font-family: 'Inter', sans-serif !important;
-  font-size: 14px !important;
-  line-height: 1.62 !important;
-  font-weight: 400 !important;
-  color: #6d7f9f !important;
-  letter-spacing: 0 !important;
-}
-
-/* Ссылки «Узнать больше» / «Открыть этап» */
-.s2-more,
-.s4-card-link,
-.bis3-card a {
-  font-family: 'Inter', sans-serif !important;
-  font-size: 13px !important;
-  font-weight: 600 !important;
-  color: #ff7900 !important;
-  line-height: 1.30 !important;
-}
-
-/* ══ #screen4 ФИНАЛЬНЫЙ OVERRIDE — карточки идентичны bis3 ══ */
-#screen4 .s4-card-title {
-  font-family: 'Manrope', sans-serif !important;
-  font-size: 18px !important;
-  line-height: 1.32 !important;
-  font-weight: 700 !important;
-  color: #0b2b63 !important;
-  letter-spacing: -0.012em !important;
-  margin: 0 0 10px !important;
-}
-
-#screen4 .s4-card-text {
-  font-family: 'Inter', sans-serif !important;
-  font-size: 14px !important;
-  line-height: 1.62 !important;
-  font-weight: 400 !important;
-  color: #6d7f9f !important;
-  letter-spacing: 0 !important;
-  margin: 0 0 16px !important;
-}
-
-#screen4 .s4-card-link {
-  font-family: 'Inter', sans-serif !important;
-  font-size: 13px !important;
-  font-weight: 600 !important;
-  color: #ff7900 !important;
-  line-height: 1.30 !important;
-}
-
-/* ══ bis3-card h3 — привести к H4 стандарту карточек ══ */
-.bis3-card h3 {
-  font-family: 'Manrope', sans-serif !important;
-  font-size: 18px !important;
-  line-height: 1.32 !important;
-  font-weight: 700 !important;
-  color: #0b2b63 !important;
-  letter-spacing: -0.012em !important;
-  margin: 0 0 10px !important;
-  padding-bottom: 0 !important;
-}
-
-.bis3-card h3::after {
-  display: none !important;
-}
-
-.bis3-lead {
-  font-family: 'Inter', sans-serif !important;
-  font-size: 14px !important;
-  line-height: 1.62 !important;
-  font-weight: 400 !important;
-  color: #6d7f9f !important;
-  margin: 0 0 8px !important;
-}
-
-.bis3-body {
-  font-family: 'Inter', sans-serif !important;
-  font-size: 14px !important;
-  line-height: 1.62 !important;
-  font-weight: 400 !important;
-  color: #6d7f9f !important;
-  margin: 0 !important;
-}
-
-.bis3-list li {
-  font-family: 'Inter', sans-serif !important;
-  font-size: 14px !important;
-  line-height: 1.62 !important;
-  font-weight: 400 !important;
-  color: #6d7f9f !important;
-}
-
-.bis3-list li strong {
-  font-weight: 600 !important;
-  color: #0b2b63 !important;
-}
